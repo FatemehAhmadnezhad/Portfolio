@@ -11,30 +11,30 @@
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
 # theme                  : "minimal-mistakes-jekyll"
-# remote_theme           : "mmistakes/minimal-mistakes"
+remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "sunrise" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "fa-IR"
 rtl                      :  true # turns direction of the page into right to left for RTL languages
 title                    : "Fash Design"
-title_separator          : "داستان من، از قاب طراحی"
-subtitle                 : # site tagline that appears below site title in masthead
+title_separator          : " "
+subtitle                 : "داستان من، از قاب طراحی"
 name                     : "فاطمه احمدنژاد"
 description              : "نمونه‌کارهای منتخب فاطمه احمدنژاد در طراحی گرافیک"
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+url                      : "https://fatemehahmadnezhad.github.io/"
+baseurl                  :  "/Portfolio"
+repository               : "fatemehahmadnezhad/Portfolio"
 teaser                   : "/assets/images/DefaultThumbnail.jpg"
 logo                     : "/assets/images/fashgraphic.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true
 words_per_minute         : 200
 enable_copy_code_button  : # true, false (default)
-copyright                : # "copyright" name, defaults to site.title
+copyright                : "تمامی حقوق برای فاطمه احمدنژاد محفوظ است."
 copyright_url            : # "copyright" URL, defaults to site.url
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
+  provider               : false  # "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -68,8 +68,8 @@ reCaptcha:
 atom_feed:
   path                   : # blank (default) uses feed.xml
   hide                   : # true, false (default)
-search                   : # true, false (default)
-search_full_content      : # true, false (default)
+search                   : true
+search_full_content      : true
 search_provider          : # lunr (default), algolia, google
 lunr:
   search_within_pages    : # true, false (default)
@@ -272,8 +272,40 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+#----------------------------------------------------
+# Collections (این بخش را اضافه کنید برای مدیریت نمونه کارها) ### تغییر یا افزودن ###
+collections:
+  portfolio: # نام کالکشن شما برای نمونه کارها
+    output: true # برای اینکه هر آیتم پورتفولیو صفحه جداگانه داشته باشد
+    permalink: /portfolio/:name/ # آدرس هر نمونه کار، مثلا: yoursite.com/portfolio/project-name
 
-
+# Defaults (این بخش را اضافه کنید برای تنظیمات پیش‌فرض نمونه کارها) ### تغییر یا افزودن ###
+defaults:
+  # _posts (تنظیمات پیش‌فرض برای پست‌های وبلاگ اگر داشته باشید)
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      # comments: true # اگر کامنت برای پست‌ها فعال است
+      share: true
+      related: true
+  # _portfolio (تنظیمات پیش‌فرض برای آیتم‌های کالکشن نمونه کارها)
+  - scope:
+      path: ""
+      type: portfolio # باید با نام کالکشنی که در بالا تعریف کردید یکی باشد
+    values:
+      layout: single # از این layout برای نمایش هر نمونه کار استفاده می‌شود
+      author_profile: false # معمولاً پروفایل نویسنده برای هر نمونه کار لازم نیست
+      share: true # دکمه‌های اشتراک‌گذاری
+      # می‌توانید مقادیر پیش‌فرض دیگری هم اینجا اضافه کنید
+      # مثلا اگر تمام نمونه کارهایتان یک header خاص دارند
+      # header:
+      #   overlay_image: /assets/images/default-portfolio-header.jpg
+      #   overlay_filter: 0.5
+#----------------------------------------------------
 # Archives
 #  Type
 #  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
