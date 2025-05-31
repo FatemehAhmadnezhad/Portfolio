@@ -12,23 +12,23 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "neon" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
-rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Site Title"
-title_separator          : "-"
+locale                   : "fa-IR"
+rtl                      :  true # turns direction of the page into right to left for RTL languages
+title                    : "Fash Design"
+title_separator          : "داستان من، از قاب طراحی"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Your Name"
-description              : "An amazing website."
+name                     : "فاطمه احمدنژاد"
+description              : "نمونه‌کارهای منتخب فاطمه احمدنژاد در طراحی گرافیک"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-breadcrumbs              : # true, false (default)
+breadcrumbs              : true
 words_per_minute         : 200
 enable_copy_code_button  : # true, false (default)
 copyright                : # "copyright" name, defaults to site.title
@@ -113,15 +113,15 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "فاطمه احمدنژاد"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  location         : "البرز - کرج"
+  email            :  "fatemehahmadnezhad.sh@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
+      url: "fatemehahmadnezhad.sh@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
