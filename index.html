@@ -2,3 +2,39 @@
 layout: home
 author_profile: true
 ---
+---
+layout: splash # یا home یا هر layout مناسب دیگری برای صفحه اصلی
+# author_profile: true # اگر می‌خواهید پروفایل نویسنده در صفحه اصلی نمایش داده شود
+header:
+  overlay_image: /assets/images/home-hero-image.jpg # یک عکس پس‌زمینه جذاب برای بالای صفحه اصلی
+  overlay_filter: 0.4
+  actions: # دکمه‌های فراخوان (Call to Action)
+    - label: "مشاهده همه نمونه کارها"
+      url: "/portfolio/" # لینک به صفحه لیست نمونه کارها
+# مقدمه یا متن خوش‌آمدگویی
+excerpt: "به دنیای طراحی‌های من خوش آمدید! خلاقیت، زیبایی و کارایی، سه اصل کلیدی در تمام پروژه‌های من هستند."
+
+# بخش نمایش دسته‌بندی‌ها با feature_row
+feature_row:
+  - image_path: /assets/images/category-poster.jpg # یک عکس نماینده برای پوسترها (آپلود کنید)
+    alt: "طراحی پوستر"
+    title: "پوستر"
+    excerpt: "مجموعه‌ای از طراحی‌های پوستر برای رویدادها، تبلیغات و اطلاع‌رسانی."
+    url: "/tags/پوستر/" # لینک به صفحه آرشیو تگ "پوستر" (باید نمونه کارهایی با این تگ داشته باشید)
+    btn_label: "مشاهده پوسترها"
+    btn_class: "btn--primary"
+  - image_path: /assets/images/category-logo.jpg # یک عکس نماینده برای لوگوها (آپلود کنید)
+    alt: "طراحی لوگو"
+    title: "لوگو و هویت بصری"
+    excerpt: "طراحی لوگوهای منحصربه‌فرد و سیستم‌های کامل هویت بصری برای کسب‌وکارها."
+    url: "/categories/لوگو/" # لینک به صفحه آرشیو دسته‌بندی "لوگو" (باید نمونه کارهایی با این category داشته باشید)
+    btn_label: "مشاهده لوگوها"
+    btn_class: "btn--primary"
+  - image_path: /assets/images/category-print.jpg # یک عکس نماینده برای چاپ (آپلود کنید)
+    alt: "طراحی چاپ"
+    title: "طراحی برای چاپ"
+    excerpt: "طراحی بروشور، کاتالوگ، کارت ویزیت و سایر اقلام چاپی."
+    url: "/tags/چاپ/" # لینک به صفحه آرشیو تگ "چاپ"
+    btn_label: "مشاهده کارهای چاپی"
+    btn_class: "btn--primary"
+---
