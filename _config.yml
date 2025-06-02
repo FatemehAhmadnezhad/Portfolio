@@ -124,6 +124,7 @@ author:
       url: "fatemehahmadnezhad.sh@gmail.com"
     - label: "09337213591" # شماره تماس شما
       icon: "fas fa-fw fa-phone"
+      url: "tel:09337213591"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
