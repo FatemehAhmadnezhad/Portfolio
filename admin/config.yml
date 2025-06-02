@@ -1,0 +1,31 @@
+# محتوای اولیه برای admin/config.yml - این را در قدم‌های بعدی تکمیل می‌کنیم
+backend:
+  name: github
+  repo: "FatemehAhmadnezhad/Portfolio" # نام کاربری شما / نام مخزن شما
+  branch: master # یا master اگر شاخه اصلی شما master است
+  auth_type: implicit # برای ساده‌ترین حالت احراز هویت با گیت‌هاب (توضیحات در قدم ۴)
+  # site_domain: FatemehAhmadnezhad.github.io # (اختیاری ولی می‌تواند مفید باشد)
+
+media_folder: "assets/images/uploads" # مسیری که تصاویر آپلود شده در مخزن ذخیره می‌شوند
+public_folder: "/assets/images/uploads" # مسیری که تصاویر از طریق وب‌سایت قابل دسترسی هستند
+
+collections:
+  - name: "posts" # نام داخلی برای مجموعه پست‌ها
+    label: "نمونه کارها / پست‌ها" # برچسبی که در داشبورد نمایش داده می‌شود
+    folder: "_posts" # پوشه‌ای که فایل‌های پست در آن ذخیره می‌شوند
+    create: true # اجازه ایجاد پست جدید
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # فرمت نام فایل پست‌ها
+    fields: # فیلدهایی که برای هر پست در داشبورد نمایش داده می‌شوند
+      - {label: "عنوان", name: "title", widget: "string"}
+      - {label: "تاریخ انتشار", name: "date", widget: "datetime", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", timeFormat: false}
+      - {label: "چیدمان", name: "layout", widget: "hidden", default: "single"}
+      - {label: "دسته‌بندی‌ها", name: "categories", widget: "list", required: false, hint: "هر دسته‌بندی در یک خط جدید یا با کاما جدا شود"}
+      - label: "هدر پست" # برای فیلدهای تو در توی header.teaser و header.image
+        name: "header"
+        widget: "object"
+        fields:
+          - {label: "تصویر تیزر (برای لیست‌ها)", name: "teaser", widget: "image", required: false, hint: "تصویر کوچکتر برای نمایش در لیست‌ها. ابتدا در بخش رسانه آپلود و سپس انتخاب کنید."}
+          - {label: "تصویر اصلی (برای صفحه پست)", name: "image", widget: "image", required: false, hint: "تصویر بزرگتر که در بالای صفحه پست نمایش داده می‌شود."}
+          - {label: "کپشن تصویر اصلی (اختیاری)", name: "caption", widget: "string", required: false}
+      - {label: "خلاصه (اختیاری برای لیست‌ها)", name: "excerpt", widget: "text", required: false}
+      - {label: "محتوای اصلی", name: "body", widget: "markdown"}
