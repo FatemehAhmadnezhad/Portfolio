@@ -1,53 +1,20 @@
+# Minimal Test Config - June 2, 2025 - (ساعت فعلی خودتان را اینجا بنویسید)
 backend:
   name: github
   repo: "FatemehAhmadnezhad/Portfolio"
-  branch: master
+  branch: master # اطمینان حاصل کنید که این نام شاخه اصلی شماست (master یا main)
   auth_type: github
   app_id: "Ov23liEmdIM9fK8gTMBt" # Client ID شما
 
-# مسیرهای پیش‌فرض برای آپلود رسانه، اگر در ویجت خاصی بازنویسی نشود
-# (مثلاً اگر تصویری را مستقیماً در بدنه متن Markdown بکشید و رها کنید)
-media_folder: "assets/images/uploads"
-public_folder: "/assets/images/uploads" # مسیر از ریشه سایت
+# در این نسخه آزمایشی، موقتاً media_folder و public_folder سراسری را حذف می‌کنیم
+# media_folder: "assets/images/uploads"
+# public_folder: "/assets/images/uploads"
 
 collections:
-  - name: "posts" # نام داخلی مجموعه
-    label: "نمونه کارها / پست‌ها" # برچسب نمایشی در داشبورد
-    folder: "_posts" # پوشه‌ای که فایل‌های این مجموعه در آن ذخیره می‌شوند
-    create: true # اجازه ایجاد آیتم جدید
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # فرمت نام فایل‌ها
-    fields: # فیلدهای هر آیتم
-      - {label: "عنوان", name: "title", widget: "string"}
-      - {label: "تاریخ انتشار", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false}
-      - {label: "چیدمان", name: "layout", widget: "hidden", default: "single"}
-      - label: "دسته‌بندی برای پوشه تصاویر"
-        name: "image_folder_category"
-        widget: "string"
-        hint: "نام انگلیسی و با حروف کوچک برای پوشه تصاویر (مثلاً: infographics, posters, logos). از خط تیره (-) بجای فاصله استفاده کنید."
-        pattern: ['^[a-z0-9-]+$', "فقط حروف کوچک انگلیسی، اعداد و خط تیره مجاز است."]
-      - label: "دسته‌بندی‌ها (برای نمایش)"
-        name: "categories"
-        widget: "list"
-        required: false
-        hint: "دسته‌بندی‌های نمایشی پست. هر کدام در یک خط جدید یا با کاما جدا شوند. می‌توانید دسته‌بندی اصلی بالا را نیز اینجا تکرار کنید."
-      - label: "هدر پست"
-        name: "header"
-        widget: "object"
-        fields:
-          - label: "تصویر تیزر (برای لیست‌ها)"
-            name: "teaser"
-            widget: "image"
-            media_folder: "assets/images/portfolio/{{fields.image_folder_category}}" # مسیر داینامیک برای آپلود
-            public_folder: "/assets/images/portfolio/{{fields.image_folder_category}}" # مسیر عمومی داینامیک
-            required: false
-            hint: "ابتدا فیلد 'دسته‌بندی برای پوشه تصاویر' را پر کرده و پست را (حتی به صورت پیش‌نویس) یکبار ذخیره کنید، سپس تصویر را آپلود یا انتخاب نمایید."
-          - label: "تصویر اصلی (برای صفحه پست)"
-            name: "image"
-            widget: "image"
-            media_folder: "assets/images/portfolio/{{fields.image_folder_category}}" # مسیر داینامیک برای آپلود
-            public_folder: "/assets/images/portfolio/{{fields.image_folder_category}}" # مسیر عمومی داینامیک
-            required: false
-            hint: "ابتدا فیلد 'دسته‌بندی برای پوشه تصاویر' را پر کرده و پست را (حتی به صورت پیش‌نویس) یکبار ذخیره کنید، سپس تصویر را آپلود یا انتخاب نمایید."
-          - {label: "کپشن تصویر اصلی (اختیاری)", name: "caption", widget: "string", required: false}
-      - {label: "خلاصه (اختیاری)", name: "excerpt", widget: "text", required: false}
-      - {label: "محتوای اصلی", name: "body", widget: "markdown"}
+  - name: "test_collection" # یک نام آزمایشی ساده
+    label: "آیتم‌های تستی" # برچسب آزمایشی
+    folder: "_test_items" # یک پوشه آزمایشی (نیازی نیست از قبل وجود داشته باشد)
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
