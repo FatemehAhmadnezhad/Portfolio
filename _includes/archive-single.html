@@ -1,9 +1,11 @@
+{% comment %} --- تعیین متغیر 'teaser' برای تصویر پیش‌نمایش --- {% endcomment %}
 {% if post.header.teaser %}
   {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
 {% else %}
-  {% assign teaser = site.teaser %}
+  {% assign teaser = site.teaser %} {# اگر پست تیزر نداشت، از تیزر پیش‌فرض سایت (اگر در _config.yml تعریف شده باشد) استفاده کن #}
 {% endif %}
 
+{% comment %} --- تعیین متغیر 'title' برای عنوان پست --- {% endcomment %}
 {% if post.id %}
   {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
 {% else %}
@@ -12,11 +14,17 @@
 
 <div class="{{ include.type | default: 'list' }}__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"{% if post.locale %} lang="{{ post.locale }}"{% endif %}>
+    
+    {% comment %} --- نمایش تصویر تیزر: فقط اگر نوع نمایش 'grid' باشد و تیزر وجود داشته باشد --- {% endcomment %}
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
-        <img src="{{ teaser | relative_url }}" alt="">
+        <a href="{{ post.url | relative_url }}" rel="permalink">
+          <img src="{{ teaser | relative_url }}" alt="{{ title | strip_html | escape | default: 'تصویر پیش‌نمایش' }}">
+        </a>
       </div>
     {% endif %}
+
+    {% comment %} --- نمایش عنوان پست (همیشه نمایش داده می‌شود) --- {% endcomment %}
     <h2 class="archive__item-title no_toc" itemprop="headline">
       {% if post.link %}
         <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
@@ -24,7 +32,18 @@
         <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
       {% endif %}
     </h2>
-    {% include page__meta.html type=include.type %}
-    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
+
+    {% comment %} --- نمایش متادیتا (تاریخ، دسته‌بندی و ...): فقط زمانی که نوع نمایش 'grid' نباشد --- {% endcomment %}
+    {% unless include.type == "grid" %}
+      {% include page__meta.html type=include.type %}
+    {% endunless %}
+
+    {% comment %} --- نمایش خلاصه پست: فقط زمانی که نوع نمایش 'grid' نباشد و خلاصه وجود داشته باشد --- {% endcomment %}
+    {% unless include.type == "grid" %}
+      {% if post.excerpt %}
+        <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>
+      {% endif %}
+    {% endunless %}
+    
   </article>
 </div>
