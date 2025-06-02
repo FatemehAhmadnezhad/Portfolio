@@ -1,8 +1,17 @@
-/* در فایل CSS سفارشی شما */
-.page__entries .grid__item .archive__item-excerpt { /* پنهان کردن خلاصه پست */
+/* در فایل _sass/custom/_my-custom-styles.scss */
+
+/* پنهان کردن خلاصه پست */
+.page__entries .grid__item .archive__item-excerpt {
   display: none;
 }
 
-.page__entries .grid__item .page__meta { /* پنهان کردن بخش متادیتا (تاریخ، دسته‌بندی و غیره) */
+/* پنهان کردن بخش متادیتا */
+.page__entries .grid__item .page__meta,
+.page__entries .grid__item .comment__date {
   display: none;
+}
+
+/* اگر می‌خواهید فونت عنوان را هم تغییر دهید: */
+.page__entries .grid__item .archive__item-title {
+  font-size: 1.1em; /* یا اندازه دلخواه شما */
 }
