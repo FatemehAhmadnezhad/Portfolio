@@ -10,22 +10,43 @@ media_folder: "assets/images/uploads" # مسیری که تصاویر آپلود 
 public_folder: "/assets/images/uploads" # مسیری که تصاویر از طریق وب‌سایت قابل دسترسی هستند
 
 collections:
-  - name: "posts" # نام داخلی برای مجموعه پست‌ها
-    label: "نمونه کارها / پست‌ها" # برچسبی که در داشبورد نمایش داده می‌شود
-    folder: "_posts" # پوشه‌ای که فایل‌های پست در آن ذخیره می‌شوند
-    create: true # اجازه ایجاد پست جدید
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # فرمت نام فایل پست‌ها
-    fields: # فیلدهایی که برای هر پست در داشبورد نمایش داده می‌شوند
+  - name: "posts"
+    label: "نمونه کارها / پست‌ها"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
       - {label: "عنوان", name: "title", widget: "string"}
       - {label: "تاریخ انتشار", name: "date", widget: "datetime", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", timeFormat: false}
       - {label: "چیدمان", name: "layout", widget: "hidden", default: "single"}
-      - {label: "دسته‌بندی‌ها", name: "categories", widget: "list", required: false, hint: "هر دسته‌بندی در یک خط جدید یا با کاما جدا شود"}
-      - label: "هدر پست" # برای فیلدهای تو در توی header.teaser و header.image
+      - label: "دسته‌بندی اصلی برای پوشه تصاویر" # فیلد جدید
+        name: "image_folder_category"
+        widget: "string"
+        hint: "نام پوشه‌ای که تصاویر این پست در آن آپلود می‌شوند (مثلاً: infographics, posters, logos). لطفاً انگلیسی، با حروف کوچک و بدون فاصله بنویسید. اگر فاصله لازم است از خط تیره (-) استفاده کنید."
+        pattern: ['^[a-z0-9-]+$', "لطفاً فقط از حروف کوچک انگلیسی، اعداد و خط تیره استفاده کنید."]
+      - label: "سایر دسته‌بندی‌ها (برای نمایش)" # فیلد قبلی دسته‌بندی‌ها
+        name: "categories"
+        widget: "list"
+        required: false
+        hint: "دسته‌بندی‌هایی که برای نمایش پست استفاده می‌شوند. هر دسته‌بندی در یک خط جدید یا با کاما جدا شود. می‌توانید دسته‌بندی اصلی بالا را هم اینجا تکرار کنید."
+      - label: "هدر پست"
         name: "header"
         widget: "object"
         fields:
-          - {label: "تصویر تیزر (برای لیست‌ها)", name: "teaser", widget: "image", required: false, hint: "تصویر کوچکتر برای نمایش در لیست‌ها. ابتدا در بخش رسانه آپلود و سپس انتخاب کنید."}
-          - {label: "تصویر اصلی (برای صفحه پست)", name: "image", widget: "image", required: false, hint: "تصویر بزرگتر که در بالای صفحه پست نمایش داده می‌شود."}
+          - label: "تصویر تیزر (برای لیست‌ها)"
+            name: "teaser"
+            widget: "image"
+            media_folder: "assets/images/portfolio/{{fields.image_folder_category}}" # استفاده از فیلد جدید
+            public_folder: "/assets/images/portfolio/{{fields.image_folder_category}}" # استفاده از فیلد جدید
+            required: false
+            hint: "تصویر کوچکتر برای نمایش در لیست‌ها. ابتدا این پست را ذخیره کنید، سپس تصویر را در بخش رسانه با توجه به مسیر بالا آپلود و اینجا انتخاب کنید."
+          - label: "تصویر اصلی (برای صفحه پست)"
+            name: "image"
+            widget: "image"
+            media_folder: "assets/images/portfolio/{{fields.image_folder_category}}" # استفاده از فیلد جدید
+            public_folder: "/assets/images/portfolio/{{fields.image_folder_category}}" # استفاده از فیلد جدید
+            required: false
+            hint: "تصویر بزرگتر که در بالای صفحه پست نمایش داده می‌شود. ابتدا این پست را ذخیره کنید، سپس تصویر را در بخش رسانه با توجه به مسیر بالا آپلود و اینجا انتخاب کنید."
           - {label: "کپشن تصویر اصلی (اختیاری)", name: "caption", widget: "string", required: false}
       - {label: "خلاصه (اختیاری برای لیست‌ها)", name: "excerpt", widget: "text", required: false}
       - {label: "محتوای اصلی", name: "body", widget: "markdown"}
