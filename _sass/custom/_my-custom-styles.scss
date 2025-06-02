@@ -2,9 +2,8 @@
 
 /* پنهان کردن خلاصه پست */
 .page__entries .grid__item .archive__item-excerpt {
-  display: none;
+  display: none !important;
 }
-
 /* پنهان کردن بخش متادیتا */
 .page__entries .grid__item .page__meta,
 .page__entries .grid__item .comment__date {
