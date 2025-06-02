@@ -1,10 +1,9 @@
-# محتوای اولیه برای admin/config.yml - این را در قدم‌های بعدی تکمیل می‌کنیم
 backend:
   name: github
   repo: "FatemehAhmadnezhad/Portfolio"
-  branch: master # یا main، مطمئن شوید نام شاخه اصلی شما صحیح است
+  branch: master
   auth_type: github
-  app_id: Ov23liEmdIM9fK8gTMBt # Client ID شما که از گیت‌هاب گرفتید
+  app_id: Ov23liEmdIM9fK8gTMBt
 
 media_folder: "assets/images/uploads" # مسیری که تصاویر آپلود شده در مخزن ذخیره می‌شوند
 public_folder: "/assets/images/uploads" # مسیری که تصاویر از طریق وب‌سایت قابل دسترسی هستند
