@@ -7,14 +7,11 @@ backend:
 
 # ... (بخش backend شما در اینجا) ...
 
-media_folder: "assets/images/uploads"
-public_folder: "/assets/images/uploads"
+  media_folder: "assets/images/uploads"
+  public_folder: "/assets/images/uploads"
 
-media_library: # این بخش برای رفع خطای قبلی media_library اضافه شده بود
-  name: git   # فقط نام کتابخانه را مشخص می‌کنیم
-
-collections:
-  # ... (بقیه تنظیمات collections شما در اینجا) ...
+  media_library: # این بخش برای رفع خطای قبلی media_library اضافه شده بود
+    name: git   # فقط نام کتابخانه را مشخص می‌کنیم
 collections:
   - name: "posts" # نام داخلی برای این مجموعه
     label: "نمونه کارها / پست‌ها" # برچسبی که در داشبورد نمایش داده می‌شود
