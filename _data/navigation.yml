@@ -1,17 +1,12 @@
 # main links
 main:
-  - title: "صفحه اصلی"
-    url: /  # لینک به صفحه اصلی سایت شما
-
-  - title: "نمونه کارها"
-    url: /portfolio/ # لینک به صفحه لیست نمونه‌کارهای شما (مطمئن شوید این صفحه را ساخته‌اید)
-
-  # - title: "درباره من"
-    # url: /about/     # لینک به صفحه درباره من (باید این صفحه را بسازید)
-
-  # مثال‌هایی برای لینک‌های بیشتر (در صورت نیاز از حالت کامنت خارج کرده و آدرس‌ها را تنظیم کنید):
-  # - title: "وبلاگ"
-  #   url: /blog/
-
-  # - title: "تماس با من"
-  #   url: /contact/
+  - title: "Quick-Start Guide"
+    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  # - title: "About"
+  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
