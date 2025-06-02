@@ -125,6 +125,51 @@ author:
     - label: "09337213591" # شماره تماس شما
       icon: "fas fa-fw fa-phone"
       url: "tel:09337213591"
+      # شروع لیست مهارت‌ها
+    # اگر راهکار دوم را برای عنوان Skills انتخاب کردید، آن را اینجا قرار دهید:
+    - label: "Skills"
+      # icon: "fas fa-star"
+      url: "#"
+    - label: "Illustrator"
+      icon: "fas fa-bezier-curve" # آیکون کلی برای طراحی وکتور
+      url: "#"
+    - label: "Photoshop"
+      icon: "fas fa-image" # آیکون کلی برای ویرایش تصویر
+      url: "#"
+    - label: "Premiere Pro" # معمولا منظور از Premiere، نسخه Pro است
+      icon: "fas fa-film" # آیکون برای ویرایش ویدیو
+      url: "#"
+    - label: "After Effects"
+      icon: "fas fa-magic" # آیکون برای جلوه‌های ویژه و موشن گرافیک
+      url: "#"
+    - label: "Figma"
+      icon: "fab fa-figma" # آیکون رسمی فیگما
+      url: "#"
+    - label: "InDesign"
+      icon: "fas fa-book-open" # آیکون برای صفحه‌آرایی و نشر
+      url: "#"
+    - label: "Storyline" # (Articulate Storyline)
+      icon: "fas fa-chalkboard-teacher" # آیکون مرتبط با آموزش الکترونیکی
+      url: "#"
+    - label: "Unity"
+      icon: "fab fa-unity" # آیکون رسمی یونیتی
+      url: "#"
+    - label: "Camtasia"
+      icon: "fas fa-video" # آیکون برای ضبط و ویرایش ویدیو (مشابه Premiere)
+      url: "#"
+    - label: "Python"
+      icon: "fab fa-python" # آیکون رسمی پایتون
+      url: "#"
+    - label: "SQL"
+      icon: "fas fa-database" # آیکون برای پایگاه داده
+      url: "#"
+    - label: "ICDL"
+      icon: "fas fa-certificate" # آیکون برای گواهینامه یا مهارت کامپیوتری
+      url: "#"
+
+
+
+      # --------------
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
