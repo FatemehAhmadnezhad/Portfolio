@@ -320,20 +320,7 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
-#----------------------------------------------------
-navigation:
-  - title: صفحه اصلی
-    url: /Portfolio/
-  - title: درباره من
-    url: /Portfolio/about/
-  - title: نمونه کارها
-    dropdown:
-      - title: پوستر
-        url: /Portfolio/posters/ # یا هر لینکی که برای صفحه‌ی پوسترها در نظر می‌گیرید
-      - title: لوگو
-        url: /Portfolio/logos/
-      - title: طراحی وب
-        url: /Portfolio/web-design/
+
 #----------------------------------------------------
 # Collections (این بخش را اضافه کنید برای مدیریت نمونه کارها) ### تغییر یا افزودن ###
 collections:
