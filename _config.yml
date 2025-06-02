@@ -117,11 +117,13 @@ author:
   avatar           : "/assets/images/avatar.png"
   bio              : "فاطمه احمدنژاد، طراح گرافیک با ۴ سال تجربه در طراحی پوستر، نشریه و پروژه‌های چاپی و دیجیتال. در این مسیر خودآموخته، با نرم‌افزارهایی چون Illustrator، Photoshop، InDesign و Figma به خلق آثاری کاربردی، زیباشناسانه و معنا‌محور پرداخته‌ام. طراحی برای من نه‌فقط یک مهارت، بلکه روشی برای فکر کردن و ارتباط برقرار کردن است."
   location         : "البرز - کرج"
-  email            :  "fatemehahmadnezhad.sh@gmail.com"
+  # email            :  "fatemehahmadnezhad.sh@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "fatemehahmadnezhad.sh@gmail.com"
+      url: "fatemehahmadnezhad.sh@gmail.com"
+    - label: "09337213591" # شماره تماس شما
+      icon: "fas fa-fw fa-phone"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
