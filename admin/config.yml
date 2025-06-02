@@ -1,4 +1,72 @@
 backend:
   name: github
   repo: "FatemehAhmadnezhad/Portfolio"
-  branch: master # اطمینان حاصل کنید که این نام شاخه اصلی شماست (master یا main)
+  branch: master # اطمینان حاصل کنید که این نام شاخه اصلی شماست
+  auth_type: github
+  app_id: "Ov23liEmdIM9fK8gTMBt" # Client ID شما
+
+# -----------------------------------------------------------------------------
+# بخش‌های ضروری که در پیام خطا به آن‌ها اشاره شده بود:
+# -----------------------------------------------------------------------------
+
+# مسیر پیش‌فرض برای آپلود فایل‌های رسانه‌ای (مانند تصاویر)
+# این مسیر برای زمانی است که تصویری را مستقیماً در ویرایشگر Markdown اضافه می‌کنید
+# یا اگر ویجت تصویر خاصی مسیر خودش را نداشته باشد.
+media_folder: "assets/images/uploads"
+
+# مسیری که فایل‌های رسانه‌ای از طریق وب‌سایت قابل دسترسی هستند (از ریشه سایت).
+# Decap CMS از این مسیر برای پیش‌نمایش تصاویر در پنل مدیریت استفاده می‌کند.
+public_folder: "/assets/images/uploads"
+
+# (اختیاری، اما برای رفع خطای احتمالی media_library می‌توانید این بخش را اضافه کنید)
+# این بخش به Decap CMS می‌گوید که از کتابخانه داخلی خودش برای مدیریت آپلودها استفاده کند.
+media_library:
+  name: git # یا uploadcare یا cloudinary اگر از آن‌ها استفاده می‌کنید؛ برای آپلود مستقیم در مخزن، git مناسب است
+  config:
+    # تنظیمات خاصی برای media_library: git معمولاً نیاز نیست
+    # اما اگر از uploadcare استفاده می‌کنید، باید publicKey را اینجا قرار دهید:
+    # publicKey: YOUR_UPLOADCARE_PUBLIC_KEY
+
+collections:
+  - name: "posts" # نام داخلی برای این مجموعه
+    label: "نمونه کارها / پست‌ها" # برچسبی که در داشبورد نمایش داده می‌شود
+    folder: "_posts" # پوشه‌ای که فایل‌های Markdown این مجموعه در آن ذخیره می‌شوند
+    create: true # اجازه ایجاد آیتم‌های جدید
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # فرمت نام فایل برای آیتم‌های جدید
+    fields: # فیلدهایی که برای هر آیتم در این مجموعه تعریف می‌شوند
+      - {label: "عنوان", name: "title", widget: "string"}
+      - {label: "تاریخ انتشار", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false}
+      - {label: "چیدمان", name: "layout", widget: "hidden", default: "single"}
+      - label: "دسته‌بندی برای پوشه تصاویر"
+        name: "image_folder_category"
+        widget: "string"
+        hint: "نام انگلیسی و با حروف کوچک برای پوشه تصاویر (مثلاً: infographics, posters, logos). از خط تیره (-) بجای فاصله استفاده کنید."
+        pattern: ['^[a-z0-9-]+$', "فقط حروف کوچک انگلیسی، اعداد و خط تیره مجاز است."]
+      - label: "دسته‌بندی‌ها (برای نمایش)"
+        name: "categories"
+        widget: "list"
+        required: false
+        hint: "دسته‌بندی‌های نمایشی پست. هر کدام در یک خط جدید یا با کاما جدا شوند."
+      - label: "هدر پست"
+        name: "header"
+        widget: "object"
+        fields:
+          - label: "تصویر تیزر (برای لیست‌ها)"
+            name: "teaser"
+            widget: "image"
+            # مسیرهای آپلود و نمایش برای این فیلد خاص:
+            media_folder: "assets/images/portfolio/{{fields.image_folder_category}}"
+            public_folder: "/assets/images/portfolio/{{fields.image_folder_category}}"
+            required: false
+            hint: "ابتدا فیلد 'دسته‌بندی برای پوشه تصاویر' را پر کرده و پست را (حتی به صورت پیش‌نویس) یکبار ذخیره کنید، سپس تصویر را آپلود یا انتخاب نمایید."
+          - label: "تصویر اصلی (برای صفحه پست)"
+            name: "image"
+            widget: "image"
+            # مسیرهای آپلود و نمایش برای این فیلد خاص:
+            media_folder: "assets/images/portfolio/{{fields.image_folder_category}}"
+            public_folder: "/assets/images/portfolio/{{fields.image_folder_category}}"
+            required: false
+            hint: "ابتدا فیلد 'دسته‌بندی برای پوشه تصاویر' را پر کرده و پست را (حتی به صورت پیش‌نویس) یکبار ذخیره کنید، سپس تصویر را آپلود یا انتخاب نمایید."
+          - {label: "کپشن تصویر اصلی (اختیاری)", name: "caption", widget: "string", required: false}
+      - {label: "خلاصه (اختیاری)", name: "excerpt", widget: "text", required: false}
+      - {label: "محتوای اصلی", name: "body", widget: "markdown"}
