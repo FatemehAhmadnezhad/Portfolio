@@ -1,20 +1,4 @@
-# Minimal Test Config - June 2, 2025 - (ساعت فعلی خودتان را اینجا بنویسید)
 backend:
   name: github
   repo: "FatemehAhmadnezhad/Portfolio"
   branch: master # اطمینان حاصل کنید که این نام شاخه اصلی شماست (master یا main)
-  auth_type: github
-  app_id: "Ov23liEmdIM9fK8gTMBt" # Client ID شما
-
-# در این نسخه آزمایشی، موقتاً media_folder و public_folder سراسری را حذف می‌کنیم
-# media_folder: "assets/images/uploads"
-# public_folder: "/assets/images/uploads"
-
-collections:
-  - name: "test_collection" # یک نام آزمایشی ساده
-    label: "آیتم‌های تستی" # برچسب آزمایشی
-    folder: "_test_items" # یک پوشه آزمایشی (نیازی نیست از قبل وجود داشته باشد)
-    create: true
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
