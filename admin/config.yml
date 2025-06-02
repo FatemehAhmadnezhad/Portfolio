@@ -38,19 +38,17 @@ collections:
           - label: "تصویر تیزر (برای لیست‌ها)"
             name: "teaser"
             widget: "image"
-            media_folder: "assets/images/portfolio/{{fields.image_folder_category}}"
-            public_folder: "/assets/images/portfolio/{{fields.image_folder_category}}"
+            media_folder: "assets/images/portfolio/{{image_folder_category}}" # تغییر در اینجا
+            public_folder: "/assets/images/portfolio/{{image_folder_category}}" # تغییر در اینجا
             required: false
-            hint: "تصویر کوچکتر برای نمایش در لیست‌ها. ابتدا این پست را ذخیره کنید، سپس تصویر را در بخش رسانه با توجه به مسیر بالا آپلود و اینجا انتخاب کنید."
-
+            hint: "..."
           - label: "تصویر اصلی (برای صفحه پست)"
             name: "image"
             widget: "image"
-            media_folder: "assets/images/portfolio/{{fields.image_folder_category}}"
-            public_folder: "/assets/images/portfolio/{{fields.image_folder_category}}"
+            media_folder: "assets/images/portfolio/{{image_folder_category}}" # تغییر در اینجا
+            public_folder: "/assets/images/portfolio/{{image_folder_category}}" # تغییر در اینجا
             required: false
-            hint: "تصویر بزرگ‌تر که در بالای صفحه پست نمایش داده می‌شود. ابتدا این پست را ذخیره کنید، سپس تصویر را در بخش رسانه با توجه به مسیر بالا آپلود و اینجا انتخاب کنید."
-
+            hint: "..."
           - { label: "کپشن تصویر اصلی (اختیاری)", name: "caption", widget: "string", required: false }
-
+    
       - { label: "خلاصه (اختیاری برای لیست‌ها)", name: "excerpt", widget: "text", required: false }
