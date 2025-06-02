@@ -17,7 +17,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "عنوان", name: "title", widget: "string"}
-      - {label: "تاریخ انتشار", name: "date", widget: "datetime", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", timeFormat: false}
+      - {label: "تاریخ انتشار", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false}
       - {label: "چیدمان", name: "layout", widget: "hidden", default: "single"}
       - label: "دسته‌بندی اصلی برای پوشه تصاویر" # فیلد جدید
         name: "image_folder_category"
