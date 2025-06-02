@@ -1,12 +1,9 @@
-# backend:
-#   name: github
-#   repo: "FatemehAhmadnezhad/Portfolio"
-#   branch: master
-#   auth_type: implicit
-#   # site_domain: FatemehAhmadnezhad.github.io  # اختیاری
 backend:
-  name: git-gateway
-  branch: master
+  name: github
+  repo: "FatemehAhmadnezhad/Portfolio"
+  branch: master # شما تأیید کردید که نام شاخه master است
+  auth_type: implicit
+  # در این روش به app_id، site_domain، base_url یا auth_endpoint نیازی نیست.
 
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
