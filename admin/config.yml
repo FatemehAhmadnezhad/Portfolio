@@ -1,13 +1,10 @@
 # محتوای اولیه برای admin/config.yml - این را در قدم‌های بعدی تکمیل می‌کنیم
 backend:
   name: github
-  repo: "FatemehAhmadnezhad/Portfolio" # نام کاربری و مخزن شما
+  repo: "FatemehAhmadnezhad/Portfolio"
   branch: master # یا main، مطمئن شوید نام شاخه اصلی شما صحیح است
-  auth_type: github # <<< اینجا را به 'github' تغییر دهید
-  app_id: Ov23liEmdIM9fK8gTMBt # <<< Client ID که از گیت‌هاب کپی کردید را اینجا قرار دهید
-  base_url: https://api.github.com # (اختیاری، اما برای وضوح خوب است) آدرس API گیت‌هاب
-  auth_endpoint: oauth/authorize # (اختیاری، اما برای وضوح خوب است) نقطه پایانی احراز هویت گیت‌هاب
-  # site_domain دیگر برای این روش لازم نیست و می‌توانید آن را حذف کنید یا کامنت نگه دارید.
+  auth_type: github
+  app_id: Ov23liEmdIM9fK8gTMBt # Client ID شما که از گیت‌هاب گرفتید
 
 media_folder: "assets/images/uploads" # مسیری که تصاویر آپلود شده در مخزن ذخیره می‌شوند
 public_folder: "/assets/images/uploads" # مسیری که تصاویر از طریق وب‌سایت قابل دسترسی هستند
