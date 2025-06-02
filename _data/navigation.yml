@@ -11,21 +11,3 @@
 #   # - title: "Sitemap"
 #   #   url: /sitemap/
 # ---------------------------------------
-# _data/navigation.yml
-
-main:
-  - title: "صفحه اصلی"
-    url: / # یا /Portfolio/ اگر baseurl تنظیم نشده
-  - title: "درباره من"
-    url: /about/ # یا /Portfolio/about/
-  - title: "نمونه کارها"
-    children:
-      - title: "پوستر"
-        url: /portfolio/posters/ # یا /Portfolio/portfolio/posters/
-      - title: "لوگو"
-        url: /portfolio/logos/ # یا /Portfolio/portfolio/logos/
-      - title: "طراحی وب" # مثال بیشتر
-        url: /portfolio/web-design/ # یا /Portfolio/portfolio/web-design/
-  # می‌توانید آیتم‌های دیگری هم به منوی اصلی اضافه کنید
-  # - title: "بلاگ"
-  #   url: /year-archive/
