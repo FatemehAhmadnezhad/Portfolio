@@ -127,8 +127,8 @@ author:
       url: "tel:09337213591"
       # شروع لیست مهارت‌ها
     # اگر راهکار دوم را برای عنوان Skills انتخاب کردید، آن را اینجا قرار دهید:
-    - label: "Skills"
-      # icon: "fas fa-star"
+    - label: "مهارت های نرم افزاری"
+      icon: "fas fa-star"
       url: "#"
     - label: "Illustrator"
       icon: "fas fa-bezier-curve" # آیکون کلی برای طراحی وکتور
