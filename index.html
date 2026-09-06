@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>پرتفولیو نمونه‌کار طراح گرافیک</title>
+    <title>پرتفولیو و رزومه کامل | فاطمه احمدنژاد</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Vazirmatn -->
@@ -100,6 +100,14 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #4f46e5;
         }
+
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.8; }
+        }
+        .animate-glow {
+            animation: pulseGlow 4s infinite ease-in-out;
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-brand-500 selection:text-white">
@@ -108,23 +116,36 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="#" onclick="showHomePage(event)" class="flex items-center gap-3 group">
                 <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-400 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-brand-500/30 group-hover:rotate-12 transition-transform duration-300">
-                    آ
+                    ف
                 </div>
                 <div>
-                    <span class="font-bold text-lg tracking-tight block text-white">آرمین رضایی</span>
-                    <span class="text-xs text-slate-400 block">طراح گرافیک و هویت بصری</span>
+                    <span class="font-bold text-lg tracking-tight block text-white">فاطمه احمدنژاد</span>
+                    <span class="text-xs text-slate-400 block">طراح گرافیک و توسعه‌دهنده</span>
                 </div>
             </a>
 
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="#" onclick="showHomePage(event)" class="text-white hover:text-brand-500 transition-colors flex items-center gap-2">
-                    <i class="fa-solid fa-border-all"></i> نمونه‌کارها
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+    <!-- نمونه‌کارها -->
+                <a href="#" onclick="showHomePage(event)" class="text-white hover:text-brand-400 transition-colors flex items-center gap-2 px-3 py-1.5 rounded-xl hover:bg-slate-800/50">
+                    <i class="fa-solid fa-border-all text-brand-400"></i> نمونه‌کارها
                 </a>
-                <a href="#about" onclick="showHomePage(event); scrollToSection('about')" class="text-slate-300 hover:text-white transition-colors">درباره من</a>
-                <a href="#contact" onclick="showHomePage(event); scrollToSection('contact')" class="text-slate-300 hover:text-white transition-colors">تماس با من</a>
+                <!-- درباره من -->
+                <a href="#about" onclick="showHomePage(event); scrollToSection('about')" class="text-slate-300 hover:text-brand-400 transition-colors flex items-center gap-2 px-3 py-1.5 rounded-xl hover:bg-slate-800/50">
+                    <i class="fa-solid fa-user text-brand-400"></i> درباره من
+                </a>
+
+                <!-- رزومه من -->
+                <a href="#" onclick="showResumePage(event)" class="text-slate-300 hover:text-brand-400 transition-colors flex items-center gap-2 px-3 py-1.5 rounded-xl hover:bg-slate-800/50">
+                    <i class="fa-solid fa-file-lines text-brand-400"></i> رزومه من
+                </a>
+
+                <!-- تماس با من -->
+                <a href="#contact" onclick="showHomePage(event); scrollToSection('contact')" class="text-slate-300 hover:text-brand-400 transition-colors flex items-center gap-2 px-3 py-1.5 rounded-xl hover:bg-slate-800/50">
+                    <i class="fa-solid fa-envelope text-brand-400"></i> تماس با من
+                </a>
             </nav>
 
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-3">
                 <a href="#contact" onclick="showHomePage(event); scrollToSection('contact')" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white font-medium text-sm shadow-lg shadow-brand-600/25 transition-all duration-300 hover:shadow-brand-600/40 hover:-translate-y-0.5">
                     سفارش پروژه
                 </a>
@@ -134,7 +155,6 @@
 
     <main class="flex-grow">
         
-        <!-- HOME PAGE -->
         <div id="home-page" class="page-view page-active">
             
             <section class="relative py-20 overflow-hidden">
@@ -142,23 +162,45 @@
                 <div class="absolute top-20 left-10 w-72 h-72 bg-purple-600/15 rounded-full blur-3xl pointer-events-none"></div>
 
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-sm font-medium mb-6">
-                        <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
-                        آماده پذیرش پروژه‌های جدید گرافیک
-                    </span>
+
                     <h1 class="text-4xl sm:text-6xl font-black text-white leading-tight mb-6">
-                        خلق <span class="bg-gradient-to-r from-brand-500 via-indigo-300 to-purple-400 bg-clip-text text-transparent">هویت بصری</span> منحصر‌به‌فرد
+                        تلفیق خلاقیت <span class="bg-gradient-to-r from-brand-500 via-indigo-300 to-purple-400 bg-clip-text text-transparent">گرافیک و نرم‌افزار</span>
                     </h1>
                     <p class="max-w-2xl mx-auto text-slate-400 text-base sm:text-lg leading-relaxed mb-10">
-                        طراحی حرفه‌ای برندینگ، بسته‌بندی، پوستر و رابط‌کاربری با تمرکز بر انتقال سریع پیام و ایجاد احساس ماندگار در مخاطب.
+                        طراحی حرفه‌ای هویت بصری، لوگو، برندینگ و توسعه نرم‌افزارهای کاربردی با ترکیب نگاه هنری و ساختار مهندسی.
                     </p>
 
-                    <div class="flex flex-wrap justify-center gap-2 sm:gap-3 max-w-3xl mx-auto mb-12">
+                    <!-- دکمه‌های فیلتر دسته‌بندی -->
+                    <div class="flex flex-wrap justify-center gap-2 sm:gap-3 max-w-3xl mx-auto mb-8">
                         <button onclick="filterProjects('all')" class="filter-btn active-filter px-5 py-2.5 rounded-xl text-sm font-medium transition-all bg-brand-600 text-white shadow-lg shadow-brand-600/30" data-filter="all">همه پروژه‌ها</button>
                         <button onclick="filterProjects('branding')" class="filter-btn px-5 py-2.5 rounded-xl text-sm font-medium transition-all bg-dark-800 text-slate-300 hover:text-white hover:bg-dark-700" data-filter="branding">هویت بصری و برندینگ</button>
                         <button onclick="filterProjects('packaging')" class="filter-btn px-5 py-2.5 rounded-xl text-sm font-medium transition-all bg-dark-800 text-slate-300 hover:text-white hover:bg-dark-700" data-filter="packaging">بسته‌بندی</button>
                         <button onclick="filterProjects('poster')" class="filter-btn px-5 py-2.5 rounded-xl text-sm font-medium transition-all bg-dark-800 text-slate-300 hover:text-white hover:bg-dark-700" data-filter="poster">پوستر و تبلیغات</button>
-                        <button onclick="filterProjects('ui')" class="filter-btn px-5 py-2.5 rounded-xl text-sm font-medium transition-all bg-dark-800 text-slate-300 hover:text-white hover:bg-dark-700" data-filter="ui">رابط کاربری (UI)</button>
+                        <button onclick="filterProjects('ui')" class="filter-btn px-5 py-2.5 rounded-xl text-sm font-medium transition-all bg-dark-800 text-slate-300 hover:text-white hover:bg-dark-700" data-filter="ui">رابط کاربری و نرم‌افزار</button>
+                    </div>
+
+                    <!-- بخش کنترل‌های مرتب‌سازی و تغییر حالت نمایش -->
+                    <div class="flex flex-wrap items-center justify-between gap-4 max-w-7xl mx-auto pt-4 border-t border-slate-800/80">
+                        <div class="flex items-center gap-2">
+                            <label for="sort-order" class="text-xs text-slate-400 font-medium">مرتب‌سازی بر اساس:</label>
+                            <div class="relative">
+                                <select id="sort-order" onchange="changeSortOrder(this.value)" class="appearance-none bg-dark-800 border border-slate-700 hover:border-brand-500 text-slate-200 text-xs rounded-xl px-3 py-2 pl-8 focus:outline-none focus:border-brand-500 transition-colors cursor-pointer font-medium">
+                                    <option value="featured" selected>منتخب</option>
+                                    <option value="newest">جدیدترین</option>
+                                    <option value="oldest">قدیمی‌ترین</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down absolute left-2.5 top-1/2 -translate-y-1/2 text-[10px] text-slate-400 pointer-events-none"></i>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center bg-dark-800 p-1 rounded-xl border border-slate-800">
+                            <button id="view-mode-projects" onclick="setViewMode('projects')" class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all bg-brand-600 text-white shadow">
+                                <i class="fa-solid fa-grid-2"></i> پروژه‌ها
+                            </button>
+                            <button id="view-mode-gallery" onclick="setViewMode('gallery')" class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all text-slate-400 hover:text-white">
+                                <i class="fa-solid fa-images"></i> گالری
+                            </button>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -168,35 +210,48 @@
                 </div>
             </section>
 
-            <section id="about" class="py-20 bg-dark-800/50 border-y border-slate-800">
+            <section id="about" class="py-20 bg-dark-800/50 border-y border-slate-800 relative">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="glass-card rounded-3xl p-8 md:p-12">
+                    <div class="glass-card rounded-3xl p-8 md:p-12 relative overflow-hidden">
                         <div class="flex flex-col md:flex-row items-center md:items-start gap-8 lg:gap-12">
-                            <!-- Compact Avatar Container -->
                             <div class="relative shrink-0">
                                 <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-brand-600 to-purple-600 opacity-50 blur-lg"></div>
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="آرمین رضایی" class="relative rounded-2xl w-36 h-36 sm:w-44 sm:h-44 object-cover shadow-2xl border-2 border-slate-700">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="فاطمه احمدنژاد" class="relative rounded-2xl w-36 h-36 sm:w-44 sm:h-44 object-cover shadow-2xl border-2 border-slate-700">
                             </div>
 
                             <div class="flex-grow text-center md:text-right">
                                 <span class="text-brand-400 font-bold text-xs sm:text-sm tracking-widest uppercase mb-1 block">درباره من</span>
-                                <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-4">آرمین رضایی؛ طراح و مدیر هنری</h2>
+                                <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-3">فاطمه احمدنژاد؛ طراح و توسعه‌دهنده</h2>
                                 <p class="text-slate-300 leading-relaxed mb-6 text-sm sm:text-base max-w-3xl">
-                                    با بیش از ۷ سال تجربه در زمینه طراحی گرافیک، برندینگ و خلق زبان بصری برای کسب‌وکارهای نوپا و سازمان‌های بزرگ. هدف من ترکیب هنر مدرن با نیازهای تجاری بازار برای ساخت ایده‌های ماندگار است.
+                                    دانش‌آموخته مهندسی کامپیوتر با علاقه فراوان به خلق ارزش در دو دنیای هنر گرافیک و نرم‌افزار. دارای سابقه طراحی هویت بصری، لوگو، بسته‌بندی و همچنین توسعه اپلیکیشن‌های موبایل و دسکتاپ با تکنولوژی‌های مدرن مانند Flutter و #C.
                                 </p>
                                 
+                                <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 mb-8">
+                                    <!-- دکمه شکیل رزومه من -->
+                                    <button onclick="showResumePage(event)" class="px-6 py-3 rounded-2xl bg-gradient-to-r from-brand-600 via-indigo-600 to-purple-600 hover:from-brand-500 hover:to-purple-500 text-white font-bold text-sm shadow-xl shadow-brand-600/30 transition-all duration-300 hover:scale-105 flex items-center gap-3 group border border-indigo-400/30">
+                                        <i class="fa-solid fa-file-pdf text-lg group-hover:rotate-12 transition-transform"></i>
+                                        <span >رزومه من</span>
+                                        <i class="fa-solid fa-arrow-left text-xs transition-transform group-hover:-translate-x-1"></i>
+                                    </button>
+
+                                    <a href="#contact" onclick="scrollToSection('contact')" class="px-6 py-3 rounded-2xl bg-dark-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold text-sm transition-all flex items-center gap-2">
+                                        <i class="fa-regular fa-envelope text-brand-400"></i>
+                                        ارتباط با من
+                                    </a>
+                                </div>
+
                                 <div class="grid grid-cols-3 gap-4 border-t border-slate-700/60 pt-6 max-w-lg">
                                     <div class="bg-dark-900/40 p-3 rounded-xl border border-slate-800">
-                                        <span class="block text-xl font-black text-brand-400">+۵۰</span>
-                                        <span class="text-xs text-slate-400">پروژه موفق</span>
+                                        <span class="block text-xl font-black text-brand-400">+۴۰</span>
+                                        <span class="text-xs text-slate-400">پروژه گرافیک و برندینگ</span>
                                     </div>
                                     <div class="bg-dark-900/40 p-3 rounded-xl border border-slate-800">
-                                        <span class="block text-xl font-black text-brand-400">+۳۰</span>
-                                        <span class="text-xs text-slate-400">مشتری راضی</span>
+                                        <span class="block text-xl font-black text-brand-400">+۱۵</span>
+                                        <span class="text-xs text-slate-400">پروژه توسعه نرم‌افزار</span>
                                     </div>
                                     <div class="bg-dark-900/40 p-3 rounded-xl border border-slate-800">
-                                        <span class="block text-xl font-black text-brand-400">۷ سال</span>
-                                        <span class="text-xs text-slate-400">سابقه کار</span>
+                                        <span class="block text-xl font-black text-brand-400">۴+ سال</span>
+                                        <span class="text-xs text-slate-400">تجربه تخصصی</span>
                                     </div>
                                 </div>
                             </div>
@@ -208,8 +263,8 @@
             <section id="contact" class="py-20">
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 class="text-3xl font-bold text-white mb-4">آیا پروژه‌ای در ذهن دارید؟</h2>
-                    <p class="text-slate-400 mb-8">بیایید درباره ایده شما صحبت کنیم و آن را به یک اثر هنری ماندگار تبدیل کنیم.</p>
-                    <a href="mailto:contact@example.com" class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-lg shadow-xl shadow-brand-600/30 transition-all hover:scale-105">
+                    <p class="text-slate-400 mb-8">بیایید درباره ایده شما صحبت کنیم و آن را به یک محصول بصری یا نرم‌افزاری کارآمد تبدیل کنیم.</p>
+                    <a href="mailto:fatemeh.ahmadnezhad@example.com" class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-lg shadow-xl shadow-brand-600/30 transition-all hover:scale-105">
                         <i class="fa-regular fa-envelope"></i>
                         ارسال پیام مستقیم
                     </a>
@@ -221,7 +276,6 @@
         <div id="project-detail-page" class="page-view page-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
                 
-                <!-- Back Button -->
                 <div class="mb-8">
                     <button onclick="showHomePage(event)" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl glass-card text-slate-300 hover:text-white hover:border-brand-500/50 transition-all text-sm font-medium group">
                         <i class="fa-solid fa-arrow-right transition-transform group-hover:translate-x-1"></i>
@@ -229,7 +283,6 @@
                     </button>
                 </div>
 
-                <!-- PROJECT HEADER COMPONENT -->
                 <div class="glass-card rounded-3xl p-6 sm:p-10 mb-12 relative overflow-hidden">
                     <div class="absolute -top-20 -left-20 w-80 h-80 bg-brand-600/10 rounded-full blur-3xl pointer-events-none"></div>
                     
@@ -243,9 +296,7 @@
                         عنوان پروژه
                     </h1>
 
-                    <!-- 2-Row Header Information Grid -->
                     <div class="space-y-6 pt-6 border-t border-slate-700/50">
-                        <!-- Row 1: Client, Role, Date -->
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 bg-dark-900/50 p-5 rounded-2xl border border-slate-800">
                             <div class="flex items-center gap-3">
                                 <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center shrink-0">
@@ -262,7 +313,7 @@
                                     <i class="fa-solid fa-user-gear text-lg"></i>
                                 </div>
                                 <div>
-                                    <span class="block text-xs text-slate-400 mb-0.5">نقش طراح</span>
+                                    <span class="block text-xs text-slate-400 mb-0.5">نقش مجری</span>
                                     <span id="detail-role" class="text-sm font-bold text-slate-200">---</span>
                                 </div>
                             </div>
@@ -278,9 +329,7 @@
                             </div>
                         </div>
 
-                        <!-- Row 2: Tools, Color Palette, Quick Jump Nav -->
                         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-dark-900/50 p-5 rounded-2xl border border-slate-800 items-center">
-                            <!-- Tools (4 cols) -->
                             <div class="lg:col-span-4 flex items-center gap-3">
                                 <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center shrink-0">
                                     <i class="fa-solid fa-pen-ruler text-lg"></i>
@@ -291,17 +340,14 @@
                                 </div>
                             </div>
 
-                            <!-- Color Palette (4 cols) -->
                             <div class="lg:col-span-4 border-t lg:border-t-0 lg:border-r border-slate-800 pt-4 lg:pt-0 lg:pr-6">
                                 <span class="block text-xs text-slate-400 mb-2 font-medium flex items-center gap-1.5">
                                     <i class="fa-solid fa-palette text-brand-400"></i> پالت رنگی
                                 </span>
                                 <div id="detail-palette" class="flex flex-wrap items-center gap-2">
-                                    <!-- Dynamic Color Swatches -->
                                 </div>
                             </div>
 
-                            <!-- Quick Jump Nav Buttons (4 cols) -->
                             <div class="lg:col-span-4 border-t lg:border-t-0 lg:border-r border-slate-800 pt-4 lg:pt-0 lg:pr-6 flex flex-wrap gap-2 justify-start lg:justify-end">
                                 <a href="#section-gallery" class="px-3 py-2 rounded-xl bg-slate-800 hover:bg-brand-600 text-slate-300 hover:text-white text-xs font-semibold transition-all flex items-center gap-1.5 border border-slate-700">
                                     <i class="fa-solid fa-images"></i> گالری
@@ -316,7 +362,6 @@
                         </div>
                     </div>
 
-                    <!-- Short Description -->
                     <div class="mt-8 pt-6 border-t border-slate-700/40">
                         <h3 class="text-base font-bold text-white mb-2">خلاصه پروژه</h3>
                         <p id="detail-description" class="text-slate-300 leading-relaxed text-sm sm:text-base">
@@ -333,19 +378,14 @@
                         </h2>
                     </div>
 
-                    <!-- Main Cover Image -->
                     <div class="rounded-3xl overflow-hidden glass-card p-2 group cursor-pointer" onclick="openModal(document.getElementById('detail-main-img').src)">
                         <img id="detail-main-img" src="" alt="Main Project Preview" class="w-full h-auto max-h-[600px] object-cover rounded-2xl transition-transform duration-500 group-hover:scale-[1.01]">
                     </div>
 
-                    <!-- Row 1: 2 Images Grid -->
                     <div id="detail-gallery-row1" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- Dynamic Injection -->
                     </div>
 
-                    <!-- Row 2: 3 Images Grid (Added 3 images row) -->
                     <div id="detail-gallery-row2" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                        <!-- Dynamic Injection -->
                     </div>
                 </div>
 
@@ -354,10 +394,9 @@
                         <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center">
                             <i class="fa-solid fa-lightbulb text-xl"></i>
                         </div>
-                        <h2 class="text-2xl font-bold text-white">رویکرد طراحی (Design Approach)</h2>
+                        <h2 class="text-2xl font-bold text-white">رویکرد اجرا و پیاده‌سازی</h2>
                     </div>
                     <div id="detail-design-approach" class="prose prose-invert max-w-none text-slate-300 leading-relaxed text-sm sm:text-base space-y-4">
-                        <!-- Dynamic Approach Content -->
                     </div>
                 </div>
 
@@ -369,11 +408,9 @@
                         <h2 class="text-2xl font-bold text-white">تایپوگرافی و فونت‌ها</h2>
                     </div>
                     <div id="detail-typography" class="text-slate-300 leading-relaxed text-sm sm:text-base space-y-4">
-                        <!-- Dynamic Typography Content -->
                     </div>
                 </div>
 
-                <!-- Project Navigation Footer -->
                 <div class="border-t border-slate-800 pt-8 flex items-center justify-between">
                     <button id="prev-project-btn" onclick="navigateProject(-1)" class="flex items-center gap-3 glass-card px-5 py-3 rounded-2xl hover:border-brand-500/50 transition-all group">
                         <i class="fa-solid fa-chevron-right text-slate-400 group-hover:text-brand-500"></i>
@@ -395,9 +432,296 @@
             </div>
         </div>
 
+        <div id="resume-page" class="page-view page-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+                
+                <!-- دکمه بازگشت به پروژه‌ها -->
+                <div class="mb-8 flex items-center justify-between">
+                    <button onclick="showHomePage(event)" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl glass-card text-slate-300 hover:text-white hover:border-brand-500/50 transition-all text-sm font-medium group">
+                        <i class="fa-solid fa-arrow-right transition-transform group-hover:translate-x-1"></i>
+                        بازگشت به نمونه‌کارها
+                    </button>
+                    
+                    <button onclick="window.print()" class="px-4 py-2.5 rounded-xl bg-brand-600/20 hover:bg-brand-600 text-brand-300 hover:text-white border border-brand-500/30 transition-all text-xs font-semibold flex items-center gap-2">
+                        <i class="fa-solid fa-download"></i>
+                        دانلود فایل PDF رزومه
+                    </button>
+                </div>
+
+                <!-- 1. Header Profile Card -->
+                <div class="glass-card rounded-3xl p-6 sm:p-10 mb-8 relative overflow-hidden border border-slate-700/60">
+                    <div class="absolute -top-32 -left-32 w-96 h-96 bg-brand-600/20 rounded-full blur-3xl pointer-events-none"></div>
+                    <div class="flex flex-col lg:flex-row items-center lg:items-start gap-8 relative z-10">
+                        <div class="relative shrink-0">
+                            <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl p-1 bg-gradient-to-tr from-brand-500 via-purple-500 to-indigo-400 shadow-2xl">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="فاطمه احمدنژاد" class="w-full h-full object-cover rounded-xl">
+                            </div>
+                            <span class="absolute -bottom-2 -right-2 bg-emerald-500 text-slate-900 font-bold text-[10px] px-3 py-1 rounded-full border-2 border-dark-900 shadow">
+                                آماده همکاری
+                            </span>
+                        </div>
+
+                        <div class="flex-grow text-center lg:text-right">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+                                <div>
+                                    <h1 class="text-3xl sm:text-4xl font-black text-white mb-2">فاطمه احمدنژاد</h1>
+                                    <p class="text-brand-400 font-semibold text-lg flex items-center justify-center lg:justify-start gap-2">
+                                        <i class="fa-solid fa-laptop-code text-sm"></i>
+                                        طراح گرافیک، برندینگ و توسعه‌دهنده نرم‌افزار
+                                    </p>
+                                </div>
+                            </div>
+
+                            <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                                مهندس کامپیوتر علاقه‌مند به خلق تجربیات بصری متمایز و توسعه اپلیکیشن‌های کاربردی. با ترکیب دانش تحلیل الگوریتمی و اصول زیبایی‌شناسی گرافیک، همواره در تلاش برای ارائه راهکارهای خلاقانه و باکیفیت هستم.
+                            </p>
+
+                            <!-- اطلاعات تماس quick grid -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 pt-4 border-t border-slate-700/60 text-xs">
+                                <div class="flex items-center gap-2.5 text-slate-300 bg-dark-900/50 p-3 rounded-xl border border-slate-800">
+                                    <i class="fa-solid fa-envelope text-brand-400 text-base"></i>
+                                    <span class="truncate">fatemeh.ahmadnezhad@example.com</span>
+                                </div>
+                                <div class="flex items-center gap-2.5 text-slate-300 bg-dark-900/50 p-3 rounded-xl border border-slate-800">
+                                    <i class="fa-solid fa-location-dot text-brand-400 text-base"></i>
+                                    <span>ایران، تهران</span>
+                                </div>
+                                <div class="flex items-center gap-2.5 text-slate-300 bg-dark-900/50 p-3 rounded-xl border border-slate-800">
+                                    <i class="fa-brands fa-github text-brand-400 text-base"></i>
+                                    <span>github.com/fatemeh-ahmadnezhad</span>
+                                </div>
+                                <div class="flex items-center gap-2.5 text-slate-300 bg-dark-900/50 p-3 rounded-xl border border-slate-800">
+                                    <i class="fa-brands fa-linkedin text-brand-400 text-base"></i>
+                                    <span>linkedin.com/in/fatemeh-ahmadnezhad</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    
+                    <!-- ستون سمت راست: درباره من، سابقه کاری و تحصیلی -->
+                    <div class="lg:col-span-8 space-y-8">
+                        
+                        <!-- 2. درباره من -->
+                        <div class="glass-card rounded-3xl p-6 sm:p-8">
+                            <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-3 border-b border-slate-700/60 pb-3">
+                                <i class="fa-solid fa-user-astronaut text-brand-400"></i>
+                                درباره من (بیوگرافی حرفه‌ای)
+                            </h2>
+                            <div class="text-slate-300 text-sm leading-relaxed space-y-3">
+                                <p>
+                                    من فاطمه احمدنژاد، دانش‌آموخته رشته مهندسی کامپیوتر هستم. اشتیاق من به هنر بصری و قدرت حل مسئله در علوم کامپیوتر باعث شده مسیر حرفه‌ای خود را در نقطه تلاقی **طراحی گرافیک/برندینگ** و **توسعه نرم‌افزار** قرار دهم.
+                                </p>
+                                <p>
+                                    از طرفی با ابزارهای استاندارد طراحی گرافیک مانند Illustrator و Photoshop هویت‌های بصری مدرن، لوگو و بسته‌بندی می‌خلقم و از طرف دیگر، با مسلط بودن بر مفاهیم برنامه‌نویسی متمرکز بر Flutter و #C، ایده‌ها را به نرم‌افزارهای کاربردی تبدیل می‌کنم.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 3. سابقه تحصیلی -->
+                        <div class="glass-card rounded-3xl p-6 sm:p-8">
+                            <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-3 border-b border-slate-700/60 pb-3">
+                                <i class="fa-solid fa-graduation-cap text-brand-400"></i>
+                                سابقه تحصیلی
+                            </h2>
+
+                            <div class="relative pr-6 border-r-2 border-brand-500/30 space-y-8">
+                                <div class="relative">
+                                    <span class="absolute -right-[31px] top-1.5 w-4 h-4 rounded-full bg-brand-500 border-4 border-dark-900"></span>
+                                    <div class="bg-dark-900/60 p-5 rounded-2xl border border-slate-800">
+                                        <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                            <h3 class="text-lg font-bold text-white">کارشناسی مهندسی کامپیوتر</h3>
+                                            <span class="px-3 py-1 rounded-full bg-brand-500/10 text-brand-400 text-xs font-semibold">دانشگاه دولتی</span>
+                                        </div>
+                                        <p class="text-xs text-slate-400 mb-3"><i class="fa-regular fa-calendar ml-1"></i> سال ورود: ۱۳۹۹ - فارغ‌التحصیل</p>
+                                        <p class="text-slate-300 text-xs leading-relaxed mb-3">
+                                            تمرکز تخصصی بر روی مباحث برنامه‌نویسی، طراحی الگوریتم، نظریه زبان‌ها و اتومات، پایگاه داده و مبانی هوش مصنوعی.
+                                        </p>
+                                        <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-800">
+                                            <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 text-[11px]"><i class="fa-solid fa-brain text-brand-400 ml-1"></i> مباحث هوش مصنوعی</span>
+                                            <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 text-[11px]"><i class="fa-solid fa-code-branch text-brand-400 ml-1"></i> نظریه زبان‌ها و اتومات</span>
+                                            <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 text-[11px]"><i class="fa-solid fa-database text-brand-400 ml-1"></i> سیستم‌های پایگاه داده</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4. سابقه کاری و پروژه‌ها -->
+                        <div class="glass-card rounded-3xl p-6 sm:p-8">
+                            <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-3 border-b border-slate-700/60 pb-3">
+                                <i class="fa-solid fa-briefcase text-brand-400"></i>
+                                سابقه کاری و پروژه‌ها
+                            </h2>
+
+                            <div class="relative pr-6 border-r-2 border-brand-500/30 space-y-8">
+                                <!-- شغل ۱ -->
+                                <div class="relative">
+                                    <span class="absolute -right-[31px] top-1.5 w-4 h-4 rounded-full bg-brand-500 border-4 border-dark-900"></span>
+                                    <div class="bg-dark-900/60 p-5 rounded-2xl border border-slate-800">
+                                        <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                                            <h3 class="text-lg font-bold text-white">طراح هویت بصری و توسعه‌دهنده فرانت‌اند (فریلنسر)</h3>
+                                            <span class="text-xs text-brand-400 font-semibold">۱۴۰۱ - تاکنون</span>
+                                        </div>
+                                        <p class="text-xs text-slate-400 mb-3"><i class="fa-solid fa-building-user ml-1"></i> همکاری با کسب‌وکارها و استارتاپ‌ها</p>
+                                        <ul class="list-disc list-inside text-xs text-slate-300 space-y-2 leading-relaxed">
+                                            <li>طراحی بیش از ۳۰ هویت بصری شامل لوگو، پالت رنگی، ست اداری و کتابچه راهنمای برند.</li>
+                                            <li>توسعه اپلیکیشن‌های موبایل با **Flutter** برای سفارش‌گیری و مدیریت محصولات.</li>
+                                            <li>طراحی پوسترهای تبلیغاتی و بسته‌بندی‌های خلاقانه برای محصولات ارگانیک و کافه‌ها.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- شغل ۲ -->
+                                <div class="relative">
+                                    <span class="absolute -right-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-600 border-4 border-dark-900"></span>
+                                    <div class="bg-dark-900/60 p-5 rounded-2xl border border-slate-800">
+                                        <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                                            <h3 class="text-lg font-bold text-white">توسعه‌دهنده نرم‌افزار C# / Desktop</h3>
+                                            <span class="text-xs text-slate-400">۱۴۰۰ - ۱۴۰۲</span>
+                                        </div>
+                                        <p class="text-xs text-slate-400 mb-3"><i class="fa-solid fa-laptop-code ml-1"></i> پروژه‌های دانشگاهی و سازمانی</p>
+                                        <ul class="list-disc list-inside text-xs text-slate-300 space-y-2 leading-relaxed">
+                                            <li>طراحی و پیاده‌سازی اتوماسیون‌های دسکتاپ به زبان #C و دات‌نت.</li>
+                                            <li>ارتباط با پایگاه داده SQL Server و طراحی رابط‌های کاربری تمیز و کاربرپسند.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- ستون سمت چپ: ابزارها، مهارت نرم، افتخارات -->
+                    <div class="lg:col-span-4 space-y-8">
+                        
+                        <!-- 5. ابزارها و تکنولوژی‌ها -->
+                        <div class="glass-card rounded-3xl p-6 sm:p-8">
+                            <h2 class="text-lg font-bold text-white mb-6 flex items-center gap-2 border-b border-slate-700/60 pb-3">
+                                <i class="fa-solid fa-screwdriver-wrench text-brand-400"></i>
+                                ابزارها و تکنولوژی‌ها
+                            </h2>
+
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold mb-1">
+                                        <span class="text-slate-200"><i class="fa-solid fa-bezier-curve text-pink-400 ml-1"></i> Adobe Illustrator</span>
+                                        <span class="text-brand-400">۹۵٪</span>
+                                    </div>
+                                    <div class="w-full bg-dark-900 h-2 rounded-full overflow-hidden">
+                                        <div class="bg-gradient-to-r from-brand-500 to-pink-500 h-full rounded-full" style="width: 95%"></div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold mb-1">
+                                        <span class="text-slate-200"><i class="fa-solid fa-image text-blue-400 ml-1"></i> Adobe Photoshop</span>
+                                        <span class="text-brand-400">۹۰٪</span>
+                                    </div>
+                                    <div class="w-full bg-dark-900 h-2 rounded-full overflow-hidden">
+                                        <div class="bg-gradient-to-r from-brand-500 to-blue-500 h-full rounded-full" style="width: 90%"></div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold mb-1">
+                                        <span class="text-slate-200"><i class="fa-brands fa-figma text-purple-400 ml-1"></i> Figma (UI/UX)</span>
+                                        <span class="text-brand-400">۸۵٪</span>
+                                    </div>
+                                    <div class="w-full bg-dark-900 h-2 rounded-full overflow-hidden">
+                                        <div class="bg-gradient-to-r from-brand-500 to-purple-500 h-full rounded-full" style="width: 85%"></div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold mb-1">
+                                        <span class="text-slate-200"><i class="fa-mobile-screen-button text-sky-400 ml-1"></i> Flutter & Dart</span>
+                                        <span class="text-brand-400">۸۰٪</span>
+                                    </div>
+                                    <div class="w-full bg-dark-900 h-2 rounded-full overflow-hidden">
+                                        <div class="bg-gradient-to-r from-brand-500 to-sky-400 h-full rounded-full" style="width: 80%"></div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold mb-1">
+                                        <span class="text-slate-200"><i class="fa-brands fa-microsoft text-purple-300 ml-1"></i> C# & .NET</span>
+                                        <span class="text-brand-400">۷۵٪</span>
+                                    </div>
+                                    <div class="w-full bg-dark-900 h-2 rounded-full overflow-hidden">
+                                        <div class="bg-gradient-to-r from-brand-500 to-purple-400 h-full rounded-full" style="width: 75%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="pt-3 border-t border-slate-800 flex flex-wrap gap-2">
+                                    <span class="px-2.5 py-1 rounded-lg bg-dark-900 border border-slate-800 text-slate-300 text-[11px]"><i class="fa-brands fa-git-alt text-orange-500 ml-1"></i> Git / GitHub</span>
+                                    <span class="px-2.5 py-1 rounded-lg bg-dark-900 border border-slate-800 text-slate-300 text-[11px]"><i class="fa-solid fa-code text-blue-400 ml-1"></i> VS Code</span>
+                                    <span class="px-2.5 py-1 rounded-lg bg-dark-900 border border-slate-800 text-slate-300 text-[11px]"><i class="fa-brands fa-python text-yellow-400 ml-1"></i> Python</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 6. مهارت‌های نرم -->
+                        <div class="glass-card rounded-3xl p-6 sm:p-8">
+                            <h2 class="text-lg font-bold text-white mb-4 flex items-center gap-2 border-b border-slate-700/60 pb-3">
+                                <i class="fa-solid fa-comments text-brand-400"></i>
+                                مهارت‌های نرم
+                            </h2>
+
+                            <div class="grid grid-cols-1 gap-2.5">
+                                <div class="flex items-center gap-3 p-2.5 rounded-xl bg-dark-900/50 border border-slate-800 text-xs text-slate-300">
+                                    <i class="fa-solid fa-lightbulb text-amber-400 text-sm"></i>
+                                    <span>حل مسئله و تفکر الگوریتمی</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-2.5 rounded-xl bg-dark-900/50 border border-slate-800 text-xs text-slate-300">
+                                    <i class="fa-solid fa-clock text-emerald-400 text-sm"></i>
+                                    <span>مدیریت زمان و تحویل به‌موقع</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-2.5 rounded-xl bg-dark-900/50 border border-slate-800 text-xs text-slate-300">
+                                    <i class="fa-solid fa-users text-sky-400 text-sm"></i>
+                                    <span>روحیه کار تیمی و تعامل موثر</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-2.5 rounded-xl bg-dark-900/50 border border-slate-800 text-xs text-slate-300">
+                                    <i class="fa-solid fa-wand-magic-sparkles text-purple-400 text-sm"></i>
+                                    <span>خلاقیت و نوآوری در طراحی</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 7. افتخارات و گواهینامه‌ها -->
+                        <div class="glass-card rounded-3xl p-6 sm:p-8">
+                            <h2 class="text-lg font-bold text-white mb-4 flex items-center gap-2 border-b border-slate-700/60 pb-3">
+                                <i class="fa-solid fa-award text-brand-400"></i>
+                                افتخارات و دوره تخصصی
+                            </h2>
+
+                            <div class="space-y-3 text-xs">
+                                <div class="p-3 rounded-xl bg-dark-900/60 border border-slate-800">
+                                    <span class="text-brand-400 font-bold block mb-1">دوره توسعه وب با Python & Django</span>
+                                    <span class="text-slate-400">گواهینامه معتبر برنامه‌نویسی</span>
+                                </div>
+                                <div class="p-3 rounded-xl bg-dark-900/60 border border-slate-800">
+                                    <span class="text-brand-400 font-bold block mb-1">دوره جامع طراحی هویت بصری</span>
+                                    <span class="text-slate-400">اصول برندینگ و استراتژی دیداری</span>
+                                </div>
+                                <div class="p-3 rounded-xl bg-dark-900/60 border border-slate-800">
+                                    <span class="text-brand-400 font-bold block mb-1">رتبه برتر مسابقات علمی/طراحی</span>
+                                    <span class="text-slate-400">مقطع دانشگاهی مهندسی کامپیوتر</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
     </main>
 
-    <!-- Modal Lightbox -->
     <div id="image-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4">
         <button onclick="closeModal()" class="absolute top-6 left-6 text-white hover:text-brand-500 text-3xl transition-colors">
             <i class="fa-solid fa-xmark"></i>
@@ -408,38 +732,38 @@
     <!-- Footer -->
     <footer class="bg-dark-900 border-t border-slate-800/80 py-8 mt-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p class="text-xs text-slate-500">© ۱۴۰۵ تمامی حقوق محفوظ است. طراحی و توسعه برای پرتفولیو گرافیک.</p>
+            <p class="text-xs text-slate-500">© ۱۴۰۵ تمامی حقوق محفوظ است. طراحی و پیاده‌سازی رزومه و پرتفولیو فاطمه احمدنژاد.</p>
             <div class="flex items-center gap-4 text-slate-400">
                 <a href="#" class="hover:text-brand-500 transition-colors"><i class="fa-brands fa-instagram text-lg"></i></a>
                 <a href="#" class="hover:text-brand-500 transition-colors"><i class="fa-brands fa-dribbble text-lg"></i></a>
-                <a href="#" class="hover:text-brand-500 transition-colors"><i class="fa-brands fa-behance text-lg"></i></a>
+                <a href="#" class="hover:text-brand-500 transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
                 <a href="#" class="hover:text-brand-500 transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
             </div>
         </div>
     </footer>
 
     <script>
-        // Updated Projects Data with Color Palette, Design Approach, Typography, and extra Gallery Images
         const projectsData = [
             {
                 id: '1',
-                title: 'بازطراحی هویت بصری کافه و رستوران لوکس لومیر',
+                title: 'بازطراحی هویت بصری و لوگو کافه و رستوران لوکس لومیر',
                 category: 'branding',
                 categoryLabel: 'هویت بصری',
+                score: 9.8,
                 date: '۱۴۰۲/۰۷/۱۰',
                 client: 'کافه لومیر',
                 role: 'طراح هویت برند',
                 tools: 'Illustrator, Photoshop',
                 colorPalette: ['#1e1b18', '#c5a059', '#3e2723', '#f5f0eb'],
-                coverImage: 'image/Asset 6.png',
+                coverImage: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1000&q=80',
                 galleryRow1: [
-                    'image/Asset 6.png',
-                    'image/Asset 6.png'
+                    'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&q=80',
+                    'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1000&q=80'
                 ],
                 galleryRow2: [
-                    'image/Asset 6.png',
-                    'image/Asset 6.png',
-                    'image/Asset 6.png'
+                    'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1497636577773-f1231844b336?auto=format&fit=crop&w=800&q=80'
                 ],
                 description: 'طراحی جامع هویت بصری برند لومیر شامل لوگوتایپ اختصاصی، پالت رنگی گرم و مدرن، طراحی منو، کارت ویزیت و بسته بندی ظروف بیرون‌بر. هدف این پروژه انتقال حس لوکس بودن در عین سادگی به مخاطب بود.',
                 designApproach: `
@@ -466,10 +790,11 @@
                 title: 'بسته‌بندی محصولات ارگانیک زیتون آریا',
                 category: 'packaging',
                 categoryLabel: 'بسته‌بندی',
+                score: 8.5,
                 date: '۱۴۰۲/۰۶/۲۵',
                 client: 'صنایع غذایی آریا',
                 role: 'طراح بسته‌بندی',
-                tools: 'Illustrator, Cinema 4D',
+                tools: 'Illustrator, Photoshop',
                 colorPalette: ['#2d4a22', '#8b9a46', '#d4af37', '#fdfbf7'],
                 coverImage: 'https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&w=1000&q=80',
                 galleryRow1: [
@@ -484,7 +809,6 @@
                 description: 'طراحی لیبل و جعبه بسته‌بندی برای روغن زیتون طبیعی. استفاده از تصویرسازی‌های خطی و مینیمال گیاه زیتون با ترکیب رنگ‌های طلایی و سبز زیتونی.',
                 designApproach: `
                     <p>تمرکز اصلی در این پروژه، نمایش ارگانیک بودن و خلوص فرآورده‌های زیتون بوده است. با بکارگیری ماتریال باکیفیت و بافت کاغذهای بازیافتی در شبیه‌سازی ماکاپ، حس دوستی با طبیعت به خریدار منتقل می‌شود.</p>
-                    <p>ترکیب تصویرسازی دست‌آزاد برگ‌های زیتون با تایپوگرافی مدرن باعث جلب توجه سریع خریدار در شلف فروشگاه‌ها خواهد شد.</p>
                 `,
                 typography: `
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -495,7 +819,7 @@
                         </div>
                         <div class="bg-dark-900/60 p-4 rounded-2xl border border-slate-800">
                             <span class="text-xs text-brand-400 font-bold block mb-1">فونت اطلاعات تکمیلی</span>
-                            <h4 class="text-xl font-bold text-white mb-2">IRANSansX</h4>
+                            <h4 class="text-xl font-bold text-white mb-2">Vazirmatn</h4>
                             <p class="text-xs text-slate-400">جهت درج ترکیبات و جدول ارزش غذایی با وضوح بالا در سایز کوچک.</p>
                         </div>
                     </div>
@@ -503,13 +827,14 @@
             },
             {
                 id: '3',
-                title: 'مجموعه پوسترهای جشنواره بین‌المللی فیلم کوتاه',
+                title: 'مجموعه پوسترهای مفهوم‌گرا و تبلیغاتی رویدادهای هنری',
                 category: 'poster',
                 categoryLabel: 'پوستر و تبلیغات',
+                score: 9.2,
                 date: '۱۴۰۲/۰۵/۱۸',
-                client: 'دبیرخانه جشنواره',
+                client: 'دبیرخانه همایش',
                 role: 'طراح پوستر',
-                tools: 'Adobe Photoshop',
+                tools: 'Adobe Photoshop, Illustrator',
                 colorPalette: ['#000000', '#e63946', '#f1faee', '#457b9d'],
                 coverImage: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1000&q=80',
                 galleryRow1: [
@@ -521,20 +846,20 @@
                     'https://images.unsplash.com/photo-1518173946687-a4c8a383392e?auto=format&fit=crop&w=800&q=80',
                     'https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80'
                 ],
-                description: 'طراحی سری پوسترهای مفهوم‌گرا برای جشنواره فیلم. مفهوم اصلی طرح‌ها ترکیب عنصر نور، سایه و نوار فیلم‌های قدیمی برای تداعی حس نوستالژی سینما بود.',
+                description: 'طراحی سری پوسترهای مفهوم‌گرا. مفهوم اصلی طرح‌ها ترکیب عنصر نور، سایه و خطوط تایپوگرافی برای تداعی حس نوستالژی و هنر بود.',
                 designApproach: `
-                    <p>در پوستر سینمایی، ایهام و معناگرایی حرف اول را می‌زند. خلق ترکیبی چشم‌گیر با استفاده از کنتراست شدید نور و تاریکی (Chiaroscuro) محور اصلی فرمول دیداری این پوسترها قرار گرفت.</p>
+                    <p>در پوستر هنری، ایهام و معناگرایی حرف اول را می‌زند. خلق ترکیبی چشم‌گیر با استفاده از کنتراست شدید نور و تاریکی محور اصلی فرمول دیداری این پوسترها قرار گرفت.</p>
                 `,
                 typography: `
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="bg-dark-900/60 p-4 rounded-2xl border border-slate-800">
                             <span class="text-xs text-brand-400 font-bold block mb-1">فونت تیتر اصلی</span>
                             <h4 class="text-xl font-bold text-white mb-2">لاله‌زار / Lalezar</h4>
-                            <p class="text-xs text-slate-400">فونت پرقدرت و سنگین ایده‌آل برای عناوین سینمایی و هنری.</p>
+                            <p class="text-xs text-slate-400">فونت پرقدرت و سنگین ایده‌آل برای عناوین هنری.</p>
                         </div>
                         <div class="bg-dark-900/60 p-4 rounded-2xl border border-slate-800">
-                            <span class="text-xs text-brand-400 font-bold block mb-1">فونت اسامی عوامل</span>
-                            <h4 class="text-xl font-bold text-white mb-2">B Yekan</h4>
+                            <span class="text-xs text-brand-400 font-bold block mb-1">فونت توضیحات</span>
+                            <h4 class="text-xl font-bold text-white mb-2">Vazirmatn</h4>
                             <p class="text-xs text-slate-400">خوانایی عالی در ابعاد ریز پایینی پوستر.</p>
                         </div>
                     </div>
@@ -542,13 +867,14 @@
             },
             {
                 id: '4',
-                title: 'طراحی رابط کاربری اپلیکیشن سرمایه‌گذاری دارایی',
+                title: 'توسعه اپلیکیشن مدیریت مالی و فروش با Flutter',
                 category: 'ui',
-                categoryLabel: 'رابط کاربری',
+                categoryLabel: 'رابط کاربری و نرم‌افزار',
+                score: 8.9,
                 date: '۱۴۰۲/۰۴/۳۰',
-                client: 'استارتاپ فین‌تک',
-                role: 'طراح UI/UX',
-                tools: 'Figma, Illustrator',
+                client: 'استارتاپ مدیریت فروش',
+                role: 'طراح UI و توسعه‌دهنده Flutter',
+                tools: 'Figma, Flutter, Dart',
                 colorPalette: ['#0f172a', '#6366f1', '#10b981', '#f43f5e'],
                 coverImage: 'https://images.unsplash.com/photo-1616469829941-c7200edec809?auto=format&fit=crop&w=1000&q=80',
                 galleryRow1: [
@@ -560,9 +886,9 @@
                     'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=800&q=80',
                     'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80'
                 ],
-                description: 'طراحی رابط کاربری مدرن، تمیز و کاربرپسند برای اپلیکیشن مدیریت سرمایه و بورس. تمرکز اصلی بر خوانایی داده‌ها و نمودارهای تعاملی بوده است.',
+                description: 'طراحی و پیاده‌سازی کامل اپلیکیشن مدیریت فروش با Flutter به صورت نیتیو کراس‌پلتفرم. همراه با داشبورد تحلیل نمودارها و قابلیت ثبت فاکتور آنلاین.',
                 designApproach: `
-                    <p>در پروژه‌های داشبورد مالی، کاهش فشار ذهنی کاربر (Cognitive Load) اولویت اول است. شبکه گریدهای ۱۲ ستونه منطقی و استفاده هوشمندانه از رنگ‌های سبز و قرمز برای سود و زیان، شفافیت داده‌ها را دوچندان کرده است.</p>
+                    <p>در پروژه‌های داشبورد مالی، کاهش فشار ذهنی کاربر (Cognitive Load) اولویت اول است. شبکه گریدهای منطقی و استفاده هوشمندانه از رنگ‌های سبز و قرمز برای سود و زیان، شفافیت داده‌ها را دوچندان کرده است.</p>
                 `,
                 typography: `
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -582,49 +908,84 @@
         ];
 
         let currentProjectIndex = 0;
+        let currentFilter = 'all';
+        let currentSort = 'featured';
+        let currentViewMode = 'projects';
 
-        function renderProjects(filter = 'all') {
+        function renderProjects() {
             const grid = document.getElementById('projects-grid');
             grid.innerHTML = '';
 
-            const filteredProjects = filter === 'all' 
-                ? projectsData 
-                : projectsData.filter(p => p.category === filter);
+            let filtered = currentFilter === 'all' 
+                ? [...projectsData] 
+                : projectsData.filter(p => p.category === currentFilter);
 
-            filteredProjects.forEach((project) => {
+            filtered.sort((a, b) => {
+                if (currentSort === 'featured') {
+                    return (b.score || 0) - (a.score || 0);
+                } else {
+                    const dateA = a.date.replace(/\//g, '');
+                    const dateB = b.date.replace(/\//g, '');
+                    return currentSort === 'newest' ? dateB.localeCompare(dateA) : dateA.localeCompare(dateB);
+                }
+            });
+
+            if (currentViewMode === 'gallery') {
+                grid.className = 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6';
+            } else {
+                grid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
+            }
+
+            filtered.forEach((project) => {
                 const card = document.createElement('div');
-                card.className = 'project-card glass-card rounded-2xl overflow-hidden cursor-pointer group flex flex-col justify-between';
                 card.onclick = () => openProjectDetail(project.id);
 
-                card.innerHTML = `
-                    <div class="relative overflow-hidden h-64 bg-slate-800">
-                        <img src="${project.coverImage}" alt="${project.title}" class="card-image w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-dark-900/90 via-dark-900/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
-                        <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-dark-900/80 backdrop-blur-md text-brand-400 border border-slate-700/50 text-xs font-semibold">
-                            ${project.categoryLabel}
-                        </span>
-                    </div>
-                    <div class="p-6">
-                        <span class="text-xs text-slate-400 block mb-2"><i class="fa-regular fa-calendar ml-1"></i> ${project.date}</span>
-                        <h3 class="text-xl font-bold text-white group-hover:text-brand-400 transition-colors line-clamp-2 mb-3">
-                            ${project.title}
-                        </h3>
-                        <p class="text-slate-400 text-sm line-clamp-2 leading-relaxed">
-                            ${project.description}
-                        </p>
-                    </div>
-                    <div class="px-6 pb-6 pt-2 flex items-center justify-between border-t border-slate-800/60 mt-auto">
-                        <span class="text-xs font-medium text-slate-300">مشاهده جزئیات پروژه</span>
-                        <div class="w-8 h-8 rounded-full bg-brand-600/20 text-brand-400 flex items-center justify-center group-hover:bg-brand-600 group-hover:text-white transition-all">
-                            <i class="fa-solid fa-arrow-left text-xs"></i>
+                if (currentViewMode === 'gallery') {
+                    card.className = 'project-card glass-card rounded-2xl overflow-hidden cursor-pointer group relative h-80 flex items-center justify-center';
+                    card.innerHTML = `
+                        <img src="${project.coverImage}" alt="${project.title}" class="card-image w-full h-full object-cover absolute inset-0">
+                        <div class="absolute inset-0 bg-dark-900/75 group-hover:bg-dark-900/85 transition-all duration-300 flex flex-col items-center justify-center p-6 text-center opacity-90 group-hover:opacity-100">
+                            <h3 class="text-lg font-bold text-white mb-4 line-clamp-3 leading-snug">
+                                ${project.title}
+                            </h3>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-brand-600/90 group-hover:bg-brand-600 text-white text-xs font-semibold shadow-lg transition-all transform group-hover:scale-105">
+                                مشاهده جزئیات پروژه <i class="fa-solid fa-arrow-left text-[10px]"></i>
+                            </span>
                         </div>
-                    </div>
-                `;
+                    `;
+                } else {
+                    card.className = 'project-card glass-card rounded-2xl overflow-hidden cursor-pointer group flex flex-col justify-between';
+                    card.innerHTML = `
+                        <div class="relative overflow-hidden h-64 bg-slate-800">
+                            <img src="${project.coverImage}" alt="${project.title}" class="card-image w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark-900/90 via-dark-900/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
+                            <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-dark-900/80 backdrop-blur-md text-brand-400 border border-slate-700/50 text-xs font-semibold">
+                                ${project.categoryLabel}
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs text-slate-400 block mb-2"><i class="fa-regular fa-calendar ml-1"></i> ${project.date}</span>
+                            <h3 class="text-xl font-bold text-white group-hover:text-brand-400 transition-colors line-clamp-2 mb-3">
+                                ${project.title}
+                            </h3>
+                            <p class="text-slate-400 text-sm line-clamp-2 leading-relaxed">
+                                ${project.description}
+                            </p>
+                        </div>
+                        <div class="px-6 pb-6 pt-2 flex items-center justify-between border-t border-slate-800/60 mt-auto">
+                            <span class="text-xs font-medium text-slate-300">مشاهده جزئیات پروژه</span>
+                            <div class="w-8 h-8 rounded-full bg-brand-600/20 text-brand-400 flex items-center justify-center group-hover:bg-brand-600 group-hover:text-white transition-all">
+                                <i class="fa-solid fa-arrow-left text-xs"></i>
+                            </div>
+                        </div>
+                    `;
+                }
                 grid.appendChild(card);
             });
         }
 
         function filterProjects(category) {
+            currentFilter = category;
             document.querySelectorAll('.filter-btn').forEach(btn => {
                 if (btn.dataset.filter === category) {
                     btn.className = 'filter-btn active-filter px-5 py-2.5 rounded-xl text-sm font-medium transition-all bg-brand-600 text-white shadow-lg shadow-brand-600/30';
@@ -632,7 +993,27 @@
                     btn.className = 'filter-btn px-5 py-2.5 rounded-xl text-sm font-medium transition-all bg-dark-800 text-slate-300 hover:text-white hover:bg-dark-700';
                 }
             });
-            renderProjects(category);
+            renderProjects();
+        }
+
+        function changeSortOrder(order) {
+            currentSort = order;
+            renderProjects();
+        }
+
+        function setViewMode(mode) {
+            currentViewMode = mode;
+            const btnProjects = document.getElementById('view-mode-projects');
+            const btnGallery = document.getElementById('view-mode-gallery');
+
+            if (mode === 'projects') {
+                btnProjects.className = 'flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all bg-brand-600 text-white shadow';
+                btnGallery.className = 'flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all text-slate-400 hover:text-white';
+            } else {
+                btnGallery.className = 'flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all bg-brand-600 text-white shadow';
+                btnProjects.className = 'flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all text-slate-400 hover:text-white';
+            }
+            renderProjects();
         }
 
         function openProjectDetail(id) {
@@ -642,7 +1023,6 @@
             currentProjectIndex = index;
             const project = projectsData[index];
 
-            // Fill Simple Text Data
             document.getElementById('detail-title').innerText = project.title;
             document.getElementById('detail-category').innerText = project.categoryLabel;
             document.getElementById('detail-date').innerText = project.date;
@@ -651,7 +1031,6 @@
             document.getElementById('detail-tools').innerText = project.tools;
             document.getElementById('detail-description').innerText = project.description;
 
-            // Render Color Palette Swatches
             const paletteContainer = document.getElementById('detail-palette');
             paletteContainer.innerHTML = '';
             if (project.colorPalette && project.colorPalette.length > 0) {
@@ -666,10 +1045,8 @@
                 });
             }
 
-            // Cover Image
             document.getElementById('detail-main-img').src = project.coverImage;
 
-            // Gallery Row 1 (2 images)
             const row1 = document.getElementById('detail-gallery-row1');
             row1.innerHTML = '';
             (project.galleryRow1 || []).forEach(imgUrl => {
@@ -682,7 +1059,6 @@
                 row1.appendChild(item);
             });
 
-            // Gallery Row 2 (3 images)
             const row2 = document.getElementById('detail-gallery-row2');
             row2.innerHTML = '';
             (project.galleryRow2 || []).forEach(imgUrl => {
@@ -695,16 +1071,13 @@
                 row2.appendChild(item);
             });
 
-            // Fill Sections: Design Approach & Typography
             document.getElementById('detail-design-approach').innerHTML = project.designApproach || '<p>توضیحاتی برای این بخش ثبت نشده است.</p>';
             document.getElementById('detail-typography').innerHTML = project.typography || '<p>اطلاعات تایپوگرافی ثبت نشده است.</p>';
 
             updateNavigationButtons();
 
-            // Navigation Display Toggle
-            document.getElementById('home-page').classList.replace('page-active', 'page-hidden');
+            hideAllPages();
             document.getElementById('project-detail-page').classList.replace('page-hidden', 'page-active');
-
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
@@ -721,10 +1094,25 @@
             openProjectDetail(projectsData[currentProjectIndex].id);
         }
 
+        function hideAllPages() {
+            const pages = ['home-page', 'project-detail-page', 'resume-page'];
+            pages.forEach(pId => {
+                const el = document.getElementById(pId);
+                if (el) el.classList.replace('page-active', 'page-hidden');
+            });
+        }
+
         function showHomePage(e) {
             if (e) e.preventDefault();
-            document.getElementById('project-detail-page').classList.replace('page-active', 'page-hidden');
+            hideAllPages();
             document.getElementById('home-page').classList.replace('page-hidden', 'page-active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function showResumePage(e) {
+            if (e) e.preventDefault();
+            hideAllPages();
+            document.getElementById('resume-page').classList.replace('page-hidden', 'page-active');
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
