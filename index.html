@@ -365,7 +365,7 @@
                         </div>
 
                         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-dark-900/50 p-5 rounded-2xl border border-slate-800 items-center">
-                            <div class="lg:col-span-4 flex items-center gap-3">
+                            <div class="lg:col-span-3 flex items-center gap-3">
                                 <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center shrink-0">
                                     <i class="fa-solid fa-pen-ruler text-lg"></i>
                                 </div>
@@ -375,7 +375,14 @@
                                 </div>
                             </div>
 
-                            <div class="lg:col-span-4 border-t lg:border-t-0 lg:border-r border-slate-800 pt-4 lg:pt-0 lg:pr-6">
+                            <div class="lg:col-span-3 border-t lg:border-t-0 lg:border-r border-slate-800 pt-4 lg:pt-0 lg:pr-6">
+                                <span class="block text-xs text-slate-400 mb-2 font-medium flex items-center gap-1.5">
+                                    <i class="fa-solid fa-wand-magic-sparkles text-brand-400"></i> سبک / الهام
+                                </span>
+                                <span id="detail-style" class="text-sm font-bold text-slate-200">---</span>
+                            </div>
+
+                            <div class="lg:col-span-3 border-t lg:border-t-0 lg:border-r border-slate-800 pt-4 lg:pt-0 lg:pr-6">
                                 <span class="block text-xs text-slate-400 mb-2 font-medium flex items-center gap-1.5">
                                     <i class="fa-solid fa-palette text-brand-400"></i> پالت رنگی
                                 </span>
@@ -383,15 +390,15 @@
                                 </div>
                             </div>
 
-                            <div class="lg:col-span-4 border-t lg:border-t-0 lg:border-r border-slate-800 pt-4 lg:pt-0 lg:pr-6 flex flex-wrap gap-2 justify-start lg:justify-end">
+                            <div class="lg:col-span-3 border-t lg:border-t-0 lg:border-r border-slate-800 pt-4 lg:pt-0 lg:pr-6 flex flex-wrap gap-2 justify-start lg:justify-end">
                                 <a href="#section-gallery" class="px-3 py-2 rounded-xl bg-slate-800 hover:bg-brand-600 text-slate-300 hover:text-white text-xs font-semibold transition-all flex items-center gap-1.5 border border-slate-700">
-                                    <i class="fa-solid fa-images"></i> گالری
+                                     گالری
                                 </a>
                                 <a href="#section-approach" class="px-3 py-2 rounded-xl bg-slate-800 hover:bg-brand-600 text-slate-300 hover:text-white text-xs font-semibold transition-all flex items-center gap-1.5 border border-slate-700">
-                                    <i class="fa-solid fa-lightbulb"></i> رویکرد
+                                     رویکرد
                                 </a>
                                 <a href="#section-typography" class="px-3 py-2 rounded-xl bg-slate-800 hover:bg-brand-600 text-slate-300 hover:text-white text-xs font-semibold transition-all flex items-center gap-1.5 border border-slate-700">
-                                    <i class="fa-solid fa-font"></i> تایپوگرافی
+                                     تایپوگرافی
                                 </a>
                             </div>
                         </div>
@@ -433,6 +440,9 @@
                     </div>
                     <div id="detail-design-approach" class="prose prose-invert max-w-none text-slate-300 leading-relaxed text-sm sm:text-base space-y-4">
                     </div>
+                    <div id="detail-approach-image-container" class="mt-6 hidden">
+                        <img id="detail-approach-image" src="" alt="تصویر رویکرد دیزاین" class="max-w-xs h-auto rounded-2xl border border-slate-700/80 cursor-pointer shadow-lg hover:opacity-90 transition-opacity" onclick="openModal(this.src)">
+                    </div>
                 </div>
 
                 <div id="section-typography" class="glass-card rounded-3xl p-6 sm:p-10 mb-16 scroll-mt-28">
@@ -442,7 +452,61 @@
                         </div>
                         <h2 class="text-2xl font-bold text-white">تایپوگرافی و فونت‌ها</h2>
                     </div>
-                    <div id="detail-typography" class="text-slate-300 leading-relaxed text-sm sm:text-base space-y-4">
+
+                    <div class="space-y-6">
+                        <!-- سطر اول: مشخصات فونت -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 bg-dark-900/50 p-5 rounded-2xl border border-slate-800">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-font text-lg"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs text-slate-400 mb-0.5">فونت</span>
+                                    <span id="detail-typo-font" class="text-sm font-bold text-slate-200">---</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-bold text-lg"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs text-slate-400 mb-0.5">وزن فونت</span>
+                                    <span id="detail-typo-weight" class="text-sm font-bold text-slate-200">---</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-text-height text-lg"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs text-slate-400 mb-0.5">سایز فونت</span>
+                                    <span id="detail-typo-size" class="text-sm font-bold text-slate-200">---</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- سطر دوم: نمونه فونت (عکس کوچک) -->
+                        <div id="detail-typo-sample-container" class="bg-dark-900/50 p-5 rounded-2xl border border-slate-800 hidden">
+                            <span class="block text-xs text-slate-400 mb-3 font-medium flex items-center gap-2">
+                                <i class="fa-solid fa-image text-brand-400"></i> نمونه فونت
+                            </span>
+                            <img id="detail-typo-sample-image" src="" alt="نمونه فونت" class="max-w-xs h-auto rounded-xl border border-slate-700/80 cursor-pointer shadow hover:opacity-90 transition-opacity" onclick="openModal(this.src)">
+                        </div>
+
+                        <!-- سطر سوم: توضیحات و عکس اختیاری -->
+                        <div class="bg-dark-900/50 p-5 rounded-2xl border border-slate-800 space-y-4">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-align-right text-brand-400"></i>
+                                <span class="text-xs text-slate-400 font-medium">توضیحات تایپوگرافی</span>
+                            </div>
+                            <div id="detail-typography" class="text-slate-300 leading-relaxed text-sm sm:text-base space-y-2">
+                            </div>
+                            <div id="detail-typo-desc-img-container" class="pt-2 hidden">
+                                <img id="detail-typo-desc-image" src="" alt="تصویر توضیحات تایپوگرافی" class="max-w-xs h-auto rounded-xl border border-slate-700/80 cursor-pointer shadow hover:opacity-90 transition-opacity" onclick="openModal(this.src)">
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -523,7 +587,6 @@
                                     </div>
                                     <div class="text-center bg-dark-800/60 p-2.5 rounded-xl border border-slate-700/50">
                                         <span class="block text-brand-400 font-bold text-base">+۶ سال</span>
-                                        <span class="text-text-slate-400 font-bold text-base text-brand-400">+۶ سال</span>
                                         <span class="text-[11px] text-slate-400">سابقه حرفه‌ای</span>
                                     </div>
                                 </div>
@@ -572,13 +635,13 @@
                                     </div>
                                     <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
                                         <h3 class="text-base font-bold text-white">طراح ارشد گرافیک و هویت برند</h3>
-                                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-brand-500/20 text-brand-300 border border-brand-500/30">۱۳a۹۹ - تاکنون</span>
+                                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-brand-500/20 text-brand-300 border border-brand-500/30">۱۳۹۹ - تاکنون</span>
                                     </div>
                                     <p class="text-xs text-brand-400 font-medium mb-3">استودیو طراحی و آژانس‌های تبلیغاتی (تهران)</p>
                                     <ul class="text-slate-300 text-xs sm:text-sm space-y-2 list-disc list-inside leading-relaxed">
-                                        <li>مدیریت و طراحی بیش از ۲۵۰ پروژه هویت بصری، لوگو و ست اداری برای شرکت‌های معتبر[cite: 1].</li>
-                                        <li>طراحی تخصصی پوستر، کاتالوگ و نشریات با استانداردهای دقیق چاپ Offset و Digital[cite: 1].</li>
-                                        <li>ارائه مشاوره برندینگ و تدوین دفترچه راهنمای هویت بصری (Brand Guidelines)[cite: 1].</li>
+                                        <li>مدیریت و طراحی بیش از ۲۵۰ پروژه هویت بصری، لوگو و ست اداری برای شرکت‌های معتبر.</li>
+                                        <li>طراحی تخصصی پوستر، کاتالوگ و نشریات با استانداردهای دقیق چاپ Offset و Digital.</li>
+                                        <li>ارائه مشاوره برندینگ و تدوین دفترچه راهنمای هویت بصری (Brand Guidelines).</li>
                                     </ul>
                                 </div>
 
@@ -592,9 +655,9 @@
                                     </div>
                                     <p class="text-xs text-brand-400 font-medium mb-3">کانون‌های فرهنگی و گروه‌های انتشاراتی</p>
                                     <ul class="text-slate-300 text-xs sm:text-sm space-y-2 list-disc list-inside leading-relaxed">
-                                        <li>طراحی اینفوگرافیک‌های تحلیلی و داده‌نما برای مجلات و گزارش‌های سالانه[cite: 1].</li>
-                                        <li>صفحه‌آرایی مجلات تخصصی و نشریات با نرم‌افزارهای InDesign و Illustrator[cite: 1].</li>
-                                        <li>طراحی بنرهای تبلیغاتی محیطی، بیلبوردها و بنرهای دیجیتال[cite: 1].</li>
+                                        <li>طراحی اینفوگرافیک‌های تحلیلی و داده‌نما برای مجلات و گزارش‌های سالانه.</li>
+                                        <li>صفحه‌آرایی مجلات تخصصی و نشریات با نرم‌افزارهای InDesign و Illustrator.</li>
+                                        <li>طراحی بنرهای تبلیغاتی محیطی، بیلبوردها و بنرهای دیجیتال.</li>
                                     </ul>
                                 </div>
 
@@ -614,7 +677,7 @@
                                         <h3 class="text-base font-bold text-white mb-1">کارشناسی مهندسی کامپیوتر</h3>
                                         <p class="text-xs text-slate-400">دانشگاه دولتی - تمرکز بر دید بصری و تحلیل ساختاری</p>
                                     </div>
-                                    <span class="text-xs font-medium px-3 py-1 rounded-xl bg-slate-800 text-brand-300 border border-slate-700">۱۳a۹۹ - ۱۴۰۳</span>
+                                    <span class="text-xs font-medium px-3 py-1 rounded-xl bg-slate-800 text-brand-300 border border-slate-700">۱۳۹۹ - ۱۴۰۳</span>
                                 </div>
                             </div>
                         </div>
@@ -630,13 +693,13 @@
                                 <div class="bg-dark-900/50 p-4 rounded-2xl border border-slate-800/80">
                                     <i class="fa-solid fa-trophy text-amber-400 text-xl mb-2"></i>
                                     <h4 class="text-sm font-bold text-white mb-1">ارزیابی برتر المپیاد زیست‌شناسی</h4>
-                                    <p class="text-xs text-slate-400">ارزیابی و طراحی لوگوی ۲۹امین دوره المپیاد زیست‌شناسی[cite: 1].</p>
+                                    <p class="text-xs text-slate-400">ارزیابی و طراحی لوگوی ۲۹امین دوره المپیاد زیست‌شناسی.</p>
                                 </div>
 
                                 <div class="bg-dark-900/50 p-4 rounded-2xl border border-slate-800/80">
                                     <i class="fa-solid fa-star text-amber-400 text-xl mb-2"></i>
                                     <h4 class="text-sm font-bold text-white mb-1">طراحی پرتفولیو مدرن</h4>
-                                    <p class="text-xs text-slate-400">انتشار و میزبانی پرتفولیوی اختصاصی گرافیک روی دامنه شخصی[cite: 1].</p>
+                                    <p class="text-xs text-slate-400">انتشار و میزبانی پرتفولیوی اختصاصی گرافیک روی دامنه شخصی.</p>
                                 </div>
                             </div>
                         </div>
@@ -787,6 +850,7 @@
                 client: 'کمیته المپیاد زیست شناسی ایران',
                 role: 'طراح و ایده پرداز',
                 tools: 'Illustrator',
+                style: 'مفهوم‌گرا / مونوگرام ترکیب با فیگور حیوان',
                 colorPalette: ['#000000', '#efc08e', '#c68355'],
                 coverImage: 'image/logo_zist/logo-zist-00.jpg',
                 galleryRow1: [
@@ -798,10 +862,15 @@
                     'image/logo_zist/logo-zist-04.jpg',
                     'image/logo_zist/logo-zist-05.jpg'
                 ],
-                description: 'طراحی نشان دوره ییست و نهمین المپیاد زیست شناسی ایران با الهام از سیاهگوش ایرانی',
+                description: 'طراحی نشان دوره بیست و نهمین المپیاد زیست شناسی ایران با الهام از سیاهگوش ایرانی',
                 designApproach: '<p>ایده اصلی این طرح، ترکیب فرم سیاه‌گوش ایرانی به‌عنوان نمادی از هوش، سرعت و زیبایی باعدد ۲۹ است؛ ترکیبی که به‌صورت یکپارچه و هماهنگ در ساختار لوگو شکل گرفته است. در کنار این ترکیب، با استفاده از خطوط و فرم دم سیاه‌گوش، تلاش شده است نقش بته‌جقه که نمادی از سرو ایرانی است، در طراحی دم به‌صورت ظریف و یکپارچه شکل بگیرد. رنگ‌بندی طرح نیز با الهام از رنگ طبیعی بدن سیاه‌گوش ایرانی انتخاب شده است تا در کنار فرم و مفهوم، پیوند بیشتری با هویت این جانور داشته باشد.</p>',
-                typography: '<h4 class="text-xl font-bold text-white mb-2">IRANSans - Bold </h4> اصلاحات و شخصی‌سازی تایپوگرافی:\n گرد کردن زاویه ها ایجاد شکل اختصاصی برای حروف' 
-
+                approachImage: 'image/logo_zist/logo-zist-01.jpg',
+                typoFont: 'IRANSans',
+                typoWeight: 'Bold / Heavy',
+                typoSize: 'عنوان: ۲۴pt | متن: ۱۲pt',
+                typoSampleImage: 'image/logo_zist/logo-zist-02.jpg',
+                typography: 'اصلاحات و شخصی‌سازی تایپوگرافی:\n گرد کردن زاویه ها ایجاد شکل اختصاصی برای حروف',
+                typoDescImage: 'image/logo_zist/logo-zist-03.jpg'
             },
             {
                 id: '2',
@@ -813,6 +882,7 @@
                 client: 'کافه لومیر',
                 role: 'طراح هویت برند',
                 tools: 'Illustrator, Photoshop',
+                style: 'لوکس مدرن (Modern Luxury)',
                 colorPalette: ['#1e1b18', '#c5a059', '#3e2723', '#f5f0eb'],
                 coverImage: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1000&q=80',
                 galleryRow1: [
@@ -826,7 +896,13 @@
                 ],
                 description: 'طراحی جامع هویت بصری برند لومیر شامل لوگوتایپ اختصاصی، پالت رنگی گرم و مدرن، طراحی منو و کارت ویزیت.',
                 designApproach: '<p>تلفیق حس اصالت قهوه سنتی با مدرنیته و استفاده از المان‌های لوکس طلایی روی زمینه‌های تیره.</p>',
-                typography: '<h4 class="text-xl font-bold text-white mb-2">وزیرمتن / Playfair Display</h4>'
+                approachImage: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80',
+                typoFont: 'وزیرمتن / Playfair Display',
+                typoWeight: 'Regular & SemiBold',
+                typoSize: 'عناوین: ۲۸pt | بدنه: ۱۴pt',
+                typoSampleImage: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80',
+                typography: 'استفاده از ترکیب فونت کلاسیک انگلیسی در کنار وزن‌های مختلف وزیرمتن جهت ایجاد تعادل بین لوکس بودن و خوانایی.',
+                typoDescImage: ''
             },
             {
                 id: '3',
@@ -838,6 +914,7 @@
                 client: 'استودیو پارس',
                 role: 'طراح گرافیک',
                 tools: 'Illustrator, Photoshop',
+                style: 'مینیمال هندسی (Minimalist Structural)',
                 colorPalette: ['#111827', '#e5e7eb', '#d97706'],
                 coverImage: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1000&q=80',
                 galleryRow1: [
@@ -849,7 +926,13 @@
                 ],
                 description: 'طراحی کارت ویزیت با یووی موضعی و طلاکوب بر روی کاغذ بافت‌دار مشکی سخت برای مهندسان معمار.',
                 designApproach: '<p>تأکید بر سادگی و سنگینی با ساختار تایپوگرافی خوانا و خطوط طلایی ظریف.</p>',
-                typography: '<h4 class="text-xl font-bold text-white mb-2">Vazirmatn Medium</h4>'
+                approachImage: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80',
+                typoFont: 'Vazirmatn',
+                typoWeight: 'Medium & Light',
+                typoSize: 'نام: ۱۶pt | عناوین شغلی: ۱۰pt',
+                typoSampleImage: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80',
+                typography: 'استفاده از ساختار خطوط هندسی دقیق و وزن مدیوم برای حفظ ریتم منظم روی کارت ویزیت.',
+                typoDescImage: ''
             },
             {
                 id: '4',
@@ -861,6 +944,7 @@
                 client: 'داده‌پردازان',
                 role: 'طراح گرافیک',
                 tools: 'Illustrator, InDesign',
+                style: 'شرکتی و رسمی (Corporate)',
                 colorPalette: ['#1e293b', '#6366f1', '#f8fafc'],
                 coverImage: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=1000&q=80',
                 galleryRow1: [
@@ -872,7 +956,13 @@
                 ],
                 description: 'طراحی سربرگ A4 و A5 با رعایت استانداردهای مکاتبات اداری، حاشیه امن چاپ و واترمارک رسمی.',
                 designApproach: '<p>ساختار منظم گرافیکی همراه با قرارگیری بهینه اطلاعات تماس و لوگو در سربرگ رسمی.</p>',
-                typography: '<h4 class="text-xl font-bold text-white mb-2">Vazirmatn Regular</h4>'
+                approachImage: '',
+                typoFont: 'Vazirmatn',
+                typoWeight: 'Regular',
+                typoSize: 'متن نامه: ۱۱pt | عناوین: ۱۴pt',
+                typoSampleImage: 'https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?auto=format&fit=crop&w=800&q=80',
+                typography: 'تایپوگرافی رسمی و استاندارد بر اساس گرید رسمی مکاتبات سازمانی.',
+                typoDescImage: ''
             },
             {
                 id: '5',
@@ -884,6 +974,7 @@
                 client: 'مهندسی نیرو',
                 role: 'طراح گرافیک و صفحه آرا',
                 tools: 'InDesign, Illustrator',
+                style: 'صنعتی ساختاریافته (Industrial Structured)',
                 colorPalette: ['#0369a1', '#0284c7', '#f0f9ff', '#0f172a'],
                 coverImage: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1000&q=80',
                 galleryRow1: [
@@ -895,7 +986,13 @@
                 ],
                 description: 'بروشور ۳ لتی تبلیغاتی با چینش منظم متون، اینفوگرافیک‌های کوچک خدمات و آیکون‌های اختصاصی.',
                 designApproach: '<p>صفحه‌آرایی روان برای هدایت بهتر چشم خواننده در سه خط تا و ارائه جذاب خدمات صنعتی.</p>',
-                typography: '<h4 class="text-xl font-bold text-white mb-2">فونت انجمن / Vazirmatn</h4>'
+                approachImage: '',
+                typoFont: 'فونت انجمن / Vazirmatn',
+                typoWeight: 'SemiBold & Regular',
+                typoSize: 'تیترها: ۱۸pt | توضیحات: ۱۰pt',
+                typoSampleImage: 'https://images.unsplash.com/photo-1542744094-3a31b272c390?auto=format&fit=crop&w=800&q=80',
+                typography: 'استفاده از فونت انجمن برای ایجاد حالت مدرن و صنعتی در کنار فونت وزیر برای خوانایی عالی.',
+                typoDescImage: ''
             },
             {
                 id: '6',
@@ -907,6 +1004,7 @@
                 client: 'دبیرخانه جشنواره',
                 role: 'طراح پوستر',
                 tools: 'Photoshop, Illustrator',
+                style: 'مفهومی سوئیسی / آوانگارد (Conceptual Swiss)',
                 colorPalette: ['#000000', '#e63946', '#f1faee', '#457b9d'],
                 coverImage: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1000&q=80',
                 galleryRow1: [
@@ -918,7 +1016,13 @@
                 ],
                 description: 'طراحی سری پوسترهای مفهوم‌گرا با کنتراست رنگی شدید و تایپوگرافی جسورانه.',
                 designApproach: '<p>ایجاد کنتراست‌های گرافیکی قوی و ترکیب فرم‌های تجریدی با فونت‌های سنگین.</p>',
-                typography: '<h4 class="text-xl font-bold text-white mb-2">لاله‌زار / Vazirmatn</h4>'
+                approachImage: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80',
+                typoFont: 'لاله‌زار / Vazirmatn',
+                typoWeight: 'Black / Extra Bold',
+                typoSize: 'عنوان پوستر: ۷۲pt | جزئیات: ۱۴pt',
+                typoSampleImage: 'https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=800&q=80',
+                typography: 'تایپوگرافی برجسته و تیتروار برای جلب توجه مخاطب در فضاهای شهری و دیجیتال.',
+                typoDescImage: ''
             },
             {
                 id: '7',
@@ -929,6 +1033,7 @@
                 date: '۱۴۰۲/۰۲/۱۰',
                 client: 'فروشگاه آنلاین استایل',
                 role: 'طراح بنر و تبلیغات',
+                style: 'پاپ / مدرن و پرکنتراست (Vibrant Pop)',
                 tools: 'Photoshop, Illustrator',
                 colorPalette: ['#ec4899', '#8b5cf6', '#ffffff', '#1e1b4b'],
                 coverImage: 'https://images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=1000&q=80',
@@ -941,7 +1046,13 @@
                 ],
                 description: 'طراحی بنرهای بیلبوردی محیطی و بنرهای استاندارد وب‌سایت برای افزایش نرخ کلیک و جذب مشتری.',
                 designApproach: '<p>پیام‌رسانی سریع با رنگ‌های شارپ و فراخوان به عمل (CTA) بسیار واضح و خوانا.</p>',
-                typography: '<h4 class="text-xl font-bold text-white mb-2">فونت کلمه / Vazirmatn Bold</h4>'
+                approachImage: '',
+                typoFont: 'فونت کلمه / Vazirmatn Bold',
+                typoWeight: 'Bold',
+                typoSize: 'پیام اصلی: ۴۸pt | فراخوان: ۱۸pt',
+                typoSampleImage: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80',
+                typography: 'استفاده از تایپ بولد و ضخیم برای انتقال لحظه‌ای پیام در تبلیغات محیطی.',
+                typoDescImage: ''
             },
             {
                 id: '8',
@@ -953,6 +1064,7 @@
                 client: 'انتشارات هنر مدرن',
                 role: 'مدیر هنری و صفحه آرا',
                 tools: 'InDesign, Photoshop',
+                style: 'تحریریه‌ای مدرن (Editorial Modernism)',
                 colorPalette: ['#0f172a', '#38bdf8', '#e2e8f0', '#0284c7'],
                 coverImage: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=1000&q=80',
                 galleryRow1: [
@@ -964,7 +1076,13 @@
                 ],
                 description: 'صفحه‌آرایی ۶۴ صفحه مجله همراه با طراحی جلد جذاب، تایپوگرافی چندستونی و اینفوگرافیک‌های داخلی.',
                 designApproach: '<p>استفاده از گرید چندستونی دقیق این‌دیزاین برای خوانایی راحت متون طولانی و جذابیت بصری تصاویر.</p>',
-                typography: '<h4 class="text-xl font-bold text-white mb-2">فونت یکان بخت / Vazirmatn</h4>'
+                approachImage: '',
+                typoFont: 'فونت یکان بخت / Vazirmatn',
+                typoWeight: 'Regular, Medium, Heavy',
+                typoSize: 'تیتر مقالات: ۳۲pt | متن مقاله: ۱۰.۵pt',
+                typoSampleImage: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=80',
+                typography: 'تنظیم دقیق فاصله خطوط (Leading) و کشیدگی حروف جهت مطالعه بی‌خستگی متون مجله.',
+                typoDescImage: ''
             },
             {
                 id: '9',
@@ -976,6 +1094,7 @@
                 client: 'دبیرخانه المپیاد زیست‌شناسی',
                 role: 'طراح نشریه',
                 tools: 'InDesign, Illustrator',
+                style: 'آکادمیک تمیز (Academic Clean)',
                 colorPalette: ['#1e3a8a', '#3b82f6', '#f8fafc', '#334155'],
                 coverImage: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1000&q=80',
                 galleryRow1: [
@@ -987,7 +1106,13 @@
                 ],
                 description: 'طراحی قالب کلی و صفحه‌آرایی نشریه علمی با رعایت ساختار مقالات، جداول آماری و نمودارهای دقیق.',
                 designApproach: '<p>ساختار آکادمیک و منظم با در نظر گرفتن خوانایی متون تخصصی و المان‌های زیستی.</p>',
-                typography: '<h4 class="text-xl font-bold text-white mb-2">فونت نازنین / Vazirmatn</h4>'
+                approachImage: '',
+                typoFont: 'فونت نازنین / Vazirmatn',
+                typoWeight: 'Regular & Bold',
+                typoSize: 'عناوین تخصصی: ۲۰pt | متن اصلی: ۱۱pt',
+                typoSampleImage: 'https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=800&q=80',
+                typography: 'استفاده از فونت‌های استاندارد نشریات علمی فارسی با رعایت استانداردهای ارجاع‌دهی.',
+                typoDescImage: ''
             },
             {
                 id: '10',
@@ -999,6 +1124,7 @@
                 client: 'مرکز تحقیقات گرافیک',
                 role: 'طراح اینفوگرافیک',
                 tools: 'Illustrator, Photoshop',
+                style: 'داده‌نمایی برداری (Flat Data Visual)',
                 colorPalette: ['#0f172a', '#10b981', '#06b6d4', '#f8fafc'],
                 coverImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80',
                 galleryRow1: [
@@ -1010,7 +1136,13 @@
                 ],
                 description: 'تبدیل آمار و داده‌های پیچیده به یک تصویرپوستر اینفوگرافیک ملموس و جذاب.',
                 designApproach: '<p>استفاده از آیکون‌های وکتوری اختصاصی و نمودارهای گرافیکی شکیل جهت انتقال سریع اطلاعات.</p>',
-                typography: '<h4 class="text-xl font-bold text-white mb-2">Vazirmatn Medium</h4>'
+                approachImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
+                typoFont: 'Vazirmatn',
+                typoWeight: 'Medium & SemiBold',
+                typoSize: 'اعداد شاخص: ۳۶pt | لیبل‌ها: ۹pt',
+                typoSampleImage: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80',
+                typography: 'استفاده از فونت‌های اعداد لاتین و فارسی هم‌خوانی داده شده برای نمودارهای آماری.',
+                typoDescImage: ''
             },
             {
                 id: '11',
@@ -1022,6 +1154,7 @@
                 client: 'استودیو دیزاین نوین',
                 role: 'طراح ارتباطات بصری',
                 tools: 'Illustrator, Figma',
+                style: 'تکنولوژی / تایم‌لاین (Timeline Tech)',
                 colorPalette: ['#4f46e5', '#818cf8', '#312e81', '#ffffff'],
                 coverImage: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1000&q=80',
                 galleryRow1: [
@@ -1033,7 +1166,13 @@
                 ],
                 description: 'طراحی پوستر رودمپ ۳ ساله هویت برند برای ارائه به سرمایه‌گذاران همراه با گام‌های زمانی شفاف.',
                 designApproach: '<p>نمایش خط زمانی افقی با آیکون‌های موفقیت (Milestones) و تفکیک فازهای پروژه با رنگ‌بندی مجزا.</p>',
-                typography: '<h4 class="text-xl font-bold text-white mb-2">Vazirmatn Bold</h4>'
+                approachImage: '',
+                typoFont: 'Vazirmatn',
+                typoWeight: 'Bold & Light',
+                typoSize: 'گام‌ها: ۱۴pt | شرح اقدامات: ۹.۵pt',
+                typoSampleImage: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80',
+                typography: 'تایپوگرافی سلسله‌مراتبی و طبقه‌بندی شده برای درک گام به گام فرایندها.',
+                typoDescImage: ''
             }
         ];
 
@@ -1198,110 +1337,163 @@
             document.getElementById('detail-client').innerText = project.client;
             document.getElementById('detail-role').innerText = project.role;
             document.getElementById('detail-tools').innerText = project.tools;
+            document.getElementById('detail-style').innerText = project.style || '---';
             document.getElementById('detail-description').innerText = project.description;
 
             const paletteContainer = document.getElementById('detail-palette');
             paletteContainer.innerHTML = '';
             if (project.colorPalette && project.colorPalette.length > 0) {
-                project.colorPalette.forEach(hex => {
-                    const colorCircle = document.createElement('div');
-                    colorCircle.className = 'group relative flex items-center justify-center';
-                    colorCircle.innerHTML = `
-                        <span class="w-7 h-7 rounded-full border border-white/20 shadow-md cursor-pointer transition-transform group-hover:scale-110" style="background-color: ${hex}"></span>
-                        <span class="absolute -bottom-8 opacity-0 group-hover:opacity-100 transition-opacity bg-dark-900 text-slate-200 text-[10px] px-2 py-0.5 rounded border border-slate-700 font-mono pointer-events-none z-10 uppercase">${hex}</span>
-                    `;
-                    paletteContainer.appendChild(colorCircle);
+                project.colorPalette.forEach(color => {
+                    const circle = document.createElement('div');
+                    circle.className = 'w-6 h-6 rounded-full border border-white/20 shadow-sm transition-transform hover:scale-110';
+                    circle.style.backgroundColor = color;
+                    circle.title = color;
+                    paletteContainer.appendChild(circle);
                 });
+            } else {
+                paletteContainer.innerText = '---';
             }
 
             document.getElementById('detail-main-img').src = project.coverImage;
 
             const row1 = document.getElementById('detail-gallery-row1');
             row1.innerHTML = '';
-            (project.galleryRow1 || []).forEach(imgUrl => {
-                const item = document.createElement('div');
-                item.className = 'rounded-2xl overflow-hidden glass-card p-2 group cursor-pointer';
-                item.onclick = () => openModal(imgUrl);
-                item.innerHTML = `
-                    <img src="${imgUrl}" alt="Gallery image" class="w-full h-80 object-cover rounded-xl transition-transform duration-500 group-hover:scale-105">
-                `;
-                row1.appendChild(item);
-            });
+            if (project.galleryRow1 && project.galleryRow1.length > 0) {
+                project.galleryRow1.forEach(imgSrc => {
+                    const div = document.createElement('div');
+                    div.className = 'rounded-2xl overflow-hidden glass-card p-2 cursor-pointer group';
+                    div.onclick = () => openModal(imgSrc);
+                    div.innerHTML = `<img src="${imgSrc}" class="w-full h-64 object-cover rounded-xl group-hover:scale-105 transition-transform duration-300">`;
+                    row1.appendChild(div);
+                });
+            }
 
             const row2 = document.getElementById('detail-gallery-row2');
             row2.innerHTML = '';
-            (project.galleryRow2 || []).forEach(imgUrl => {
-                const item = document.createElement('div');
-                item.className = 'rounded-2xl overflow-hidden glass-card p-2 group cursor-pointer';
-                item.onclick = () => openModal(imgUrl);
-                item.innerHTML = `
-                    <img src="${imgUrl}" alt="Gallery detail image" class="w-full h-64 object-cover rounded-xl transition-transform duration-500 group-hover:scale-105">
-                `;
-                row2.appendChild(item);
-            });
+            if (project.galleryRow2 && project.galleryRow2.length > 0) {
+                project.galleryRow2.forEach(imgSrc => {
+                    const div = document.createElement('div');
+                    div.className = 'rounded-2xl overflow-hidden glass-card p-2 cursor-pointer group';
+                    div.onclick = () => openModal(imgSrc);
+                    div.innerHTML = `<img src="${imgSrc}" class="w-full h-48 object-cover rounded-xl group-hover:scale-105 transition-transform duration-300">`;
+                    row2.appendChild(div);
+                });
+            }
 
-            document.getElementById('detail-design-approach').innerHTML = project.designApproach || '<p>توضیحاتی ثبت نشده است.</p>';
-            document.getElementById('detail-typography').innerHTML = project.typography || '<p>اطلاعات تایپوگرافی ثبت نشده است.</p>';
+            document.getElementById('detail-design-approach').innerHTML = project.designApproach || '<p>---</p>';
+
+            const approachImgContainer = document.getElementById('detail-approach-image-container');
+            const approachImg = document.getElementById('detail-approach-image');
+            if (project.approachImage) {
+                approachImg.src = project.approachImage;
+                approachImgContainer.classList.remove('hidden');
+            } else {
+                approachImgContainer.classList.add('hidden');
+            }
+
+            document.getElementById('detail-typo-font').innerText = project.typoFont || '---';
+            document.getElementById('detail-typo-weight').innerText = project.typoWeight || '---';
+            document.getElementById('detail-typo-size').innerText = project.typoSize || '---';
+
+            const typoSampleContainer = document.getElementById('detail-typo-sample-container');
+            const typoSampleImg = document.getElementById('detail-typo-sample-image');
+            if (project.typoSampleImage) {
+                typoSampleImg.src = project.typoSampleImage;
+                typoSampleContainer.classList.remove('hidden');
+            } else {
+                typoSampleContainer.classList.add('hidden');
+            }
+
+            document.getElementById('detail-typography').innerText = project.typography || '---';
+
+            const typoDescImgContainer = document.getElementById('detail-typo-desc-img-container');
+            const typoDescImg = document.getElementById('detail-typo-desc-image');
+            if (project.typoDescImage) {
+                typoDescImg.src = project.typoDescImage;
+                typoDescImgContainer.classList.remove('hidden');
+            } else {
+                typoDescImgContainer.classList.add('hidden');
+            }
 
             updateNavigationButtons();
 
-            hideAllPages();
-            document.getElementById('project-detail-page').classList.replace('page-hidden', 'page-active');
+            showPage('project-detail-page');
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        function updateNavigationButtons() {
-            const prevIndex = (currentProjectIndex - 1 + projectsData.length) % projectsData.length;
-            const nextIndex = (currentProjectIndex + 1) % projectsData.length;
-
-            document.getElementById('prev-project-title').innerText = projectsData[prevIndex].title;
-            document.getElementById('next-project-title').innerText = projectsData[nextIndex].title;
-        }
-
         function navigateProject(direction) {
-            currentProjectIndex = (currentProjectIndex + direction + projectsData.length) % projectsData.length;
-            openProjectDetail(projectsData[currentProjectIndex].id);
+            const newIndex = currentProjectIndex + direction;
+            if (newIndex >= 0 && newIndex < projectsData.length) {
+                openProjectDetail(projectsData[newIndex].id);
+            }
         }
 
-        function hideAllPages() {
-            const pages = ['home-page', 'project-detail-page', 'resume-page'];
-            pages.forEach(pId => {
-                const el = document.getElementById(pId);
-                if (el) el.classList.replace('page-active', 'page-hidden');
+        function updateNavigationButtons() {
+            const prevBtn = document.getElementById('prev-project-btn');
+            const nextBtn = document.getElementById('next-project-btn');
+
+            if (currentProjectIndex > 0) {
+                prevBtn.style.visibility = 'visible';
+                document.getElementById('prev-project-title').innerText = projectsData[currentProjectIndex - 1].title;
+            } else {
+                prevBtn.style.visibility = 'hidden';
+            }
+
+            if (currentProjectIndex < projectsData.length - 1) {
+                nextBtn.style.visibility = 'visible';
+                document.getElementById('next-project-title').innerText = projectsData[currentProjectIndex + 1].title;
+            } else {
+                nextBtn.style.visibility = 'hidden';
+            }
+        }
+
+        function showPage(pageId) {
+            document.querySelectorAll('.page-view').forEach(page => {
+                page.classList.remove('page-active');
+                page.classList.add('page-hidden');
             });
+
+            const activePage = document.getElementById(pageId);
+            if (activePage) {
+                activePage.classList.remove('page-hidden');
+                activePage.classList.add('page-active');
+            }
         }
 
         function showHomePage(e) {
             if (e) e.preventDefault();
-            hideAllPages();
-            document.getElementById('home-page').classList.replace('page-hidden', 'page-active');
+            showPage('home-page');
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         function showResumePage(e) {
             if (e) e.preventDefault();
-            hideAllPages();
-            document.getElementById('resume-page').classList.replace('page-hidden', 'page-active');
+            showPage('resume-page');
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         function scrollToSection(id) {
             setTimeout(() => {
                 const el = document.getElementById(id);
-                if (el) el.scrollIntoView({ behavior: 'smooth' });
+                if (el) {
+                    el.scrollIntoView({ behavior: 'smooth' });
+                }
             }, 100);
         }
 
         function openModal(src) {
-            document.getElementById('modal-img').src = src;
-            document.getElementById('image-modal').classList.remove('hidden');
+            if (!src) return;
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-img');
+            modalImg.src = src;
+            modal.classList.remove('hidden');
         }
 
         function closeModal() {
             document.getElementById('image-modal').classList.add('hidden');
         }
 
-        window.onload = function() {
+        window.onload = () => {
             renderProjects();
         };
     </script>
