@@ -9,7 +9,7 @@ registerProject({
     date: '۱۴۰۳/۰۸/۱۰',
 
     /* ----- مشخصات پروژه ----- */
-    client: 'جشنواره بین‌المللی حرکت دانشگاه خوارزمی - انجمن علمی علوم کامپیوتر',
+    client: 'جشنواره حرکت دانشگاه خوارزمی - انجمن علمی علوم کامپیوتر',
     role: 'طراح گرافیک و صفحه آرا',
     tools: 'Illustrator, InDesign',
     style: 'مدرن و فن‌آورانه (Tech Modern)',
@@ -23,7 +23,7 @@ registerProject({
     ],
     galleryRow2: [
         'brochurecs-03.jpg',
-        'brochurecs-04.jpg'
+        'brochurecs-04.png'
     ],
 
     /* ----- توضیحات ----- */
