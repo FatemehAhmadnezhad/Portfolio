@@ -16,11 +16,11 @@ registerProject({
     colorPalette: ['#1e3a8a', '#d97706', '#ec4899', '#10b981', '#ffffff'],
 
     /* ----- تصاویر ----- */
-    coverImage: 'image/sdb-post/post-01.jpg',
+    coverImage: 'image/sdb-post/post-01.png',
     galleryRow1: [
-        'image/sdb-post/post-01.jpg',
-        'image/sdb-post/post-02.jpg',
-         'image/sdb-post/post-03.jpg'
+        'image/sdb-post/post-01.png',
+        'image/sdb-post/post-02.png',
+         'image/sdb-post/post-03.png'
     ],
     galleryRow2: [
        
