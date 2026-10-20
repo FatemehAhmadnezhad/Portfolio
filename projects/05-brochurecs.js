@@ -35,7 +35,7 @@ registerProject({
     typoFont: 'Kalameh(FaNum)',
     typoWeight: 'ExtraBold & Medium',
     typoSize: 'تیترها: ۱۱pt | توضیحات: ۱۱pt',
-    typoSampleImage: 'image/brochurecs/brochurecs-01.jpg',
+    typoSampleImage: 'image/brochurecs/brochurecs-04.jpg',
     typography: 'استفاده از فونت Kalameh(FaNum) ExtraBold با سایز ۱۱ برای عناوین و Kalameh(FaNum) Medium با سایز ۱۱ برای متون بدنه جهت ایجاد تمایز بصری شفاف و خوانایی بالا.',
     typoDescImage: ''
 
