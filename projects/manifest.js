@@ -17,9 +17,9 @@ window.PROJECT_FILES = [
     '04-law_infographic',
     '05-brochurecs',
     '06-showvana',
-    '07-banner-campaign',
-    '08-art-magazine',
-    '09-biology-journal',
-    // '10-infographic',
+    '07-mohandessalam_podcast',
+    '08-harekat_Cs_info',
+    '09-sdb-post',
+    '10-posters',
     '11-roadmap'
 ];
