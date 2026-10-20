@@ -14,12 +14,12 @@ window.PROJECT_FILES = [
     '01-logo-zist',
     '02-workshop-from-zero-to-mastery',
     '03-visual-identity-categories',
-    '04-letterhead',
+    '04-law_infographic',
     '05-brochurecs',
     '06-poster-series',
     '07-banner-campaign',
     '08-art-magazine',
     '09-biology-journal',
-    '10-infographic',
+    // '10-infographic',
     '11-roadmap'
 ];
