@@ -15,7 +15,7 @@ window.PROJECT_FILES = [
     '02-workshop-from-zero-to-mastery',
     '03-visual-identity-categories',
     '04-letterhead',
-    '05-brochure',
+    '05-brochurecs',
     '06-poster-series',
     '07-banner-campaign',
     '08-art-magazine',
