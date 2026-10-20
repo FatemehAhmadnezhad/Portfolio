@@ -4,7 +4,7 @@ registerProject({
     id: '5',
     title: 'طراحی مجموعه بروشورهای سه لتی نقشه راه علم داده (Data Science Roadmap)',
     category: 'بروشور',
-    mainGroup: 'branding_group',
+    mainGroup: 'brochure_group',
     score: 9.6,                       // امتیاز (برای مرتب‌سازی «منتخب‌ها»)
     date: '۱۴۰۳/۰۸/۱۰',
 
