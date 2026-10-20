@@ -16,7 +16,7 @@ window.PROJECT_FILES = [
     '03-visual-identity-categories',
     '04-law_infographic',
     '05-brochurecs',
-    '06-poster-series',
+    '06-showvana',
     '07-banner-campaign',
     '08-art-magazine',
     '09-biology-journal',
