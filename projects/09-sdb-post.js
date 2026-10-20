@@ -16,15 +16,14 @@ registerProject({
     colorPalette: ['#1e3a8a', '#d97706', '#ec4899', '#10b981', '#ffffff'],
 
     /* ----- تصاویر ----- */
-    coverImage: 'image/yscgrad/cover.jpg',
+    coverImage: 'image/sdb-post/post-01.jpg',
     galleryRow1: [
-        'image/yscgrad/post-01.jpg',
-        'image/yscgrad/post-02.jpg'
+        'image/sdb-post/post-01.jpg',
+        'image/sdb-post/post-02.jpg',
+         'image/sdb-post/post-03.jpg'
     ],
     galleryRow2: [
-        'image/yscgrad/post-03.jpg',
-        'image/yscgrad/post-04.jpg',
-        'image/yscgrad/post-05.jpg'
+       
     ],
 
     /* ----- توضیحات ----- */
@@ -33,13 +32,13 @@ registerProject({
         <p>در این پروژه، هدف اصلی خلق یک هویت بصری پویا، منسجم و جذاب برای بازتاب اخبار، مصاحبه‌ها، تحلیل‌های تخصصی و چک‌لیست‌های آموزشی المپیادهای علمی بوده است.</p>
         <p>استفاده از ترکیب‌بندی‌های چشم‌نواز، تایپوگرافی‌های برجسته، تنوع رنگی متناسب با هر موضوع علمی (مانند هوش مصنوعی، فیزیک، زیست‌شناسی و...) و جانمایی هوشمندانه نشان «صدا، دوربین و باشگاه»، حس حرفه‌ای بودن و اصالت رسانه‌ای را به مخاطب منتقل می‌کند.</p>
     `,
-    approachImage: 'image/yscgrad/01.jpg',
+    approachImage: '',
 
     /* ----- تایپوگرافی ----- */
     typoFont: '-',
     typoWeight: '-',
     typoSize: '-',
-    typoSampleImage: 'image/yscgrad/02.jpg',
+    typoSampleImage: '',
     typography: `طراحی تایپوگرافی این مجموعه با تمرکز بر خوانایی بالا در صفحه‌نمایش‌های کوچک، ایجاد وزن بصری قوی در تیترهای اصلی و برقراری هماهنگی کامل میان لحن رسمی اخبار و لحن انگیزشی مصاحبه‌ها انجام شده است.`,
     typoDescImage: ''
 
