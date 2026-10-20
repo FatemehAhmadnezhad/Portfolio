@@ -13,7 +13,7 @@
 window.PROJECT_FILES = [
     '01-logo-zist',
     '02-workshop-from-zero-to-mastery',
-    '03-business-card',
+    '03-visual-identity-categories',
     '04-letterhead',
     '05-brochure',
     '06-poster-series',
