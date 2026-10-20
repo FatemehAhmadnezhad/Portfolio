@@ -1,45 +1,42 @@
-/* =====================================================================
-   پروژه: طراحی بروشور سه لتی معرفی خدمات شرکت مهندسی نیرو
-   فایل:  projects/05-brochure.js
-   ===================================================================== */
 registerProject({
 
     /* ----- اطلاعات پایه ----- */
     id: '5',
-    title: 'طراحی بروشور سه لتی معرفی خدمات شرکت مهندسی نیرو',
+    title: 'طراحی مجموعه بروشورهای سه لتی نقشه راه علم داده (Data Science Roadmap)',
     category: 'بروشور',
     mainGroup: 'branding_group',
-    score: 9.3,                       // امتیاز (برای مرتب‌سازی «منتخب‌ها»)
-    date: '۱۴۰۲/۰۴/۱۸',
+    score: 9.6,                       // امتیاز (برای مرتب‌سازی «منتخب‌ها»)
+    date: '۱۴۰۳/۰۸/۱۰',
 
     /* ----- مشخصات پروژه ----- */
-    client: 'مهندسی نیرو',
+    client: 'جشنواره بین‌المللی حرکت دانشگاه خوارزمی - انجمن علمی علوم کامپیوتر',
     role: 'طراح گرافیک و صفحه آرا',
-    tools: 'InDesign, Illustrator',
-    style: 'صنعتی ساختاریافته (Industrial Structured)',
-    colorPalette: ['#0369a1', '#0284c7', '#f0f9ff', '#0f172a'],
+    tools: 'Illustrator, InDesign',
+    style: 'مدرن و فن‌آورانه (Tech Modern)',
+    colorPalette: ['#0f172a', '#1e293b', '#38bdf8', '#0284c7', '#ffffff'],
 
     /* ----- تصاویر ----- */
-    coverImage: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1000&q=80',
+    coverImage: 'brochurecs-04.jpg',
     galleryRow1: [
-        'https://images.unsplash.com/photo-1542744094-3a31b272c390?auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1000&q=80'
+        'brochurecs-01.jpg',
+        'brochurecs-02.jpg'
     ],
     galleryRow2: [
-        'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80'
+        'brochurecs-03.jpg',
+        'brochurecs-04.jpg'
     ],
 
     /* ----- توضیحات ----- */
-    description: 'بروشور ۳ لتی تبلیغاتی با چینش منظم متون، اینفوگرافیک‌های کوچک خدمات و آیکون‌های اختصاصی.',
-    designApproach: `<p>صفحه‌آرایی روان برای هدایت بهتر چشم خواننده در سه خط تا و ارائه جذاب خدمات صنعتی.</p>`,
+    description: 'مجموعه بروشورهای ۳ لتی راهنمای جامع مسیر علم داده شامل مفاهیم پایه‌ای، برنامه‌نویسی شی‌گرا (OOP)، مدیریت داده با SQL، معرفی کتابخانه‌های تخصصی پایتون (NumPy, Pandas, Matplotlib) و اینفوگرافیک نقشه راه.',
+    designApproach: `<p>صفحه‌آرایی ساختاریافته و مدرن با تم تیره و عناصر نئونی جهت انتقال حس تکنولوژی؛ طراحی به‌گونه‌ای انجام شده که چشم خواننده را به روانی در طول مسیر یادگیری و ابزارهای کاربردی هدایت کند.</p>`,
     approachImage: '',
 
     /* ----- تایپوگرافی ----- */
-    typoFont: 'فونت انجمن / Vazirmatn',
-    typoWeight: 'SemiBold & Regular',
-    typoSize: 'تیترها: ۱۸pt | توضیحات: ۱۰pt',
-    typoSampleImage: 'https://images.unsplash.com/photo-1542744094-3a31b272c390?auto=format&fit=crop&w=800&q=80',
-    typography: 'استفاده از فونت انجمن برای ایجاد حالت مدرن و صنعتی در کنار فونت وزیر برای خوانایی عالی.',
+    typoFont: 'Kalameh(FaNum)',
+    typoWeight: 'ExtraBold & Medium',
+    typoSize: 'تیترها: ۱۱pt | توضیحات: ۱۱pt',
+    typoSampleImage: 'brochurecs-01.jpg',
+    typography: 'استفاده از فونت Kalameh(FaNum) ExtraBold با سایز ۱۱ برای عناوین و Kalameh(FaNum) Medium با سایز ۱۱ برای متون بدنه جهت ایجاد تمایز بصری شفاف و خوانایی بالا.',
     typoDescImage: ''
 
 });
