@@ -16,10 +16,10 @@ registerProject({
     colorPalette: ['#0033CC', '#22C55E', '#DA291C', '#FFFFFF'],
 
     /* ----- تصاویر ----- */
-    coverImage: 'image/olympiad_frames/qab_jahani_01.png',
+    coverImage: 'image/qab_jahani/qab_jahani_01.png',
     galleryRow1: [
-        'image/olympiad_frames/qab_jahani_01.png',
-        'image/olympiad_frames/qab_jahani_02.png'
+        'image/qab_jahani/qab_jahani_01.png',
+        'image/qab_jahani/qab_jahani_02.png'
     ],
     galleryRow2: [
     ],
