@@ -13,17 +13,17 @@ registerProject({
     role: 'طراح گرافیک و صفحه آرا',
     tools: 'Illustrator, InDesign',
     style: 'مدرن و فن‌آورانه (Tech Modern)',
-    colorPalette: ['#0f172a', '#1e293b', '#38bdf8', '#0284c7', '#ffffff'],
+    colorPalette: ['#81d4f7', '#1c2450', '#ffffff'],
 
     /* ----- تصاویر ----- */
-    coverImage: 'brochurecs-04.jpg',
+    coverImage: 'image/brochurecs/brochurecs-04.jpg',
     galleryRow1: [
-        'brochurecs-01.jpg',
-        'brochurecs-02.jpg'
+        'image/brochurecs/brochurecs-01.jpg',
+        'image/brochurecs/brochurecs-02.jpg'
     ],
     galleryRow2: [
-        'brochurecs-03.jpg',
-        'brochurecs-04.png'
+        'image/brochurecs/brochurecs-03.jpg',
+        'image/brochurecs/brochurecs-04.png'
     ],
 
     /* ----- توضیحات ----- */
@@ -35,7 +35,7 @@ registerProject({
     typoFont: 'Kalameh(FaNum)',
     typoWeight: 'ExtraBold & Medium',
     typoSize: 'تیترها: ۱۱pt | توضیحات: ۱۱pt',
-    typoSampleImage: 'brochurecs-01.jpg',
+    typoSampleImage: 'image/brochurecs/brochurecs-01.jpg',
     typography: 'استفاده از فونت Kalameh(FaNum) ExtraBold با سایز ۱۱ برای عناوین و Kalameh(FaNum) Medium با سایز ۱۱ برای متون بدنه جهت ایجاد تمایز بصری شفاف و خوانایی بالا.',
     typoDescImage: ''
 
