@@ -34,13 +34,13 @@ registerProject({
     /* ----- توضیحات ----- */
     description: 'طراحی رابط کاربری (UI) اپلیکیشن شووانا به همراه طراحی لوگو و هویت بصری برند.',
     designApproach: `<p>ترکیب رنگ‌های پویا و جسورانه همراه با ساختار ساختاریافته برای ایجاد یک تجربه کاربری روان و بصری جذاب.</p>`,
-    approachImage: ,
+    approachImage:'' ,
 
     /* ----- تایپوگرافی ----- */
     typoFont: 'کلمه (Kalameh)',
     typoWeight: 'Medium',
     typoSize: '۱۰pt',
-    typoSampleImage: ,
+    typoSampleImage:'' ,
     typography: 'استفاده از فونت کلمه با وزن مدیوم برای خوانایی بالا و هماهنگی با زبان بصری اپلیکیشن.',
     typoDescImage: ''
 
