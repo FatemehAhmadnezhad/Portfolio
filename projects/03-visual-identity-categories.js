@@ -13,30 +13,32 @@ registerProject({
     role: 'طراح هویت بصری و گرافیک',
     tools: 'Illustrator, Photoshop, After Effects',
     style: 'آموزشی، مدرن و حرفه‌ای (Educational Modern)',
-    colorPalette: ['#0284c7', '#64748b', '#ffffff', '#0f172a'],
+    colorPalette: ['#27aae1', '#5a5b5a', '#ffffff', '#000000'],
 
-    /* ----- تصاویر ----- */
-    coverImage: 'as-00.jpg',
+    /* ----- تصاویر و گیف ----- */
+    coverImage: 'image/As/as-00.jpg',
+    logoMotion: 'image/As/as-06.gif',           // گیف لوگوموشن
     galleryRow1: [
-        'as-01.jpg',
-        'as-02.jpg'
+        'image/As/as-01.jpg',
+        'image/As/as-02.jpg'
     ],
     galleryRow2: [
-        'as-03.jpg',
-        'as-04.jpg',
-        'as-05.jpg'
+        'image/As/as-03.jpg',
+        'image/As/as-04.jpg',
+        'image/As/as-05.jpg',
+        'image/As/as-06.gif'                     // اضافه شده به گالری برای نمایش
     ],
 
     /* ----- توضیحات ----- */
     description: 'طراحی جامع هویت بصری و اقلام سازمانی گروه آموزشی آس شامل طراحی لوگو، لوگوموشن اختصاصی، قالب‌های استوری اینستاگرام، کاورهای هیلایت، سربرگ و کارت ویزیت حرفه‌ای با رویکردی مدرن و هماهنگ.',
     designApproach: `<p>طراحی هویت بصری گروه آموزشی آس با تمرکز بر انتقال حس اعتماد، تخصص و پویایی در حوزه آموزش انجام شده است. استفاده از پالت رنگی آبی و طوسی همراه با المان‌های ساختاریافته، انسجام بصری بالایی در تمامی اقلام سازمانی و شبکه‌های اجتماعی مجموعه ایجاد کرده است.</p>`,
-    approachImage: '',
+    approachImage: 'image/As/as-06.gif',
 
     /* ----- تایپوگرافی ----- */
     typoFont: 'Kalameh(FaNum)',
     typoWeight: 'Bold & Regular',
     typoSize: 'تیترها: ۱۲pt | توضیحات: ۱۰pt',
-    typoSampleImage: 'as-01.jpg',
+    typoSampleImage: 'image/As/as-01.jpg',
     typography: 'استفاده از فونت Kalameh(FaNum) Bold برای عناوین و تیترهای اقلام سازمانی و فونت Regular برای متون، جهت حفظ خوانایی بالا و ایجاد هماهنگی در هویت بصری برند.',
     typoDescImage: ''
 
