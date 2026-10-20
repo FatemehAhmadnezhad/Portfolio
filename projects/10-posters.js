@@ -16,15 +16,12 @@ registerProject({
     colorPalette: ['#1E3A8A', '#D97706', '#059669', '#111827'],
 
     /* ----- تصاویر ----- */
-    coverImage: 'image/posters/cover.jpg',
+    coverImage: 'image/posters/poster-01.jpg',
     galleryRow1: [
-        'image/posters/01.jpg',
-        'image/posters/02.jpg'
+        'image/posters/poster-01.jpg',
+        'image/posters/poster-02.jpg'
     ],
     galleryRow2: [
-        'image/posters/03.jpg',
-        'image/posters/04.jpg',
-        'image/posters/05.jpg'
     ],
 
     /* ----- توضیحات ----- */
@@ -33,13 +30,13 @@ registerProject({
         <p>طراحی این مجموعه پوسترها با هدف ایجاد ارتباط بصری سریع و موثر با مخاطبان جوان، دانش‌آموزان و دانشجویان انجام شده است.</p>
         <p>در پوسترهای مناسبتی (نظیر روز بزرگداشت زکریای رازی، عید غدیر، اربعین حسینی، روز شعر و ادب و روز خبرنگار) تلاش شده تا با ترکیب نگارگری، تایپوگرافی اصیل و ترکیب‌بندی‌های دیجیتال، حس هویت و اصالت منتقل شود. در پوسترهای علمی و آموزشی (مانند المپیادهای علمی، مسابقات برنامه‌نویسی Newbies و جلسات مشاوره) بر خوانایی بالا، چینش منظم داده‌ها و جذب مخاطب هدف تمرکز شده است.</p>
     `,
-    approachImage: 'image/posters/01.jpg',
+    approachImage: '',
 
     /* ----- تایپوگرافی ----- */
     typoFont: '-',
     typoWeight: '-',
     typoSize: '-',
-    typoSampleImage: 'image/posters/02.jpg',
+    typoSampleImage: '',
     typography: `استفاده متناسب از خطوط نستعلیق و ثلث در طراحی‌های مناسبتی و مذهبی جهت حفظ هویت فرهنگی، در کنار فونت‌های مدرن و خوانای فارسی برای بخش‌های اطلاع‌رسانی، زمان‌بندی و جدول برنامه‌ها.`,
     typoDescImage: ''
 
