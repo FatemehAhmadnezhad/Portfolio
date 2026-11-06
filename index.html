@@ -64,11 +64,11 @@ h1,h2{font-weight:300!important}
 #image-modal{background:rgba(3,3,3,.92)}
 
 /* Hero */
-.hero{position:relative;min-height:calc(100svh - 5rem);display:flex;align-items:center;justify-content:center;padding:5rem 1.5rem;overflow:hidden}
-.hero-in{position:relative;z-index:2;text-align:center;max-width:46rem}
-.hero h1{font-size:clamp(2.3rem,6vw,4.9rem);line-height:1.35;color:#fff;text-shadow:0 0 70px rgba(170,180,255,.16)}
-.hero h1 span{display:block}
-.hero p{margin:1.8rem auto 0;max-width:34rem;color:var(--mute);font-weight:300;line-height:2.1;font-size:clamp(.9rem,1.5vw,1.05rem)}
+.hero{position:relative;display:flex;align-items:center;justify-content:center;padding:1.5rem 1rem .5rem;overflow:hidden}
+.hero-in{position:relative;z-index:2;text-align:center;width:100%;max-width:60rem}
+.hero h1{font-size:clamp(1.15rem,4.7vw,3.7rem);line-height:1.5;white-space:nowrap;font-weight:900!important;background:linear-gradient(100deg,#7fb2ff 0%,#a98bff 40%,#f09cff 70%,#ffffff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 28px rgba(150,160,255,.28))}
+.hero h1 span{display:inline}
+.hero p{margin:.4rem auto 0;max-width:34rem;color:var(--mute);font-weight:300;line-height:2.1;font-size:clamp(.9rem,1.5vw,1.05rem)}
 .cue-link{display:inline-flex;flex-direction:column;align-items:center;gap:.9rem;margin-top:3.2rem;font-size:.78rem;color:#bdbdbd}
 .cue{width:1px;height:58px;background:linear-gradient(#fff,transparent);opacity:.55}
 
@@ -170,18 +170,17 @@ footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transfo
 
 /* Resume: collapsible job details */
 .job-more{margin-top:.5rem}
-.job-more summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:.4rem;font-size:.72rem;color:#a3a3a3;border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:.25rem .8rem;transition:color .3s,border-color .3s,background .3s}
-.job-more summary::-webkit-details-marker{display:none}
-.job-more summary::after{content:"+";font-size:.9rem;line-height:1}
-.job-more[open] summary::after{content:"−"}
-.job-more summary:hover{color:#fff;border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.06)}
-.job-list{margin-top:.7rem;display:grid;gap:.4rem;font-size:.8rem;line-height:1.9;color:#cfcfd4}
+.job-toggle{margin-top:.6rem;cursor:pointer;display:inline-flex;align-items:center;gap:.4rem;font-size:.72rem;color:#a3a3a3;border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:.25rem .8rem;transition:color .3s,border-color .3s,background .3s}
+.job-toggle::after{content:"+";font-size:.9rem;line-height:1}
+.job-toggle[aria-expanded="true"]::after{content:"−"}
+.job-toggle:hover{color:#fff;border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.06)}
+.job-list{margin-top:.2rem;display:grid;gap:.4rem;font-size:.8rem;line-height:1.9;color:#cfcfd4}
 .job-list li{position:relative;padding-right:1rem}
 .job-list li::before{content:"";position:absolute;right:0;top:.85em;width:5px;height:1px;background:#8a8a8a}
 .job-wins-t{margin-top:.9rem;font-size:.75rem;font-weight:700;color:#e5e5e5}
 
 @media(prefers-reduced-motion:reduce){.neb{animation:none}.scroll-smooth{scroll-behavior:auto}}
-@media print{#cosmos,.hero,header,footer,.no-print{display:none!important}body{background:#fff!important;color:#000!important}.glass-card{background:#fff!important;border:1px solid #ccc!important;color:#000!important;box-shadow:none!important}.text-white,.text-slate-300,.text-slate-400{color:#111!important}}
+@media print{.job-extra[hidden]{display:block!important}.job-toggle{display:none!important}#cosmos,.hero,header,footer,.no-print{display:none!important}body{background:#fff!important;color:#000!important}.glass-card{background:#fff!important;border:1px solid #ccc!important;color:#000!important;box-shadow:none!important}.text-white,.text-slate-300,.text-slate-400{color:#111!important}}
 </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between">
@@ -230,12 +229,12 @@ footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transfo
             
             <section class="hero" id="hero">
                 <div class="hero-in">
-                    <h1><span>خلق خلاقانه</span><span>هویت بصری و دیزاین</span></h1>
+                    <h1><span>خلق خلاقانه</span> <span>هویت بصری و دیزاین</span></h1>
                     <p>طراحی تخصصی هویت بصری، لوگو، نشریات، پوستر، اینفوگرافیک و بسته‌بندی تبلیغاتی با ساختار هوشمندانه و زیبایی‌شناسی مدرن.</p>
                 </div>
             </section>
 
-            <section id="gallery" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-6 scroll-mt-20">
+            <section id="gallery" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-3 pb-6 scroll-mt-20">
                 <div>
                     <div class="flex flex-wrap justify-center gap-2 sm:gap-3 max-w-4xl mx-auto mb-7">
                         <button onclick="filterMainGroup('all')" class="group-btn chip is-on" data-group="all">همه پروژه‌ها</button>
@@ -333,8 +332,8 @@ footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transfo
                                         <span class="text-xs text-slate-400">سابقه همکاری و تدریس</span>
                                     </div>
                                     <div class="bg-dark-900/40 p-3 rounded-xl border border-slate-800">
-                                        <span class="block text-xl font-black text-brand-400">۷</span>
-                                        <span class="text-xs text-slate-400">افتخار و جایزه</span>
+                                        <span class="block text-xl font-black text-brand-400">+۲۵۰ پروژه</span>
+                                        <span class="text-xs text-slate-400">انجام شده موفق</span>
                                     </div>
                                 </div>
                             </div>
@@ -549,32 +548,32 @@ footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transfo
                                         <span class="text-[11px] text-slate-400">همکاری، فریلنس و تدریس</span>
                                     </div>
                                     <div class="text-center bg-dark-800/60 p-2.5 rounded-xl border border-slate-700/50">
-                                        <span class="block text-brand-400 font-bold text-base">+250 پروژه</span>
-                                        <span class="text-[11px] text-slate-400">انجا شده موفق</span>
+                                        <span class="block text-brand-400 font-bold text-base">+۲۵۰ پروژه</span>
+                                        <span class="text-[11px] text-slate-400">انجام شده موفق</span>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs">
-                                <a href="tel:09337213591" class="btn flex items-center gap-2.5 text-slate-300 bg-dark-900/50 p-3 rounded-xl border border-slate-800 hover:border-brand-500 transition-colors">
-                                    <i class="fa-solid fa-phone text-brand-400 text-base"></i>
+                            <div class="flex flex-wrap lg:flex-nowrap items-stretch justify-center lg:justify-start gap-2 text-xs">
+                                <a href="tel:09337213591" class="btn flex items-center gap-2 text-slate-300 bg-dark-900/50 px-3 py-2.5 rounded-xl border border-slate-800 hover:border-brand-500 transition-colors whitespace-nowrap min-w-0">
+                                    <i class="fa-solid fa-phone text-brand-400"></i>
                                     <span dir="ltr">0933 721 3591</span>
                                 </a>
-                                <a href="mailto:fatemehahmadnezhad.sh@gmail.com" class="btn flex items-center gap-2.5 text-slate-300 bg-dark-900/50 p-3 rounded-xl border border-slate-800 hover:border-brand-500 transition-colors">
-                                    <i class="fa-solid fa-envelope text-brand-400 text-base"></i>
+                                <a href="mailto:fatemehahmadnezhad.sh@gmail.com" class="btn flex items-center gap-2 text-slate-300 bg-dark-900/50 px-3 py-2.5 rounded-xl border border-slate-800 hover:border-brand-500 transition-colors whitespace-nowrap min-w-0">
+                                    <i class="fa-solid fa-envelope text-brand-400"></i>
                                     <span class="truncate">fatemehahmadnezhad.sh@gmail.com</span>
                                 </a>
-                                <div class="flex items-center gap-2.5 text-slate-300 bg-dark-900/50 p-3 rounded-xl border border-slate-800">
-                                    <i class="fa-solid fa-location-dot text-brand-400 text-base"></i>
-                                    <span>اصفهان، ایران</span>
+                                <div class="flex items-center gap-2 text-slate-300 bg-dark-900/50 px-3 py-2.5 rounded-xl border border-slate-800 whitespace-nowrap">
+                                    <i class="fa-solid fa-location-dot text-brand-400"></i>
+                                    <span>اصفهان</span>
                                 </div>
-                                <a href="https://fatemehahmadnezhad.github.io/Portfolio/" target="_blank" class="btn flex items-center gap-2.5 text-slate-300 bg-dark-900/50 p-3 rounded-xl border border-slate-800 hover:border-brand-500 transition-colors">
-                                    <i class="fa-solid fa-globe text-brand-400 text-base"></i>
-                                    <span class="truncate">fatemehahmadnezhad.github.io/Portfolio</span>
+                                <a href="https://t.me/fash_81" target="_blank" class="btn flex items-center gap-2 text-slate-300 bg-dark-900/50 px-3 py-2.5 rounded-xl border border-slate-800 hover:border-brand-500 transition-colors whitespace-nowrap min-w-0">
+                                    <i class="fa-brands fa-telegram text-brand-400"></i>
+                                    <span dir="ltr">@fash_81</span>
                                 </a>
-                                <a href="https://www.linkedin.com/in/fatemeh-ahmadnezhad" target="_blank" class="btn flex items-center gap-2.5 text-slate-300 bg-dark-900/50 p-3 rounded-xl border border-slate-800 hover:border-brand-500 transition-colors">
-                                    <i class="fa-brands fa-linkedin text-brand-400 text-base"></i>
-                                    <span class="truncate">in/fatemeh-ahmadnezhad</span>
+                                <a href="https://www.linkedin.com/in/fatemeh-ahmadnezhad" target="_blank" class="btn flex items-center gap-2 text-slate-300 bg-dark-900/50 px-3 py-2.5 rounded-xl border border-slate-800 hover:border-brand-500 transition-colors whitespace-nowrap min-w-0">
+                                    <i class="fa-brands fa-linkedin text-brand-400"></i>
+                                    <span class="truncate" dir="ltr">in/fatemeh-ahmadnezhad</span>
                                 </a>
                             </div>
                         </div>
@@ -605,8 +604,8 @@ footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transfo
                                         <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-brand-500/20 text-brand-300 border border-brand-500/30">شهریور ۱۴۰۰ تا کنون · ۵ سال و ۲ ماه</span>
                                     </div>
                                     <p class="text-xs text-brand-400 font-medium mb-1">فریلنسر</p>
-                                    <p class="text-[11px] text-slate-500 mb-2"><i class="fa-solid fa-location-dot ml-1"></i>ایران، کرج</p>
-                                    <details class="job-more"><summary>شرح فعالیت‌ها و مسئولیت‌ها</summary><ul class="job-list"><li>ارائه خدمات تخصصی طراحی گرافیک و تولید محتوای بصری به مشتریان و کسب‌وکارهای مختلف.</li><li>طراحی هویت بصری، لوگو، پوستر، بنر، بروشور، کاتالوگ و محتوای تبلیغاتی و دیجیتال.</li><li>طراحی محتوای گرافیکی برای شبکه‌های اجتماعی، کمپین‌های تبلیغاتی و معرفی محصولات و خدمات.</li><li>تدوین و ویرایش ویدئوهای تبلیغاتی، معرفی، آموزشی و محتوای شبکه‌های اجتماعی.</li><li>دریافت و تحلیل نیازها و خواسته‌های کارفرما و تبدیل آن‌ها به راهکارهای خلاقانه و اثربخش بصری.</li><li>مدیریت مستقل پروژه‌ها از مرحله دریافت سفارش و ایده‌پردازی تا طراحی، اصلاحات و تحویل نهایی.</li><li>مدیریت زمان، اولویت‌بندی سفارش‌ها و تحویل پروژه‌ها مطابق با زمان‌بندی توافق‌شده.</li><li>تعامل مستقیم با کارفرمایان، دریافت بازخورد و اعمال اصلاحات با هدف افزایش کیفیت خروجی.</li><li>مدیریت هم‌زمان چندین پروژه و ارائه خروجی‌های متنوع با حفظ کیفیت و استانداردهای حرفه‌ای.</li><li>توسعه مستمر مهارت‌های فنی و خلاقانه و به‌کارگیری ابزارها و تکنیک‌های روز طراحی و تدوین.</li></ul></details>
+                                    <p class="text-[11px] text-slate-500 mb-2"><i class="fa-solid fa-location-dot ml-1"></i>کرج</p>
+                                    <div class="job-more"><ul class="job-list"><li>ارائه خدمات تخصصی طراحی گرافیک و تولید محتوای بصری به مشتریان و کسب‌وکارهای مختلف.</li><li>طراحی هویت بصری، لوگو، پوستر، بنر، بروشور، کاتالوگ و محتوای تبلیغاتی و دیجیتال.</li></ul><div class="job-extra" hidden><ul class="job-list" style="margin-top:.4rem"><li>طراحی محتوای گرافیکی برای شبکه‌های اجتماعی، کمپین‌های تبلیغاتی و معرفی محصولات و خدمات.</li><li>تدوین و ویرایش ویدئوهای تبلیغاتی، معرفی، آموزشی و محتوای شبکه‌های اجتماعی.</li><li>دریافت و تحلیل نیازها و خواسته‌های کارفرما و تبدیل آن‌ها به راهکارهای خلاقانه و اثربخش بصری.</li><li>مدیریت مستقل پروژه‌ها از مرحله دریافت سفارش و ایده‌پردازی تا طراحی، اصلاحات و تحویل نهایی.</li><li>مدیریت زمان، اولویت‌بندی سفارش‌ها و تحویل پروژه‌ها مطابق با زمان‌بندی توافق‌شده.</li><li>تعامل مستقیم با کارفرمایان، دریافت بازخورد و اعمال اصلاحات با هدف افزایش کیفیت خروجی.</li><li>مدیریت هم‌زمان چندین پروژه و ارائه خروجی‌های متنوع با حفظ کیفیت و استانداردهای حرفه‌ای.</li><li>توسعه مستمر مهارت‌های فنی و خلاقانه و به‌کارگیری ابزارها و تکنیک‌های روز طراحی و تدوین.</li></ul></div><button type="button" class="job-toggle" onclick="toggleJob(this)" aria-expanded="false"><span>بیشتر</span></button></div>
                                 </div>
 
                                 <div class="relative pr-8">
@@ -618,8 +617,8 @@ footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transfo
                                         <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">مرداد ۱۴۰۵ تا شهریور ۱۴۰۵ · ۱ ماه</span>
                                     </div>
                                     <p class="text-xs text-brand-400 font-medium mb-1">کمیته المپیاد زیست‌شناسی باشگاه دانش‌پژوهان جوان</p>
-                                    <p class="text-[11px] text-slate-500 mb-2"><i class="fa-solid fa-location-dot ml-1"></i>ایران، تهران</p>
-                                    <details class="job-more"><summary>شرح فعالیت‌ها و مسئولیت‌ها</summary><ul class="job-list"><li>طراحی لوگوی اختصاصی دوره بیست‌ونهم المپیاد علمی دانش‌آموزی زیست‌شناسی با رویکرد هویت‌سازی بصری.</li><li>ایده‌پردازی و توسعه کانسپت گرافیکی متناسب با مفاهیم علمی، زیست‌شناسی و ماهیت رقابتی المپیاد.</li><li>طراحی نشانه‌ای متمایز، خلاقانه و کاربردی با در نظر گرفتن اصول فرم، رنگ، ترکیب‌بندی و خوانایی.</li><li>ایجاد هماهنگی میان عناصر بصری و هویت علمی و آموزشی رویداد.</li><li>آماده‌سازی خروجی نهایی لوگو برای استفاده در اقلام تبلیغاتی، اطلاع‌رسانی و رسانه‌های رسمی المپیاد.</li></ul></details>
+                                    <p class="text-[11px] text-slate-500 mb-2"><i class="fa-solid fa-location-dot ml-1"></i>تهران</p>
+                                    <div class="job-more"><ul class="job-list"><li>طراحی لوگوی اختصاصی دوره بیست‌ونهم المپیاد علمی دانش‌آموزی زیست‌شناسی با رویکرد هویت‌سازی بصری.</li><li>ایده‌پردازی و توسعه کانسپت گرافیکی متناسب با مفاهیم علمی، زیست‌شناسی و ماهیت رقابتی المپیاد.</li></ul><div class="job-extra" hidden><ul class="job-list" style="margin-top:.4rem"><li>طراحی نشانه‌ای متمایز، خلاقانه و کاربردی با در نظر گرفتن اصول فرم، رنگ، ترکیب‌بندی و خوانایی.</li><li>ایجاد هماهنگی میان عناصر بصری و هویت علمی و آموزشی رویداد.</li><li>آماده‌سازی خروجی نهایی لوگو برای استفاده در اقلام تبلیغاتی، اطلاع‌رسانی و رسانه‌های رسمی المپیاد.</li></ul></div><button type="button" class="job-toggle" onclick="toggleJob(this)" aria-expanded="false"><span>بیشتر</span></button></div>
                                 </div>
 
                                 <div class="relative pr-8">
@@ -631,8 +630,8 @@ footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transfo
                                         <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">بهمن ۱۴۰۴ تا شهریور ۱۴۰۵ · ۷ ماه</span>
                                     </div>
                                     <p class="text-xs text-brand-400 font-medium mb-1">کمیته فارغ‌التحصیلان باشگاه دانش‌پژوهان جوان (صدا، دوربین و باشگاه)</p>
-                                    <p class="text-[11px] text-slate-500 mb-2"><i class="fa-solid fa-location-dot ml-1"></i>ایران، تهران</p>
-                                    <details class="job-more"><summary>شرح فعالیت‌ها و مسئولیت‌ها</summary><ul class="job-list"><li>طراحی و تولید محتوای بصری و گرافیکی متناسب با هویت سازمانی و نیازهای ارتباطی باشگاه.</li><li>طراحی پوستر، بنر، بروشور، اینفوگرافیک و سایر اقلام تبلیغاتی و اطلاع‌رسانی برای رویدادها، مسابقات و برنامه‌های علمی و آموزشی.</li><li>تدوین و ویرایش ویدئوهای تبلیغاتی، معرفی، آموزشی و گزارش رویدادها با رعایت اصول روایت بصری و انتقال مؤثر پیام.</li><li>آماده‌سازی محتوای گرافیکی و ویدئویی برای انتشار در بسترهای دیجیتال و شبکه‌های اجتماعی.</li><li>مشارکت در توسعه و یکپارچه‌سازی هویت بصری پروژه‌ها و فعالیت‌های مجموعه.</li><li>تبدیل ایده‌ها و نیازهای محتوایی به خروجی‌های خلاقانه، کاربردی و متناسب با مخاطب هدف.</li><li>مدیریت هم‌زمان چند پروژه طراحی و تدوین، برنامه‌ریزی مراحل اجرا و تحویل به‌موقع سفارش‌ها.</li><li>همکاری با اعضای تیم اجرایی و محتوایی برای تولید آثار بصری هماهنگ با اهداف و استانداردهای مجموعه.</li><li>رعایت اصول ترکیب‌بندی، تایپوگرافی، رنگ‌شناسی و استانداردهای فنی در تولید و خروجی‌گیری آثار گرافیکی و ویدئویی.</li></ul></details>
+                                    <p class="text-[11px] text-slate-500 mb-2"><i class="fa-solid fa-location-dot ml-1"></i>تهران</p>
+                                    <div class="job-more"><ul class="job-list"><li>طراحی و تولید محتوای بصری و گرافیکی متناسب با هویت سازمانی و نیازهای ارتباطی باشگاه.</li><li>طراحی پوستر، بنر، بروشور، اینفوگرافیک و سایر اقلام تبلیغاتی و اطلاع‌رسانی برای رویدادها، مسابقات و برنامه‌های علمی و آموزشی.</li></ul><div class="job-extra" hidden><ul class="job-list" style="margin-top:.4rem"><li>تدوین و ویرایش ویدئوهای تبلیغاتی، معرفی، آموزشی و گزارش رویدادها با رعایت اصول روایت بصری و انتقال مؤثر پیام.</li><li>آماده‌سازی محتوای گرافیکی و ویدئویی برای انتشار در بسترهای دیجیتال و شبکه‌های اجتماعی.</li><li>مشارکت در توسعه و یکپارچه‌سازی هویت بصری پروژه‌ها و فعالیت‌های مجموعه.</li><li>تبدیل ایده‌ها و نیازهای محتوایی به خروجی‌های خلاقانه، کاربردی و متناسب با مخاطب هدف.</li><li>مدیریت هم‌زمان چند پروژه طراحی و تدوین، برنامه‌ریزی مراحل اجرا و تحویل به‌موقع سفارش‌ها.</li><li>همکاری با اعضای تیم اجرایی و محتوایی برای تولید آثار بصری هماهنگ با اهداف و استانداردهای مجموعه.</li><li>رعایت اصول ترکیب‌بندی، تایپوگرافی، رنگ‌شناسی و استانداردهای فنی در تولید و خروجی‌گیری آثار گرافیکی و ویدئویی.</li></ul></div><button type="button" class="job-toggle" onclick="toggleJob(this)" aria-expanded="false"><span>بیشتر</span></button></div>
                                 </div>
 
                                 <div class="relative pr-8">
@@ -644,8 +643,8 @@ footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transfo
                                         <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">دی ۱۴۰۴</span>
                                     </div>
                                     <p class="text-xs text-brand-400 font-medium mb-1">انجمن علمی آمار دانشگاه قم</p>
-                                    <p class="text-[11px] text-slate-500 mb-2"><i class="fa-solid fa-location-dot ml-1"></i>ایران، قم</p>
-                                    <details class="job-more"><summary>شرح فعالیت‌ها و مسئولیت‌ها</summary><ul class="job-list"><li>آموزش مبانی صفحه‌آرایی و کار با نرم‌افزار Adobe InDesign از سطح مقدماتی.</li><li>آموزش ایجاد و مدیریت اسناد چندصفحه‌ای، تنظیم صفحات و حاشیه‌ها و ستون‌بندی.</li><li>آموزش اصول تایپوگرافی، قالب‌بندی متون، استایل‌های پاراگراف و کاراکتر.</li><li>آموزش جانمایی تصاویر، جداول و عناصر گرافیکی در صفحات.</li><li>آموزش آماده‌سازی و خروجی‌گیری استاندارد فایل‌ها برای چاپ و انتشار دیجیتال.</li><li>اجرای تمرین‌های عملی با هدف توانمندسازی فراگیران در صفحه‌آرایی نشریات و اسناد چندصفحه‌ای.</li></ul><p class="text-[11px] text-slate-500 mt-2"><i class="fa-regular fa-clock ml-1"></i>مدت دوره: ۶ ساعت</p></details>
+                                    <p class="text-[11px] text-slate-500 mb-2"><i class="fa-solid fa-location-dot ml-1"></i>قم</p>
+                                    <div class="job-more"><ul class="job-list"><li>آموزش مبانی صفحه‌آرایی و کار با نرم‌افزار Adobe InDesign از سطح مقدماتی.</li><li>آموزش ایجاد و مدیریت اسناد چندصفحه‌ای، تنظیم صفحات و حاشیه‌ها و ستون‌بندی.</li></ul><div class="job-extra" hidden><ul class="job-list" style="margin-top:.4rem"><li>آموزش اصول تایپوگرافی، قالب‌بندی متون، استایل‌های پاراگراف و کاراکتر.</li><li>آموزش جانمایی تصاویر، جداول و عناصر گرافیکی در صفحات.</li><li>آموزش آماده‌سازی و خروجی‌گیری استاندارد فایل‌ها برای چاپ و انتشار دیجیتال.</li><li>اجرای تمرین‌های عملی با هدف توانمندسازی فراگیران در صفحه‌آرایی نشریات و اسناد چندصفحه‌ای.</li></ul><p class="text-[11px] text-slate-500 mt-2"><i class="fa-regular fa-clock ml-1"></i>مدت دوره: ۶ ساعت</p></div><button type="button" class="job-toggle" onclick="toggleJob(this)" aria-expanded="false"><span>بیشتر</span></button></div>
                                 </div>
 
                                 <div class="relative pr-8">
@@ -657,8 +656,8 @@ footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transfo
                                         <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">آذر ۱۴۰۴</span>
                                     </div>
                                     <p class="text-xs text-brand-400 font-medium mb-1">انجمن علمی آمار دانشگاه قم</p>
-                                    <p class="text-[11px] text-slate-500 mb-2"><i class="fa-solid fa-location-dot ml-1"></i>ایران، قم</p>
-                                    <details class="job-more"><summary>شرح فعالیت‌ها و مسئولیت‌ها</summary><ul class="job-list"><li>آموزش مبانی و ابزارهای اصلی نرم‌افزار Adobe Photoshop از سطح مقدماتی.</li><li>آموزش ویرایش و اصلاح تصاویر، کار با لایه‌ها، ماسک‌ها و ابزارهای انتخاب.</li><li>آموزش تکنیک‌های ترکیب تصاویر، اصلاح رنگ و نور و آماده‌سازی فایل‌های گرافیکی.</li><li>ارائه تمرین‌های عملی با هدف تقویت مهارت کار با نرم‌افزار و اجرای پروژه‌های گرافیکی.</li><li>آشنایی فراگیران با قابلیت‌های کاربردی فتوشاپ در طراحی و تولید محتوای بصری.</li></ul><p class="text-[11px] text-slate-500 mt-2"><i class="fa-regular fa-clock ml-1"></i>مدت دوره: ۱۰ ساعت</p></details>
+                                    <p class="text-[11px] text-slate-500 mb-2"><i class="fa-solid fa-location-dot ml-1"></i>قم</p>
+                                    <div class="job-more"><ul class="job-list"><li>آموزش مبانی و ابزارهای اصلی نرم‌افزار Adobe Photoshop از سطح مقدماتی.</li><li>آموزش ویرایش و اصلاح تصاویر، کار با لایه‌ها، ماسک‌ها و ابزارهای انتخاب.</li></ul><div class="job-extra" hidden><ul class="job-list" style="margin-top:.4rem"><li>آموزش تکنیک‌های ترکیب تصاویر، اصلاح رنگ و نور و آماده‌سازی فایل‌های گرافیکی.</li><li>ارائه تمرین‌های عملی با هدف تقویت مهارت کار با نرم‌افزار و اجرای پروژه‌های گرافیکی.</li><li>آشنایی فراگیران با قابلیت‌های کاربردی فتوشاپ در طراحی و تولید محتوای بصری.</li></ul><p class="text-[11px] text-slate-500 mt-2"><i class="fa-regular fa-clock ml-1"></i>مدت دوره: ۱۰ ساعت</p></div><button type="button" class="job-toggle" onclick="toggleJob(this)" aria-expanded="false"><span>بیشتر</span></button></div>
                                 </div>
 
                                 <div class="relative pr-8">
@@ -670,8 +669,8 @@ footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transfo
                                         <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">مهر ۱۴۰۱ تا تیر ۱۴۰۴ · ۲ سال و ۹ ماه</span>
                                     </div>
                                     <p class="text-xs text-brand-400 font-medium mb-1">انجمن علمی دانشجویی علوم کامپیوتر دانشگاه خوارزمی</p>
-                                    <p class="text-[11px] text-slate-500 mb-2"><i class="fa-solid fa-location-dot ml-1"></i>ایران، کرج</p>
-                                    <details class="job-more"><summary>شرح فعالیت‌ها و مسئولیت‌ها</summary><ul class="job-list"><li>طراحی و صفحه‌آرایی نشریه علمی و تخصصی «صفر و یک» با رعایت اصول حرفه‌ای نشر و استانداردهای بصری نشریات.</li><li>طراحی جلد، صفحات داخلی، تیترها، جداول، نمودارها و عناصر گرافیکی متناسب با محتوای علمی و تخصصی.</li><li>ایجاد انسجام و یکپارچگی بصری در شماره‌های مختلف نشریه و توسعه هویت بصری آن.</li><li>طراحی پوستر، بنر، اطلاعیه و محتوای تبلیغاتی برای رویدادها، کارگاه‌ها و فعالیت‌های انجمن علمی.</li><li>آماده‌سازی و ویرایش تصاویر و محتوای بصری برای انتشار در نشریه و رسانه‌های دیجیتال.</li><li>همکاری با تیم تحریریه در زمینه هماهنگی محتوای علمی با ساختار گرافیکی و صفحه‌آرایی.</li><li>نظارت بر کیفیت بصری، خوانایی، تایپوگرافی و چیدمان مطالب و آماده‌سازی خروجی نهایی برای انتشار دیجیتال و چاپ.</li><li>مشارکت در تولید و طراحی محتوای علمی دیجیتال و ارتقای کیفیت ارائه آثار نشریه.</li></ul><p class="job-wins-t">افتخارات و دستاوردها</p><ul class="job-list"><li>کسب عنوان شایسته تقدیر در چهاردهمین جشنواره بین‌المللی حرکت، بخش محتوای علمی دیجیتال (۱۴۰۳).</li><li>کسب عنوان شایسته تقدیر در چهاردهمین جشنواره بین‌المللی حرکت، بخش نشریه (۱۴۰۳).</li><li>انتخاب نشریه «صفر و یک» به‌عنوان نشریه برگزیده آثار برتر در سومین جشنواره سراسری نشریات دانشجویی «تیتر» (۱۴۰۳).</li></ul></details>
+                                    <p class="text-[11px] text-slate-500 mb-2"><i class="fa-solid fa-location-dot ml-1"></i>کرج</p>
+                                    <div class="job-more"><ul class="job-list"><li>طراحی و صفحه‌آرایی نشریه علمی و تخصصی «صفر و یک» با رعایت اصول حرفه‌ای نشر و استانداردهای بصری نشریات.</li><li>طراحی جلد، صفحات داخلی، تیترها، جداول، نمودارها و عناصر گرافیکی متناسب با محتوای علمی و تخصصی.</li></ul><div class="job-extra" hidden><ul class="job-list" style="margin-top:.4rem"><li>ایجاد انسجام و یکپارچگی بصری در شماره‌های مختلف نشریه و توسعه هویت بصری آن.</li><li>طراحی پوستر، بنر، اطلاعیه و محتوای تبلیغاتی برای رویدادها، کارگاه‌ها و فعالیت‌های انجمن علمی.</li><li>آماده‌سازی و ویرایش تصاویر و محتوای بصری برای انتشار در نشریه و رسانه‌های دیجیتال.</li><li>همکاری با تیم تحریریه در زمینه هماهنگی محتوای علمی با ساختار گرافیکی و صفحه‌آرایی.</li><li>نظارت بر کیفیت بصری، خوانایی، تایپوگرافی و چیدمان مطالب و آماده‌سازی خروجی نهایی برای انتشار دیجیتال و چاپ.</li><li>مشارکت در تولید و طراحی محتوای علمی دیجیتال و ارتقای کیفیت ارائه آثار نشریه.</li></ul><p class="job-wins-t">افتخارات و دستاوردها</p><ul class="job-list"><li>کسب عنوان شایسته تقدیر در چهاردهمین جشنواره بین‌المللی حرکت، بخش محتوای علمی دیجیتال (۱۴۰۳).</li><li>کسب عنوان شایسته تقدیر در چهاردهمین جشنواره بین‌المللی حرکت، بخش نشریه (۱۴۰۳).</li><li>انتخاب نشریه «صفر و یک» به‌عنوان نشریه برگزیده آثار برتر در سومین جشنواره سراسری نشریات دانشجویی «تیتر» (۱۴۰۳).</li></ul></div><button type="button" class="job-toggle" onclick="toggleJob(this)" aria-expanded="false"><span>بیشتر</span></button></div>
                                 </div>
 
                                 <div class="relative pr-8">
@@ -683,8 +682,8 @@ footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transfo
                                         <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">آبان ۱۴۰۳ تا بهمن ۱۴۰۳ · ۳ ماه</span>
                                     </div>
                                     <p class="text-xs text-brand-400 font-medium mb-1">انجمن علمی دانشجویی مهندسی صنایع دانشگاه خوارزمی — نشریه صفیر</p>
-                                    <p class="text-[11px] text-slate-500 mb-2"><i class="fa-solid fa-location-dot ml-1"></i>ایران، کرج</p>
-                                    <details class="job-more"><summary>شرح فعالیت‌ها و مسئولیت‌ها</summary><ul class="job-list"><li>طراحی گرافیکی و صفحه‌آرایی یک شماره از نشریه علمی دانشجویی «صفیر».</li><li>طراحی جلد و صفحات داخلی نشریه متناسب با موضوعات علمی و تخصصی حوزه مهندسی صنایع.</li><li>انتخاب و اجرای ساختار بصری، ترکیب‌بندی، تایپوگرافی و چیدمان مطالب با تأکید بر خوانایی و انسجام محتوایی.</li><li>آماده‌سازی و تنظیم تصاویر، نمودارها و عناصر گرافیکی متناسب با محتوای مقالات.</li><li>همکاری با انجمن علمی مهندسی صنایع در راستای آماده‌سازی و انتشار نشریه.</li><li>کنترل کیفیت بصری و فنی صفحات و آماده‌سازی فایل نهایی برای انتشار.</li></ul></details>
+                                    <p class="text-[11px] text-slate-500 mb-2"><i class="fa-solid fa-location-dot ml-1"></i>کرج</p>
+                                    <div class="job-more"><ul class="job-list"><li>طراحی گرافیکی و صفحه‌آرایی یک شماره از نشریه علمی دانشجویی «صفیر».</li><li>طراحی جلد و صفحات داخلی نشریه متناسب با موضوعات علمی و تخصصی حوزه مهندسی صنایع.</li></ul><div class="job-extra" hidden><ul class="job-list" style="margin-top:.4rem"><li>انتخاب و اجرای ساختار بصری، ترکیب‌بندی، تایپوگرافی و چیدمان مطالب با تأکید بر خوانایی و انسجام محتوایی.</li><li>آماده‌سازی و تنظیم تصاویر، نمودارها و عناصر گرافیکی متناسب با محتوای مقالات.</li><li>همکاری با انجمن علمی مهندسی صنایع در راستای آماده‌سازی و انتشار نشریه.</li><li>کنترل کیفیت بصری و فنی صفحات و آماده‌سازی فایل نهایی برای انتشار.</li></ul></div><button type="button" class="job-toggle" onclick="toggleJob(this)" aria-expanded="false"><span>بیشتر</span></button></div>
                                 </div>
 
                                 <div class="relative pr-8">
@@ -696,8 +695,8 @@ footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transfo
                                         <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">آذر ۱۴۰۳</span>
                                     </div>
                                     <p class="text-xs text-brand-400 font-medium mb-1">انجمن علمی دانشجویی علوم کامپیوتر دانشگاه خوارزمی</p>
-                                    <p class="text-[11px] text-slate-500 mb-2"><i class="fa-solid fa-location-dot ml-1"></i>ایران، کرج</p>
-                                    <details class="job-more"><summary>شرح فعالیت‌ها و مسئولیت‌ها</summary><ul class="job-list"><li>آموزش مقدماتی تا کاربردی نرم‌افزارهای Adobe Illustrator ،Adobe Photoshop و Adobe InDesign.</li><li>آموزش اصول طراحی گرافیک، کار با ابزارها، پنل‌ها و قابلیت‌های اصلی نرم‌افزارها.</li><li>آموزش تکنیک‌های عملی و کاربردی و اجرای تمرین‌های متناسب با نیاز فراگیران.</li><li>انتقال مهارت‌های لازم برای طراحی محتوای گرافیکی، ویرایش تصاویر و صفحه‌آرایی.</li><li>هدایت فراگیران در مسیر یادگیری و اجرای پروژه‌های عملی.</li></ul><p class="text-[11px] text-slate-500 mt-2"><i class="fa-regular fa-clock ml-1"></i>مدت دوره: ۸ ساعت</p></details>
+                                    <p class="text-[11px] text-slate-500 mb-2"><i class="fa-solid fa-location-dot ml-1"></i>کرج</p>
+                                    <div class="job-more"><ul class="job-list"><li>آموزش مقدماتی تا کاربردی نرم‌افزارهای Adobe Illustrator ،Adobe Photoshop و Adobe InDesign.</li><li>آموزش اصول طراحی گرافیک، کار با ابزارها، پنل‌ها و قابلیت‌های اصلی نرم‌افزارها.</li></ul><div class="job-extra" hidden><ul class="job-list" style="margin-top:.4rem"><li>آموزش تکنیک‌های عملی و کاربردی و اجرای تمرین‌های متناسب با نیاز فراگیران.</li><li>انتقال مهارت‌های لازم برای طراحی محتوای گرافیکی، ویرایش تصاویر و صفحه‌آرایی.</li><li>هدایت فراگیران در مسیر یادگیری و اجرای پروژه‌های عملی.</li></ul><p class="text-[11px] text-slate-500 mt-2"><i class="fa-regular fa-clock ml-1"></i>مدت دوره: ۸ ساعت</p></div><button type="button" class="job-toggle" onclick="toggleJob(this)" aria-expanded="false"><span>بیشتر</span></button></div>
                                 </div>
 
                                 <div class="relative pr-8">
@@ -764,69 +763,46 @@ footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transfo
                         </div>
 
                         <!-- بخش افتخارات و دستاوردها -->
-                        <div class="glass-card rounded-3xl p-6 sm:p-8">
-                            <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-3 border-b border-slate-700/60 pb-3">
+                        <div class="glass-card rounded-3xl p-4 sm:p-5">
+                            <h2 class="text-base font-bold text-white mb-3 flex items-center gap-2 border-b border-slate-700/60 pb-2">
                                 <i class="fa-solid fa-award text-brand-400"></i>
                                 افتخارات و دستاوردها
                             </h2>
-
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div class="bg-dark-900/50 p-4 rounded-2xl border border-slate-800/80">
-                                    <div class="flex items-center justify-between mb-2"><i class="fa-solid fa-medal text-amber-400 text-xl"></i><span class="text-[11px] text-slate-500">۱۴۰۱</span></div>
-                                    <h4 class="text-sm font-bold text-white mb-1">مدال نقره جهانی</h4>
-                                    <p class="text-xs text-slate-400">المپیاد علوم زمین</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                <div class="bg-dark-900/50 px-3 py-2 rounded-xl border border-slate-800/80 flex items-center gap-2.5">
+                                    <i class="fa-solid fa-medal text-amber-400 text-sm shrink-0"></i>
+                                    <div class="min-w-0 flex-1"><h4 class="text-xs font-bold text-white leading-snug">مدال نقره جهانی</h4><p class="text-[11px] text-slate-400 leading-snug">المپیاد علوم زمین</p></div>
+                                    <span class="text-[11px] text-slate-500 shrink-0">۱۴۰۱</span>
                                 </div>
-                                <div class="bg-dark-900/50 p-4 rounded-2xl border border-slate-800/80">
-                                    <div class="flex items-center justify-between mb-2"><i class="fa-solid fa-trophy text-amber-400 text-xl"></i><span class="text-[11px] text-slate-500">۱۴۰۰</span></div>
-                                    <h4 class="text-sm font-bold text-white mb-1">مدال طلای کشوری</h4>
-                                    <p class="text-xs text-slate-400">المپیاد علمی علوم زمین</p>
+                                <div class="bg-dark-900/50 px-3 py-2 rounded-xl border border-slate-800/80 flex items-center gap-2.5">
+                                    <i class="fa-solid fa-trophy text-amber-400 text-sm shrink-0"></i>
+                                    <div class="min-w-0 flex-1"><h4 class="text-xs font-bold text-white leading-snug">مدال طلای کشوری</h4><p class="text-[11px] text-slate-400 leading-snug">المپیاد علمی علوم زمین</p></div>
+                                    <span class="text-[11px] text-slate-500 shrink-0">۱۴۰۰</span>
                                 </div>
-                                <div class="bg-dark-900/50 p-4 rounded-2xl border border-slate-800/80">
-                                    <div class="flex items-center justify-between mb-2"><i class="fa-solid fa-award text-amber-400 text-xl"></i><span class="text-[11px] text-slate-500">۱۴۰۳</span></div>
-                                    <h4 class="text-sm font-bold text-white mb-1">برگزیده طرح شهید وزوایی</h4>
-                                    <p class="text-xs text-slate-400">بنیاد ملی نخبگان</p>
+                                <div class="bg-dark-900/50 px-3 py-2 rounded-xl border border-slate-800/80 flex items-center gap-2.5">
+                                    <i class="fa-solid fa-award text-amber-400 text-sm shrink-0"></i>
+                                    <div class="min-w-0 flex-1"><h4 class="text-xs font-bold text-white leading-snug">برگزیده طرح شهید وزوایی</h4><p class="text-[11px] text-slate-400 leading-snug">بنیاد ملی نخبگان</p></div>
+                                    <span class="text-[11px] text-slate-500 shrink-0">۱۴۰۳</span>
                                 </div>
-                                <div class="bg-dark-900/50 p-4 rounded-2xl border border-slate-800/80">
-                                    <div class="flex items-center justify-between mb-2"><i class="fa-solid fa-star text-amber-400 text-xl"></i><span class="text-[11px] text-slate-500">۱۴۰۳</span></div>
-                                    <h4 class="text-sm font-bold text-white mb-1">شایسته تقدیر - چهاردهمین جشنواره دانشگاهی حرکت</h4>
-                                    <p class="text-xs text-slate-400">بخش محتوای علمی دیجیتال</p>
+                                <div class="bg-dark-900/50 px-3 py-2 rounded-xl border border-slate-800/80 flex items-center gap-2.5">
+                                    <i class="fa-solid fa-star text-amber-400 text-sm shrink-0"></i>
+                                    <div class="min-w-0 flex-1"><h4 class="text-xs font-bold text-white leading-snug">شایسته تقدیر - چهاردهمین جشنواره دانشگاهی حرکت</h4><p class="text-[11px] text-slate-400 leading-snug">بخش محتوای علمی دیجیتال</p></div>
+                                    <span class="text-[11px] text-slate-500 shrink-0">۱۴۰۳</span>
                                 </div>
-                                <div class="bg-dark-900/50 p-4 rounded-2xl border border-slate-800/80">
-                                    <div class="flex items-center justify-between mb-2"><i class="fa-solid fa-star text-amber-400 text-xl"></i><span class="text-[11px] text-slate-500">۱۴۰۳</span></div>
-                                    <h4 class="text-sm font-bold text-white mb-1">شایسته تقدیر - چهاردهمین جشنواره دانشگاهی حرکت</h4>
-                                    <p class="text-xs text-slate-400">بخش نشریه</p>
+                                <div class="bg-dark-900/50 px-3 py-2 rounded-xl border border-slate-800/80 flex items-center gap-2.5">
+                                    <i class="fa-solid fa-star text-amber-400 text-sm shrink-0"></i>
+                                    <div class="min-w-0 flex-1"><h4 class="text-xs font-bold text-white leading-snug">شایسته تقدیر - چهاردهمین جشنواره دانشگاهی حرکت</h4><p class="text-[11px] text-slate-400 leading-snug">بخش نشریه</p></div>
+                                    <span class="text-[11px] text-slate-500 shrink-0">۱۴۰۳</span>
                                 </div>
-                                <div class="bg-dark-900/50 p-4 rounded-2xl border border-slate-800/80">
-                                    <div class="flex items-center justify-between mb-2"><i class="fa-solid fa-book text-amber-400 text-xl"></i><span class="text-[11px] text-slate-500">۱۴۰۳</span></div>
-                                    <h4 class="text-sm font-bold text-white mb-1">نشریه برگزیده آثار برتر</h4>
-                                    <p class="text-xs text-slate-400">سومین جشنواره سراسری نشریات دانشجویی «تیتر»</p>
+                                <div class="bg-dark-900/50 px-3 py-2 rounded-xl border border-slate-800/80 flex items-center gap-2.5">
+                                    <i class="fa-solid fa-book text-amber-400 text-sm shrink-0"></i>
+                                    <div class="min-w-0 flex-1"><h4 class="text-xs font-bold text-white leading-snug">نشریه برگزیده آثار برتر</h4><p class="text-[11px] text-slate-400 leading-snug">سومین جشنواره سراسری نشریات دانشجویی «تیتر»</p></div>
+                                    <span class="text-[11px] text-slate-500 shrink-0">۱۴۰۳</span>
                                 </div>
-                                <div class="bg-dark-900/50 p-4 rounded-2xl border border-slate-800/80">
-                                    <div class="flex items-center justify-between mb-2"><i class="fa-solid fa-palette text-amber-400 text-xl"></i><span class="text-[11px] text-slate-500">۱۳۹۸</span></div>
-                                    <h4 class="text-sm font-bold text-white mb-1">برگزیده مسابقات فرهنگی و هنری</h4>
-                                    <p class="text-xs text-slate-400">مرحله کشوری</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- فعالیت‌های داوطلبانه -->
-                        <div class="glass-card rounded-3xl p-6 sm:p-8">
-                            <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-3 border-b border-slate-700/60 pb-3">
-                                <i class="fa-solid fa-hand-holding-heart text-brand-400"></i>
-                                فعالیت‌های داوطلبانه
-                            </h2>
-                            <div class="space-y-4">
-                                <div class="bg-dark-900/50 p-4 rounded-2xl border border-slate-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                                    <p class="text-sm text-slate-200 leading-relaxed">صفحه‌آرا، طراح جلد و نویسنده نشریه «صفر و یک»، انجمن علمی دانشجویی علوم کامپیوتر دانشگاه خوارزمی</p>
-                                    <span class="text-xs font-medium px-3 py-1 rounded-xl bg-slate-800 text-brand-300 border border-slate-700 shrink-0">۱۴۰۲</span>
-                                </div>
-                                <div class="bg-dark-900/50 p-4 rounded-2xl border border-slate-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                                    <p class="text-sm text-slate-200 leading-relaxed">صفحه‌آرا، طراح جلد و نویسنده شماره‌های ۱۲ و ۱۳، ویژه‌نامه خوارزمی و ویژه‌نامه ورودی‌های ۱۴۰۳ نشریه «صفر و یک»، انجمن علمی دانشجویی علوم کامپیوتر دانشگاه خوارزمی</p>
-                                    <span class="text-xs font-medium px-3 py-1 rounded-xl bg-slate-800 text-brand-300 border border-slate-700 shrink-0">۱۴۰۳</span>
-                                </div>
-                                <div class="bg-dark-900/50 p-4 rounded-2xl border border-slate-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                                    <p class="text-sm text-slate-200 leading-relaxed">صفحه‌آرا شماره ۲۱ نشریه «صفیر»، انجمن علمی دانشجویی مهندسی صنایع دانشگاه خوارزمی</p>
-                                    <span class="text-xs font-medium px-3 py-1 rounded-xl bg-slate-800 text-brand-300 border border-slate-700 shrink-0">۱۴۰۳</span>
+                                <div class="bg-dark-900/50 px-3 py-2 rounded-xl border border-slate-800/80 flex items-center gap-2.5">
+                                    <i class="fa-solid fa-palette text-amber-400 text-sm shrink-0"></i>
+                                    <div class="min-w-0 flex-1"><h4 class="text-xs font-bold text-white leading-snug">برگزیده مسابقات فرهنگی و هنری</h4><p class="text-[11px] text-slate-400 leading-snug">مرحله کشوری</p></div>
+                                    <span class="text-[11px] text-slate-500 shrink-0">۱۳۹۸</span>
                                 </div>
                             </div>
                         </div>
@@ -897,10 +873,10 @@ footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transfo
                                 <div>
                                     <div class="flex justify-between items-center text-xs font-semibold mb-1">
                                         <span class="text-slate-200 flex items-center gap-1.5"><i class="fa-solid fa-object-group text-brand-400"></i> Figma</span>
-                                        <span class="text-brand-400">متوسط</span>
+                                        <span class="text-brand-400">مقدماتی</span>
                                     </div>
                                     <div class="w-full bg-dark-900 h-2.5 rounded-full overflow-hidden p-0.5 border border-slate-800">
-                                        <div class="bg-gradient-to-r from-brand-600 via-indigo-500 to-purple-500 h-full rounded-full" style="width: 60%"></div>
+                                        <div class="bg-gradient-to-r from-brand-600 via-indigo-500 to-purple-500 h-full rounded-full" style="width: 20%"></div>
                                     </div>
                                 </div>
                             </div>
@@ -1000,10 +976,9 @@ footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transfo
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p class="text-xs text-slate-500">© ۱۴۰۵ تمامی حقوق محفوظ است. طراحی و پیاده‌سازی رزومه و پرتفولیو فاطمه احمدنژاد.</p>
             <div class="flex items-center gap-4 text-slate-400">
-                <a href="#" class="hover:text-brand-500 transition-colors"><i class="fa-brands fa-instagram text-lg"></i></a>
-                <a href="#" class="hover:text-brand-500 transition-colors"><i class="fa-brands fa-dribbble text-lg"></i></a>
                 <a href="https://github.com/fatemeh-ahmadnezhad" target="_blank" class="hover:text-brand-500 transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
                 <a href="https://www.linkedin.com/in/fatemeh-ahmadnezhad" target="_blank" class="hover:text-brand-500 transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                <a href="https://t.me/fash_81" target="_blank" class="hover:text-brand-500 transition-colors"><i class="fa-brands fa-telegram text-lg"></i></a>
             </div>
         </div>
     </footer>
@@ -1375,7 +1350,12 @@ footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transfo
         function closeModal() { document.getElementById('image-modal').classList.add('hidden'); }
         addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
-        addEventListener('beforeprint', () => document.querySelectorAll('details.job-more').forEach(d => d.open = true));
+        function toggleJob(btn) {
+            const box = btn.previousElementSibling, open = box.hasAttribute('hidden');
+            box.toggleAttribute('hidden', !open);
+            btn.setAttribute('aria-expanded', open);
+            btn.firstElementChild.textContent = open ? 'کمتر' : 'بیشتر';
+        }
         window.onload = async () => { await loadProjects(); renderProjects(); };
     </script>
 </body>
