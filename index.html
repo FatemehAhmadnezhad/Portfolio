@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#050505">
+<meta name="theme-color" content="#f2f2ef">
 <title>پرتفولیو و رزومه کامل | فاطمه احمدنژاد - طراح و گرافیست</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
@@ -22,22 +22,13 @@ tailwind.config = { theme: { extend: {
 :root{--line:rgba(255,255,255,.09);--mute:#a3a3a3}
 html{background:#050505}
 body{font-family:'Vazirmatn',sans-serif;background:#050505;color:#f5f5f5;overflow-x:hidden}
-::selection{background:rgba(255,255,255,.85);color:#050505}
+::selection{background:#ffd23f;color:#050505}
 ::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:#050505}
-::-webkit-scrollbar-thumb{background:#2c2c30;border-radius:4px}::-webkit-scrollbar-thumb:hover{background:#52525b}
+::-webkit-scrollbar-thumb{background:#2c2c30;border-radius:4px}::-webkit-scrollbar-thumb:hover{background:#9b6bff}
 img{max-width:100%;height:auto;object-position:center}
 main,footer{position:relative;z-index:1}
-:focus-visible{outline:1px solid rgba(255,255,255,.7);outline-offset:3px}
+:focus-visible{outline:1px solid #4d8dff;outline-offset:3px}
 
-/* Cosmic atmosphere */
-#cosmos{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-#stars{position:absolute;inset:0;width:100%;height:100%}
-.neb{position:absolute;border-radius:50%;filter:blur(70px);mix-blend-mode:screen;animation:breathe 18s ease-in-out infinite alternate}
-.neb.a{width:70vw;height:70vw;top:-26vw;right:-20vw;background:radial-gradient(closest-side,rgba(70,95,255,.28),rgba(70,95,255,.09) 60%,transparent)}
-.neb.b{width:62vw;height:62vw;bottom:-28vw;left:-18vw;background:radial-gradient(closest-side,rgba(165,80,255,.24),rgba(165,80,255,.07) 60%,transparent);animation-delay:-6s}
-.neb.c{width:46vw;height:46vw;top:30vh;left:26vw;background:radial-gradient(closest-side,rgba(60,170,255,.13),transparent);animation-delay:-11s}
-.neb.d{width:95vw;height:20vw;top:16vh;left:-6vw;transform:rotate(-24deg);background:radial-gradient(closest-side,rgba(255,255,255,.09),transparent);filter:blur(55px);animation:none}
-@keyframes breathe{to{transform:scale(1.12) translate3d(2vw,-1.5vw,0);opacity:.72}}
 
 /* Glass */
 .glass-card{background:linear-gradient(135deg,rgba(255,255,255,.05),rgba(255,255,255,.014));backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);border:1px solid var(--line);box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
@@ -66,16 +57,16 @@ h1,h2{font-weight:300!important}
 /* Hero */
 .hero{position:relative;display:flex;align-items:center;justify-content:center;padding:1.5rem 1rem .5rem;overflow:hidden}
 .hero-in{position:relative;z-index:2;text-align:center;width:100%;max-width:60rem}
-.hero h1{font-size:clamp(1.15rem,4.7vw,3.7rem);line-height:1.5;white-space:nowrap;font-weight:900!important;background:linear-gradient(100deg,#7fb2ff 0%,#a98bff 40%,#f09cff 70%,#ffffff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 28px rgba(150,160,255,.28))}
+.hero h1{font-size:clamp(1.15rem,4.7vw,3.7rem);line-height:1.5;white-space:nowrap;font-weight:900!important;background:linear-gradient(100deg,#4d8dff 0%,#9b6bff 30%,#ff4d5e 62%,#ffd23f 85%,#ffffff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 28px rgba(155,107,255,.3))}
 .hero h1 span{display:inline}
 .hero p{margin:.4rem auto 0;max-width:34rem;color:var(--mute);font-weight:300;line-height:2.1;font-size:clamp(.9rem,1.5vw,1.05rem)}
 .cue-link{display:inline-flex;flex-direction:column;align-items:center;gap:.9rem;margin-top:3.2rem;font-size:.78rem;color:#bdbdbd}
-.cue{width:1px;height:58px;background:linear-gradient(#fff,transparent);opacity:.55}
+.cue{width:1px;height:58px;background:linear-gradient(#ffd23f,#ff4d5e,transparent);opacity:.55}
 
 /* Controls */
 .chip{padding:.55rem 1.15rem;border-radius:999px;font-size:.8rem;color:#a3a3a3;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.02);transition:color .3s,border-color .3s,background .3s}
 .chip:hover{color:#fff;border-color:rgba(255,255,255,.32)}
-.chip.is-on{color:#050505;background:#fff;border-color:#fff}
+.chip.is-on{color:#050505;background:#fff;border-color:#fff;box-shadow:0 0 22px -6px rgba(77,141,255,.7)}
 .sel{appearance:none;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.12);color:#e5e5e5;font-size:.75rem;border-radius:999px;padding:.5rem 1rem .5rem 2rem;cursor:pointer}
 .sel option{background:#0a0a0a}
 .seg{display:flex;gap:.25rem;padding:.25rem;border-radius:999px;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.02)}
@@ -83,7 +74,7 @@ h1,h2{font-weight:300!important}
 .ctl-row{padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.07)}
 
 /* Main artwork */
-.stage-frame{position:relative;margin:0 auto;width:min(88vw,66svh,640px);padding:clamp(8px,1.4vw,16px);border-radius:28px;background:linear-gradient(135deg,rgba(255,255,255,.06),rgba(255,255,255,.015));border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 60px 120px -40px rgba(0,0,0,.95),0 0 140px -30px rgba(150,160,255,.12);cursor:pointer}
+.stage-frame{position:relative;margin:0 auto;width:min(88vw,66svh,640px);padding:clamp(8px,1.4vw,16px);border-radius:28px;background:linear-gradient(135deg,rgba(255,255,255,.06),rgba(255,255,255,.015));border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 60px 120px -40px rgba(0,0,0,.95),0 0 140px -30px rgba(155,107,255,.18);cursor:pointer}
 .stage-canvas{position:relative;width:100%;aspect-ratio:1/1;overflow:hidden;border-radius:16px;background:#08080a}
 .stage-canvas .layer{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;max-width:none}
 .stage-cap{text-align:center;margin:1.7rem auto 0;max-width:36rem;min-height:6.4rem}
@@ -100,7 +91,7 @@ h1,h2{font-weight:300!important}
 .cf-track:active{cursor:grabbing}
 .cf-item{position:absolute;top:50%;left:50%;width:132px;height:132px;margin:-66px 0 0 -66px;cursor:pointer;border-radius:10px;overflow:hidden;background:#0b0b0d;border:1px solid rgba(255,255,255,.12);will-change:transform,opacity,filter;box-shadow:0 22px 40px -18px rgba(0,0,0,.9)}
 .cf-item img{width:100%;height:100%;object-fit:contain;pointer-events:none;max-width:none}
-.cf-item.on{border-color:rgba(255,255,255,.6);box-shadow:0 0 44px -8px rgba(255,255,255,.28),0 22px 40px -18px rgba(0,0,0,.9)}
+.cf-item.on{border-color:rgba(255,255,255,.7);box-shadow:0 0 44px -8px rgba(77,141,255,.55),0 0 70px -14px rgba(255,77,94,.35),0 22px 40px -18px rgba(0,0,0,.9)}
 .cf-ctl{display:flex;justify-content:center;align-items:center;gap:1.4rem;margin-top:.4rem}
 .cf-btn{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-size:.7rem;color:#d4d4d4;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);backdrop-filter:blur(10px);transition:border-color .3s,color .3s}
 .cf-btn:hover{border-color:rgba(255,255,255,.45);color:#fff}
@@ -110,7 +101,7 @@ h1,h2{font-weight:300!important}
 /* Project cards */
 .work{position:relative;cursor:pointer;border-radius:22px;padding:7px;background:linear-gradient(135deg,rgba(255,255,255,.07),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.1);transition:transform .5s cubic-bezier(.16,.8,.2,1),border-color .4s,box-shadow .5s;will-change:transform}
 .work::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:3;opacity:0;transition:opacity .4s;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.24),transparent 60%);mix-blend-mode:overlay}
-.work:hover{border-color:rgba(255,255,255,.55);box-shadow:0 26px 60px -22px rgba(150,165,255,.5),0 0 0 1px rgba(255,255,255,.12)}
+.work:hover{border-color:rgba(255,255,255,.55);box-shadow:0 26px 60px -22px rgba(77,141,255,.55),0 0 0 1px rgba(255,255,255,.12)}
 .work:hover::before{opacity:1}
 .work-img{position:relative;aspect-ratio:1/1;border-radius:16px;overflow:hidden;background:#08080a}
 .work-img img{width:100%;height:100%;object-fit:contain;transition:transform 1.1s cubic-bezier(.16,.8,.2,1),filter .6s}
@@ -131,18 +122,18 @@ h1,h2{font-weight:300!important}
 /* Buttons & links: clear affordance + hover */
 button,a[href],.sel{cursor:pointer}
 .btn.btn.btn{border:1px solid rgba(255,255,255,.26)!important;background:linear-gradient(180deg,rgba(255,255,255,.13),rgba(255,255,255,.04))!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.24),0 8px 20px -10px rgba(0,0,0,.9)!important;color:#f5f5f5!important;transition:transform .3s,background .3s,color .3s,box-shadow .3s,border-color .3s}
-.btn.btn.btn:hover{background:#fff!important;color:#050505!important;border-color:#fff!important;transform:translateY(-2px);box-shadow:0 0 0 4px rgba(255,255,255,.1),0 14px 34px -10px rgba(185,195,255,.6)!important}
+.btn.btn.btn:hover{background:#fff!important;color:#050505!important;border-color:#fff!important;transform:translateY(-2px);box-shadow:0 0 0 4px rgba(255,255,255,.1),0 14px 34px -10px rgba(77,141,255,.65)!important}
 .btn.btn.btn:hover *{color:#050505!important}
 .btn.btn.btn:active{transform:translateY(0) scale(.97)}
 .btn i{transition:transform .3s}.btn:hover i.fa-arrow-left{transform:translateX(-4px)}.btn:hover i.fa-arrow-right{transform:translateX(4px)}
 header nav a{border:1px solid transparent;transition:background .3s,border-color .3s,box-shadow .3s,color .3s}
-header nav a:hover{background:rgba(255,255,255,.1)!important;border-color:rgba(255,255,255,.3);color:#fff!important;box-shadow:0 0 26px -6px rgba(185,195,255,.55)}
+header nav a:hover{background:rgba(255,255,255,.1)!important;border-color:rgba(255,255,255,.3);color:#fff!important;box-shadow:0 0 26px -6px rgba(155,107,255,.6)}
 header nav a:hover i{color:#fff}
 header>div>a:first-child{transition:opacity .3s}header>div>a:first-child:hover{opacity:.8}
 footer a{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.18);transition:all .3s}
-footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transform:translateY(-3px);box-shadow:0 10px 26px -8px rgba(185,195,255,.6)}
+footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transform:translateY(-3px);box-shadow:0 10px 26px -8px rgba(255,77,94,.6)}
 .chip{cursor:pointer}
-.chip:not(.is-on):hover{background:rgba(255,255,255,.13);border-color:rgba(255,255,255,.5);color:#fff;transform:translateY(-1px);box-shadow:0 8px 22px -10px rgba(185,195,255,.5)}
+.chip:not(.is-on):hover{background:rgba(255,255,255,.13);border-color:rgba(255,255,255,.5);color:#fff;transform:translateY(-1px);box-shadow:0 8px 22px -10px rgba(255,210,63,.5)}
 .chip.is-on:hover{box-shadow:0 0 26px rgba(255,255,255,.4)}
 .sel:hover{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.09)}
 .cf-btn:hover,.gal-arrow:hover{background:#fff;color:#050505;transform:scale(1.1)}
@@ -165,7 +156,7 @@ footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transfo
 .thumb{position:relative;aspect-ratio:1/1;border-radius:12px;overflow:hidden;background:#08080a;border:1px solid rgba(255,255,255,.12);opacity:.55;padding:0;transition:opacity .4s,transform .4s,border-color .4s,box-shadow .4s}
 .thumb img{width:100%;height:100%;object-fit:contain;max-width:none}
 .thumb:hover{opacity:1;transform:translateY(-3px);border-color:rgba(255,255,255,.6)}
-.thumb.on{opacity:1;border-color:#fff;box-shadow:0 0 0 2px rgba(255,255,255,.25),0 0 30px -6px rgba(190,200,255,.5)}
+.thumb.on{opacity:1;border-color:#fff;box-shadow:0 0 0 2px rgba(255,255,255,.25),0 0 30px -6px rgba(155,107,255,.6)}
 
 
 /* Resume: collapsible job details */
@@ -181,16 +172,113 @@ footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transfo
 
 @media(prefers-reduced-motion:reduce){.neb{animation:none}.scroll-smooth{scroll-behavior:auto}}
 @media print{.job-extra[hidden]{display:block!important}.job-toggle{display:none!important}#cosmos,.hero,header,footer,.no-print{display:none!important}body{background:#fff!important;color:#000!important}.glass-card{background:#fff!important;border:1px solid #ccc!important;color:#000!important;box-shadow:none!important}.text-white,.text-slate-300,.text-slate-400{color:#111!important}}
+/* ===== Minimal black & white · glass / liquid glass ===== */
+:root{--sky:#0a9bff;--vio:#8b5cf6;--red:#ff3b4e;--yel:#ffd60a}
+html,body{background:#f2f2ef}
+::selection{background:var(--yel);color:#0b0b0d}
+::-webkit-scrollbar-track{background:#f2f2ef}::-webkit-scrollbar-thumb{background:#b9b9b6}::-webkit-scrollbar-thumb:hover{background:var(--sky)}
+:focus-visible{outline:2px solid var(--sky);outline-offset:3px}
+body{color:#0e0e10}
+main,footer{z-index:auto}
+.band{position:relative;overflow:hidden;isolation:isolate;background:var(--bg);color:var(--ink)}
+.band::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:var(--orbs)}
+.sec-light{--bg:#f2f2ef;--ink:#0e0e10;--ink2:#3a3a40;--mute:#6c6c74;--line:rgba(0,0,0,.1);--mute:#6c6c74;
+ --orbs:radial-gradient(38vw 30vw at 10% 6%,rgba(0,0,0,.09),transparent 70%),radial-gradient(34vw 28vw at 92% 45%,rgba(0,0,0,.08),transparent 70%),radial-gradient(40vw 30vw at 35% 98%,#fff,transparent 70%),radial-gradient(30vw 20vw at 70% 8%,#fff,transparent 70%)}
+.sec-dark{--bg:#0b0b0d;--ink:#f4f4f2;--ink2:#cfcfd2;--mute:#9a9aa2;--line:rgba(255,255,255,.1);
+ --orbs:radial-gradient(38vw 30vw at 88% 10%,rgba(255,255,255,.09),transparent 70%),radial-gradient(34vw 28vw at 8% 60%,rgba(255,255,255,.07),transparent 70%),radial-gradient(40vw 30vw at 60% 100%,rgba(255,255,255,.06),transparent 70%)}
+
+/* floating liquid-glass header */
+header.glass-nav{top:.75rem;margin:.75rem auto 0;width:calc(100% - 1.5rem);max-width:80rem;border-radius:999px;background:linear-gradient(135deg,rgba(24,24,28,.72),rgba(10,10,12,.55));border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(26px) saturate(180%);-webkit-backdrop-filter:blur(26px) saturate(180%);box-shadow:inset 0 1px 0 rgba(255,255,255,.28),inset 0 -1px 0 rgba(255,255,255,.05),0 18px 40px -18px rgba(0,0,0,.5)}
+header nav a:hover{box-shadow:0 0 24px -8px var(--sky)}
+
+/* liquid glass cards (both themes) */
+.glass-card,.stage-frame,.work,.info-row{position:relative;backdrop-filter:blur(26px) saturate(180%);-webkit-backdrop-filter:blur(26px) saturate(180%)}
+.glass-card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(120deg,rgba(255,255,255,.22),transparent 28%,transparent 72%,rgba(255,255,255,.08));mix-blend-mode:overlay}
+.sec-light .glass-card,.sec-light .stage-frame,.sec-light .work,.sec-light .info-row{background:linear-gradient(135deg,rgba(255,255,255,.78),rgba(255,255,255,.34));border:1px solid rgba(255,255,255,.95);box-shadow:inset 0 1px 0 #fff,inset 0 -1px 0 rgba(0,0,0,.05),0 24px 50px -24px rgba(0,0,0,.28)}
+.sec-light .glass-card::after{mix-blend-mode:soft-light;background:linear-gradient(120deg,rgba(255,255,255,.9),transparent 30%,transparent 70%,rgba(255,255,255,.4))}
+
+/* light-section text & parts */
+.sec-light .text-white,.sec-light h1,.sec-light h2,.sec-light .cap-title,.sec-light .info-v{color:var(--ink)}
+.sec-light .text-slate-200,.sec-light .text-slate-300,.sec-light .job-list{color:var(--ink2)}
+.sec-light .text-slate-400,.sec-light .text-slate-500,.sec-light .cap-meta,.sec-light .info-l,.sec-light .cap-tag{color:var(--mute)}
+.sec-light .text-brand-400,.sec-light .text-brand-500{color:var(--ink)}
+.sec-light [class*="hover:text-brand"]:hover{color:var(--sky)}
+.sec-light [class*="border-slate-"]{border-color:rgba(0,0,0,.1)}
+.sec-light [class*="bg-dark-"]{background:rgba(255,255,255,.55)!important}
+.sec-light [class*="bg-brand-"]:not(body):not(.h-full),.sec-light [class*="from-brand-"]:not(.h-full){background:rgba(255,255,255,.55)!important;border:1px solid rgba(0,0,0,.1)!important;color:var(--ink)}
+.sec-light [class*="bg-brand-"]:not(body):not(.h-full):hover{background:rgba(255,255,255,.9)!important;border-color:rgba(0,0,0,.3)!important}
+.sec-light .h-full[class*="from-brand-"]{background:linear-gradient(90deg,var(--sky),var(--vio))!important}
+.sec-light .work-img,.sec-light .stage-canvas,.sec-light .thumb,.sec-light .aspect-frame,.sec-light #detail-approach-image,.sec-light #detail-typo-sample-image,.sec-light #detail-typo-desc-image{background:#e4e4e1}
+.sec-light .info-cell,.sec-light .ctl-row{border-color:rgba(0,0,0,.09)}
+.sec-light .job-toggle,.sec-light .cap-link{color:var(--ink2);border-color:rgba(0,0,0,.2)}
+.sec-light .cap-tag{border-color:rgba(0,0,0,.14)}
+.sec-light .thumb{border-color:rgba(0,0,0,.14)}
+.sec-light .thumb:hover{border-color:var(--ink)}
+.sec-light .thumb.on{border-color:var(--ink);box-shadow:0 0 0 2px rgba(10,155,255,.35),0 0 26px -6px var(--sky)}
+.sec-light .gal-count{color:#fff}
+
+/* controls on light */
+.sec-light .chip{color:var(--mute);background:rgba(255,255,255,.55);border-color:rgba(0,0,0,.1);backdrop-filter:blur(14px)}
+.sec-light .chip:not(.is-on):hover{color:var(--ink);background:rgba(255,255,255,.95);border-color:rgba(0,0,0,.3);box-shadow:0 8px 22px -12px rgba(0,0,0,.35)}
+.sec-light .chip.is-on{color:#fff;background:var(--ink);border-color:var(--ink);box-shadow:none}
+.chip.is-on::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--sky);margin-left:.45rem;vertical-align:middle}
+.sec-light .seg{background:rgba(255,255,255,.45);border-color:rgba(0,0,0,.08)}
+.sec-light .sel{background:rgba(255,255,255,.6);border-color:rgba(0,0,0,.12);color:var(--ink)}
+.sec-light .sel:hover{background:#fff;border-color:rgba(0,0,0,.35)}
+.sec-light .sel option{background:#fff;color:#0e0e10}
+.sec-light .btn.btn.btn{background:linear-gradient(180deg,rgba(255,255,255,.95),rgba(255,255,255,.55))!important;border:1px solid rgba(255,255,255,.95)!important;color:var(--ink)!important;box-shadow:inset 0 1px 0 #fff,0 10px 24px -12px rgba(0,0,0,.35)!important}
+.sec-light .btn.btn.btn:hover{background:var(--ink)!important;color:#fff!important;border-color:var(--ink)!important;box-shadow:0 0 0 4px rgba(10,155,255,.2),0 14px 30px -10px rgba(10,155,255,.6)!important}
+.sec-light .btn.btn.btn *{color:inherit!important}
+.sec-light .btn.btn.btn:hover *{color:#fff!important}
+.btn.btn.btn:hover{box-shadow:0 0 0 4px rgba(10,155,255,.18),0 14px 34px -10px rgba(10,155,255,.7)!important}
+.sec-dark .btn.btn.btn{backdrop-filter:blur(20px) saturate(160%)}
+footer.sec-light a{color:var(--ink2)!important;border-color:rgba(0,0,0,.15);background:rgba(255,255,255,.5)}
+footer.sec-light a:hover{background:var(--ink);color:#fff!important;border-color:var(--ink);box-shadow:0 10px 24px -8px rgba(10,155,255,.6)}
+footer.sec-light p{color:var(--mute)}
+
+/* hero */
+.hero h1{background:none;-webkit-text-fill-color:var(--ink);color:var(--ink);filter:none;font-weight:700!important}
+.hero h1 span:last-child{background:linear-gradient(100deg,var(--sky),var(--vio));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.hero p{color:var(--mute)}
+.hero-in::after{content:"";display:block;width:60px;height:4px;margin:1.3rem auto 0;border-radius:4px;background:linear-gradient(90deg,var(--sky) 0 25%,var(--vio) 25% 50%,var(--red) 50% 75%,var(--yel) 75%)}
+
+/* work cards */
+.work:hover{border-color:rgba(0,0,0,.35);box-shadow:inset 0 1px 0 #fff,0 28px 60px -24px rgba(10,155,255,.45)}
+.work:hover .work-go{background:var(--red);border-color:var(--red);color:#fff}
+.sec-light .work::before{mix-blend-mode:soft-light}
+
+/* cover flow in dark band */
+.cf-item.on{border-color:rgba(255,255,255,.75);box-shadow:0 0 44px -10px var(--sky),0 22px 40px -18px rgba(0,0,0,.9)}
+.cf-btn:hover,.gal-arrow:hover{background:#fff;color:#0b0b0d}
+
+/* about stats: tiny colour accents */
+#about .grid>div:nth-child(1)>span:first-child{color:var(--sky)}
+#about .grid>div:nth-child(2)>span:first-child{color:var(--vio)}
+#about .grid>div:nth-child(3)>span:first-child{color:var(--red)}
+#about img{border-color:rgba(255,255,255,.9)}
+.sec-light span.bg-emerald-500{background:var(--yel)!important;border-color:transparent}
+.sec-dark span.bg-emerald-500{background:var(--yel)!important;color:#0b0b0d}
+#resume-page .bg-gradient-to-tr{background:linear-gradient(135deg,var(--sky),var(--vio),var(--red),var(--yel))!important}
+
+/* ===== Softer rhythm: rounded floating panels instead of hard full-bleed strips ===== */
+html,body{background:#e6e6e2}
+::-webkit-scrollbar-track{background:#e6e6e2}
+.band{margin:.75rem;border-radius:2.25rem}
+.sec-light{--bg:#f8f8f6;--orbs:radial-gradient(36vw 28vw at 10% 6%,rgba(0,0,0,.045),transparent 70%),radial-gradient(34vw 26vw at 92% 50%,rgba(0,0,0,.04),transparent 70%),radial-gradient(40vw 30vw at 35% 100%,#fff,transparent 70%)}
+.sec-dark{--bg:#151517;--orbs:radial-gradient(36vw 28vw at 88% 8%,rgba(255,255,255,.06),transparent 70%),radial-gradient(34vw 26vw at 8% 70%,rgba(255,255,255,.045),transparent 70%)}
+.sec-light.band{box-shadow:inset 0 0 0 1px rgba(0,0,0,.05),0 30px 60px -40px rgba(0,0,0,.25)}
+.sec-dark.band{box-shadow:inset 0 0 0 1px rgba(255,255,255,.07),0 30px 60px -40px rgba(0,0,0,.5)}
+.sec-light .glass-card,.sec-light .stage-frame,.sec-light .work,.sec-light .info-row{background:linear-gradient(135deg,rgba(255,255,255,.9),rgba(255,255,255,.55));border-color:rgba(0,0,0,.06);box-shadow:inset 0 1px 0 #fff,0 18px 40px -26px rgba(0,0,0,.25)}
+@media(max-width:640px){.band{margin:.5rem;border-radius:1.6rem}}
+
 </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between">
 
-    <div id="cosmos" aria-hidden="true"><i class="neb a"></i><i class="neb b"></i><i class="neb c"></i><i class="neb d"></i><canvas id="stars"></canvas></div>
-
     <header class="sticky top-0 z-50 glass-nav transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="#" onclick="showHomePage(event)" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-400 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-brand-500/30 group-hover:rotate-12 transition-transform duration-300">
+                <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-black font-bold text-xl shadow-lg shadow-brand-500/30 group-hover:rotate-12 transition-transform duration-300">
                     ف
                 </div>
                 <div>
@@ -227,7 +315,8 @@ footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transfo
         <!-- صفحه اصلی (نمونه‌کارها) -->
         <div id="home-page" class="page-view page-active">
             
-            <section class="hero" id="hero">
+            <div class="sec-light band">
+<section class="hero" id="hero">
                 <div class="hero-in">
                     <h1><span>خلق خلاقانه</span> <span>هویت بصری و دیزاین</span></h1>
                     <p>طراحی تخصصی هویت بصری، لوگو، نشریات، پوستر، اینفوگرافیک و بسته‌بندی تبلیغاتی با ساختار هوشمندانه و زیبایی‌شناسی مدرن.</p>
@@ -290,11 +379,12 @@ footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transfo
             <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
                 <div id="projects-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
             </section>
+</div>
 
-            <section id="slider" class="pb-24 overflow-hidden"><div id="home-slider"></div></section>
+            <section id="slider" class="pt-16 pb-24 overflow-hidden sec-dark band"><div id="home-slider"></div></section>
 
             <!-- درباره من در صفحه اصلی -->
-            <section id="about" class="py-20 bg-dark-800/50 border-y border-slate-800 relative">
+            <section id="about" class="py-20 sec-light band">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="glass-card rounded-3xl p-8 md:p-12 relative overflow-hidden">
                         <div class="flex flex-col md:flex-row items-center md:items-start gap-8 lg:gap-12">
@@ -342,7 +432,7 @@ footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transfo
                 </div>
             </section>
 
-            <section id="contact" class="py-20">
+            <section id="contact" class="py-20 sec-dark band">
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 class="text-3xl font-bold text-white mb-4">آیا پروژه‌ای در ذهن دارید؟</h2>
                     <p class="text-slate-400 mb-8">بیایید درباره ایده شما صحبت کنیم و آن را به یک اثر بصری متمایز و ماندگار تبدیل کنیم.</p>
@@ -356,7 +446,7 @@ footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transfo
         </div>
 
         <!-- صفحه جزئیات پروژه -->
-        <div id="project-detail-page" class="page-view page-hidden">
+        <div id="project-detail-page" class="page-view page-hidden sec-light band">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
                 
                 <div class="mb-3">
@@ -495,7 +585,7 @@ footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transfo
         </div>
 
         <!-- صفحه کامل رزومه (Resume Page) -->
-        <div id="resume-page" class="page-view page-hidden">
+        <div id="resume-page" class="page-view page-hidden sec-dark band">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
                 
                 <div class="mb-8 flex items-center justify-between no-print">
@@ -972,7 +1062,7 @@ footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transfo
         <img id="modal-img" src="" alt="Zoomed view" class="max-w-full max-h-[90vh] object-contain rounded-xl shadow-2xl">
     </div>
 
-    <footer class="bg-dark-900 border-t border-slate-800/80 py-8 mt-12 no-print">
+    <footer class="py-8 sec-light band no-print">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p class="text-xs text-slate-500">© ۱۴۰۵ تمامی حقوق محفوظ است. طراحی و پیاده‌سازی رزومه و پرتفولیو فاطمه احمدنژاد.</p>
             <div class="flex items-center gap-4 text-slate-400">
@@ -1024,49 +1114,6 @@ footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transfo
         let currentProjectIndex = 0, currentMainGroup = 'all', currentCategory = 'all', currentSort = 'featured', currentViewMode = 'projects';
         let homeFlow = null, detailFlow = null;
 
-        /* ---------- Cosmic stars ---------- */
-        (function () {
-            const c = document.getElementById('stars'), x = c.getContext('2d');
-            const COL = [[225, 232, 255], [190, 205, 255], [220, 190, 255], [255, 255, 255], [255, 235, 215]];
-            let w, h, R = 1, S = [], sh = null, mx = 0, my = 0, tx = 0, ty = 0;
-            function init() {
-                R = Math.min(devicePixelRatio || 1, 2);
-                w = c.width = innerWidth * R; h = c.height = innerHeight * R;
-                S = Array.from({ length: Math.round(innerWidth * innerHeight / 4200) }, () => {
-                    const big = Math.random() < .07;
-                    return { x: Math.random() * w, y: Math.random() * h, z: Math.random() * .9 + .1, big, r: (big ? Math.random() * 1.3 + 1.1 : Math.random() * .9 + .3) * R, a: big ? .9 : Math.random() * .55 + .2, p: Math.random() * 6.28, s: Math.random() * .9 + .2, c: COL[Math.random() * COL.length | 0] };
-                });
-            }
-            addEventListener('pointermove', e => { tx = e.clientX / innerWidth - .5; ty = e.clientY / innerHeight - .5; }, { passive: true });
-            function draw(t) {
-                x.clearRect(0, 0, w, h);
-                mx += (tx - mx) * .04; my += (ty - my) * .04;
-                for (const s of S) {
-                    const px = ((s.x - mx * 40 * s.z * R) % w + w) % w, py = ((s.y - my * 40 * s.z * R - scrollY * .12 * s.z * R) % h + h) % h;
-                    const a = s.a * (.6 + .4 * Math.sin(t / 1000 * s.s + s.p)), [r, g, b] = s.c;
-                    if (s.big) {
-                        const k = s.r * 7, gr = x.createRadialGradient(px, py, 0, px, py, k);
-                        gr.addColorStop(0, `rgba(${r},${g},${b},${a * .55})`); gr.addColorStop(1, `rgba(${r},${g},${b},0)`);
-                        x.fillStyle = gr; x.fillRect(px - k, py - k, k * 2, k * 2);
-                        x.strokeStyle = `rgba(${r},${g},${b},${a * .5})`; x.lineWidth = R * .7; x.beginPath();
-                        x.moveTo(px - s.r * 5, py); x.lineTo(px + s.r * 5, py); x.moveTo(px, py - s.r * 5); x.lineTo(px, py + s.r * 5); x.stroke();
-                    }
-                    x.fillStyle = `rgba(${r},${g},${b},${a})`; x.beginPath(); x.arc(px, py, s.r, 0, 6.283); x.fill();
-                }
-                if (!reduceMotion) {
-                    if (!sh && Math.random() < .0025) sh = { x: Math.random() * w * .8 + w * .2, y: Math.random() * h * .4, vx: -(8 + Math.random() * 6) * R, vy: (4 + Math.random() * 3) * R, l: 0 };
-                    if (sh) {
-                        const al = Math.sin(sh.l / 70 * Math.PI), g2 = x.createLinearGradient(sh.x, sh.y, sh.x - sh.vx * 7, sh.y - sh.vy * 7);
-                        g2.addColorStop(0, `rgba(255,255,255,${al})`); g2.addColorStop(1, 'rgba(255,255,255,0)');
-                        x.strokeStyle = g2; x.lineWidth = 1.6 * R; x.beginPath(); x.moveTo(sh.x, sh.y); x.lineTo(sh.x - sh.vx * 7, sh.y - sh.vy * 7); x.stroke();
-                        sh.x += sh.vx; sh.y += sh.vy; if (++sh.l > 70) sh = null;
-                    }
-                    requestAnimationFrame(draw);
-                }
-            }
-            init(); addEventListener('resize', init); requestAnimationFrame(draw);
-        })();
-
         /* ---------- Infinite cover flow ---------- */
         function createFlow(root, items, onActive, onPick) {
             const track = root.querySelector('.cf-track'), n = items.length;
@@ -1076,7 +1123,7 @@ footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transfo
             for (let k = 0; k < M; k++) {
                 const d = document.createElement('div');
                 d.className = 'cf-item'; d.dataset.k = k; d.title = items[k % n].title || '';
-                const im = new Image(); im.src = items[k % n].src; im.alt = ''; im.draggable = false;
+                const im = new Image(); im.decoding = 'async'; im.src = items[k % n].src; im.alt = ''; im.draggable = false;
                 d.appendChild(im); track.appendChild(d); els.push(d);
             }
             const ac = new AbortController(), sig = { signal: ac.signal };
@@ -1160,7 +1207,13 @@ footer a:hover{background:#fff;color:#050505!important;border-color:#fff;transfo
             host.innerHTML = '';
             if (!list.length) return;
             host.innerHTML = '<div class="cf"><div class="cf-track" tabindex="0" aria-label="آثار؛ با کشیدن یا کلیدهای جهت‌دار حرکت دهید"></div></div>';
-            homeFlow = createFlow(host.firstChild, list.map(p => ({ src: p.coverImage, id: p.id, title: p.title })), () => {}, it => openProjectDetail(it.id));
+            const items = [];
+            list.forEach(p => {
+                const seen = new Set();
+                [p.coverImage, ...(p.galleryRow1 || []), ...(p.galleryRow2 || []), p.approachImage, p.typoSampleImage, p.typoDescImage]
+                    .forEach(src => { if (src && !seen.has(src)) { seen.add(src); items.push({ src, id: p.id, title: p.title }); } });
+            });
+            homeFlow = createFlow(host.firstChild, items, () => {}, it => openProjectDetail(it.id));
         }
 
         /* ---------- Project gallery: big slider + 8 thumbnails ---------- */
